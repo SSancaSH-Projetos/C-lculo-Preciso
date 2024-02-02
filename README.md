@@ -1,6 +1,5 @@
 
-<img width="479" alt="Logo03" src="https://github.com/SSancaSH-Projetos/Calculo-Preciso/assets/158601854/ac81a77a-7485-4646-854a-eb318e181cf5">
-
+<img width="268" alt="logo02" src="https://github.com/SSancaSH-Projetos/Calculo-Preciso/assets/158601854/12f8d65c-2d00-45b0-844e-242c38767a03">
 
 
 # Problema: Dificuldade no cálculo de Custo de Usinagem de Peças
