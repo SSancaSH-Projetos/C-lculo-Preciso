@@ -40,6 +40,7 @@ O projeto tem como objetivo desenvolver um sistema de comunicação eficiente, c
 **Fevereiro/2024:** Início do desenvolvimento do escopo do projeto e documentação da ideia inicial.
 - Desenvolvimento do MVP (menor produto viável).
 - Codificação e validação do MVP.
+- Desenvolvimento dos serviços e bancos de dados.
 
 **Março/2024:** Desenvolvimento do protótipo do aplicativo.
 - Desenvolvimento das interfaces do usuário, fluxos da aplicação.
@@ -123,9 +124,6 @@ O projeto tem como objetivo desenvolver um sistema de comunicação eficiente, c
 ### Como um cliente eu quero poder fazer mais de um pedido.
 - **Critérios de Aceitação:** O aplicativo deve disponibilizar uma forma de fazer múltiplas requisições.
 
-### Como um cliente eu quero uma interface mais fácil de utilizar.
-- **Critérios de Aceitação:** O aplicativo deve ter uma interface fácil de utilizar.
-
 ### Como operador eu quero saber quero que meus envios sejam registrados com sucesso.
 - **Critérios de Aceitação:** O aplicativo deve ser possível conferir se os envios foram registrados.
 
@@ -141,7 +139,7 @@ O projeto tem como objetivo desenvolver um sistema de comunicação eficiente, c
 # 8. Avaliação do Projeto
 
 ## Eficiência Operacional:
-- **Objetivo:** Reduzir o tempo médio gasto para fazer os cálculos após a implementação do sistema.
+- **Objetivo:** Trará melhorias no quesito de gastos com eltricidade e sobra de cavaco, poupando custos e tempo.
 
 ## Satisfação do Usuário:
 - **Objetivo:** Alcançar uma pontuação de satisfação do usuário de pelo menos 4,5 em 5, com base em pesquisas de satisfação.
