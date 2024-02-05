@@ -120,7 +120,7 @@ O projeto tem como objetivo desenvolver um sistema de comunicação eficiente, c
 ### Como um cliente eu quero garantir que a minha solicitação de peça seja registrada.
 - **Critérios de Aceitação:** Deve ser possível verificar se minha solicitação foi registrada com sucesso.
 
-### Como um cliente eu quero pode fazer mais de um pedido.
+### Como um cliente eu quero poder fazer mais de um pedido.
 - **Critérios de Aceitação:** O aplicativo deve disponibilizar uma forma de fazer múltiplas requisições.
 
 ### Como um cliente eu quero uma interface mais fácil de utilizar.
