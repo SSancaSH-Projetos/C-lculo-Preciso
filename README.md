@@ -48,6 +48,7 @@ O projeto tem como objetivo desenvolver um sistema de comunicação eficiente, c
 - Revisão e ajuste do protótipo com feedback da equipe.
 
 **Abril/2024:** Início da integração com sistemas.
+- Desenvolvimento dos serviços e bancos de dados.
 - Testes de integração e ajustes necessários.
 
 **Maio/2024:** Testes finais do aplicativo e do sistema integrado.
@@ -95,6 +96,8 @@ O projeto tem como objetivo desenvolver um sistema de comunicação eficiente, c
   - Custo total (considerando licenças): $0
 - Ferramenta de Design Gráfico:
   - Custo Total: $0
+- Testes Consumiveis:
+  - Custo Total: $400    
 
 ## Equipamentos:
 - Computadores:
@@ -112,7 +115,7 @@ O projeto tem como objetivo desenvolver um sistema de comunicação eficiente, c
 - Tecnologia: $0
 - Equipamentos: $0
 
-**Custo Total do Projeto: $0**
+**Custo Total do Projeto: $400**
 
 # 7. Documentação
 
@@ -146,7 +149,7 @@ O projeto tem como objetivo desenvolver um sistema de comunicação eficiente, c
 - **Métrica:** Resultados de pesquisas de satisfação realizadas com gestores, clientes e operadores.
 
 ## Integridade dos Dados:
-- **Objetivo:** Alcançar uma precisão de pelo menos 98% na integridade dos dados registrados pelo sistema.
+- **Objetivo:** Alcançar uma precisão de 100% na integridade dos dados registrados pelo sistema.
 
 ## Disponibilidade do Sistema:
 - **Objetivo:** Garantir uma disponibilidade do sistema de pelo menos 99,5% ao longo do tempo.
