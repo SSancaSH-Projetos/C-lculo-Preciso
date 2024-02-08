@@ -18,7 +18,7 @@ body, html {
 }
 
 .primeiraImagem {
-    background-image: url('../_img/imagem02.avif');
+    background-image: url('https://github.com/SSancaSH-Projetos/Calculo-Preciso/blob/main/src/_img/imagem02.avif');
     min-height: 100%;
 }
 
