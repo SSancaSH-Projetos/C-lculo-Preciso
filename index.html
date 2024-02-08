@@ -5,8 +5,126 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="_css/style.css">
     <title>WebSite em Parallax</title>
+
+ <style>
+     body, html {
+    height: 100%;
+    margin: 0;
+    font-size: 16px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: normal;
+    line-height: 0.8cm;
+    color:#667;
+}
+
+.primeiraImagem, .segundaImagem, .terceiraImagem, .quartaImagem {
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+}
+
+.primeiraImagem {
+    background-image: url('../_img/imagem02.avif');
+    min-height: 100%;
+}
+
+.segundaImagem {
+    background-image: url('../_img/imagem05.jpg');
+    min-height: 460px;
+    /* min-width: 460px; */
+}
+
+.terceiraImagem {
+    background-image: url('../_img/imagem04.jpg');
+    min-height: 460px;
+}
+
+.secao {
+    text-align: center;
+    padding: 20px 60px;
+}
+
+.secaoClara {
+    background-color: #f4f4f4;
+    color: #667;
+}
+
+.secaoEscura {
+    background-color: #282e34;
+    color: #ddd;
+}
+
+.texto {
+    position: absolute;
+    top: 50%;
+    width: 100;
+    text-align: center;
+    color: #000;
+    font-size: 27px;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    opacity: 0.7;
+}
+
+.rotulo{
+    background-color: #111;
+    color: #fff;
+    padding: 20px;
+}
+
+.texto, .rotulo, .transicao {
+    background-color: transparent;
+}
+
+ul {
+    background-color: transparent;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #1e1919;
+    opacity: 0.5;
+   
+  }
+  
+  li {
+    float: left;
+    border-right:1px solid #bbb;
+   
+  }
+  
+  li:last-child {
+    border-right: none;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    
+  }
+  
+  li a:hover:not(.active) {
+    background-color: #d83619
+  }
+  
+  .active {
+    background-color: #d83619;
+  }
+
+
+@media(max-width: 560px) {
+    .primeiraImagem, .segundaImagem, .terceiraImagem, .quartaImagem{
+        background-attachment: scroll;
+    }
+}
+ </style>
 </head>
 
 <body>
