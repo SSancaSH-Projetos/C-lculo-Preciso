@@ -18,7 +18,7 @@
             color: #667;
         }
 
-        .primeiraImagem, .segundaImagem, .terceiraImagem, .quartaImagem {
+        .primeiraImagem, .segundaImagem, .terceiraImagem, .quartaImagem, .quintaImagem{
             position: relative;
             background-position: center;
             background-size: cover;
@@ -27,18 +27,28 @@
         }
 
         .primeiraImagem {
-            background-image: url('https://bozzi.com.br/wp-content/uploads/2022/08/usina.png');
+            background-image: url('https://live.staticflickr.com/65535/53517614666_dfb4cff54a_o.jpg');
             min-height: 100%;
         }
 
         .segundaImagem {
-            background-image: url('https://img.freepik.com/fotos-premium/o-centro-de-usinagem-cnc-esta-perfurando-a-imagem-gerada-pela-tecnologia-ai_1112-12144.jpg');
+            background-image: url('https://live.staticflickr.com/65535/53518040775_4e76cfaf12_o.jpg');
             min-height: 460px;
             /* min-width: 460px; */
         }
 
         .terceiraImagem {
-            background-image: url('https://www.revistaferramental.com.br/admin/images/artigos/usinagem-5-eixos-investimento.jpg');
+            background-image: url('https://live.staticflickr.com/65535/53517929949_62a5d331c6_o.jpg');
+            min-height: 460px;
+        }
+
+        .quartaImagem {
+            background-image: url('https://live.staticflickr.com/65535/53518040780_f2ef89ce27_o.jpg');
+            min-height: 460px;
+        }
+
+        .quintaImagem {
+            background-image: url('https://live.staticflickr.com/65535/53517895973_69ebaee85f_o.png');
             min-height: 460px;
         }
 
@@ -115,20 +125,46 @@
         }
 
         @media(max-width: 560px) {
-            .primeiraImagem, .segundaImagem, .terceiraImagem, .quartaImagem {
+            .primeiraImagem, .segundaImagem, .terceiraImagem, .quartaImagem, .quintaImagem {
                 background-attachment: scroll;
             }
         }
+
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-size: 16px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-weight: normal;
+            line-height: 0.8cm;
+            color: #667;
+            position: relative;
+        }
+
+        .qrCodeContainer {
+            position: absolute;
+            top: 65px; /* Distância do topo */
+            right: 10px; /* Distância da direita */
+            width: 100px; /* Largura do QR code */
+            height: auto; /* Altura ajustável */
+        }
+
+        /* Estilize o QR code conforme necessário */
+        .qrCodeContainer img {
+            width: 100%;
+            height: auto;
+        }        
+       
     </style>
 </head>
 
 <body>
   <div class="primeiraImagem">
         <ul>
-            <li><a class="active" href="#home">Funcionalidades</a></li>
-            <li><a href="#informacoes">GitHub</a></li>
-            <li><a href="#contato">Sobre</a></li>
-            <li style="float:right"><a href="#sobre">Sobre</a></li>
+            <li><a class="active" href="https://ssancash-projetos.github.io/Calculo-Preciso/">Funcionalidades</a></li>
+            <li><a href="https://github.com/SSancaSH-Projetos/Calculo-Preciso">GitHub</a></li>
+            <li style="float:right"><a href="#sobre" onclick="scrollToBottom()">Sobre-Nós</a></li>
+
         </ul>
         <div class="texto">
             <span class="rotulo">
@@ -139,7 +175,9 @@
     <section class="secao secaoClara">
         <h2>Funcionalidades</h2>
         <p>
-            A nossa calculadora é uma forma de auxiliar operadores nos calculos de orçamentos na área de usinagem.
+            Nossa calculadora é uma ferramenta essencial projetada para auxiliar operadores na área de usinagem. Ela simplifica os
+             cálculos necessários para elaborar orçamentos precisos, considerando uma variedade de variáveis, como materiais, custos de mão de obra e tempo de usinagem. 
+            Essa ferramenta permite uma análise detalhada, contribuindo para uma gestão eficiente de recursos e uma tomada de decisão fundamentada em dados concretos.
         </p>
     </section>
     <div class="segundaImagem">
@@ -152,10 +190,11 @@
     <section class="secao secaoEscura">
         <h2>Certificações</h2>
         <p>
-            A nossa implementação sera com base no que os alunos da usinagem aprendem conforme o curso,
-            nos ultilizaremos as peças deles para nos certificarmos de que nossos calculos foram 100% precisos, 
-            com a nossa ideia nós iremos produzir este software a partir de três linguagens, Java como back-end, React Native e JS como front-end e SQL
-            como banco de dados.
+            Nossa abordagem de implementação se baseará no conhecimento adquirido pelos alunos
+             de usinagem ao longo do curso. Utilizaremos as peças criadas por eles para garantir a precisão absoluta de nossos cálculos.
+              A ideia é desenvolver um software utilizando três linguagens principais: Java para a parte do back-end, React Native e JavaScript para o front-end, e SQL para o banco de dados. 
+            Essa combinação de tecnologias nos permitirá criar uma ferramenta robusta e altamente
+             funcional, alinhada às necessidades específicas dos profissionais de usinagem.
         </p>
     </section>
     <div class="terceiraImagem">
@@ -168,12 +207,65 @@
     <section class="secao secaoEscura">
         <h2>Disponibilidades</h2>
         <p>
-            Nós disbilizaremos uma interface mobile e um site, para que qualquer pessoa possa acessar, nosso desenvolvimento começará no final de
-janeiro e estará finalizado no final de maio.
+            Vamos desenvolver uma interface mobile e um site para facilitar o acesso à nossa solução.
+             O projeto começa em janeiro e será concluído em maio, garantindo qualidade e eficiência.
+              Contaremos com uma equipe especializada em design, desenvolvimento e segurança da informação.
+               Utilizaremos as melhores práticas e tecnologias para criar um produto robusto e seguro.
+                Testes extensivos serão realizados para garantir funcionalidade e compatibilidade.
 
         </p>
     </section>
 
+    <div class="quartaImagem">
+        <div class="texto">
+            <span class="rotulo transicao">
+                Público Alvo
+            </span>
+        </div>
+    </div>
+    <section class="secao secaoEscura">
+        <h2>Público Alvo</h2>
+        <p>
+            
+Nosso software é projetado para atender operadores de usinagem com um nível de conhecimento avançado, pois
+os cálculos que serão realizados envolvem equações complexas da área.
+Apesar da interface simples, a complexidade técnica dos cálculos exige um conhecimento elevado por parte dos usuários.
+
+        </p>
+    </section>
+
+    </section>
+    <div class="quintaImagem">
+        <div class="texto">
+            <span class="rotulo">
+                Sobre-Nós
+            </span>
+        </div>
+    </div>
+    <section class="secao secaoEscura">
+        <h2>Sobre-Nós</h2>
+    <p>
+        Nossa equipe da PrecisionTech é composta por 5 desenvolvedores, cada um especializado em uma área específica
+         com o conhecimento necessário para suas respectivas funções. Dividimos nossos projetos
+          em quatro áreas principais: back-end, front-end, banco de dados e design.
+
+    </p>
+    </section>
+
+    <div id="fimDaPagina"></div>
+
+    <script>
+        function scrollToBottom() {
+            var conteudo = document.getElementById('fimDaPagina');
+            conteudo.scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+
+    <div class="qrCodeContainer">
+        <!-- Imagem do QR code -->
+        <img src="https://live.staticflickr.com/65535/53517864913_f79c13151f_o.png" alt="QR Code">
+    </div>
+  
 </body>
 
 </html>
