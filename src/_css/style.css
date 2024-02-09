@@ -18,7 +18,7 @@ body, html {
 
         .primeiraImagem {
             background-image: url('https://live.staticflickr.com/65535/53517614666_dfb4cff54a_o.jpg');
-            min-height: 100%;
+            min-height: 85%;
         }
 
         .segundaImagem {
