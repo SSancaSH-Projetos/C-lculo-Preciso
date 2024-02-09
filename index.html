@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WebSite em Parallax</title>
+    <title>Calculo Preciso</title>
+    <link rel="icon" href="favicon.ico" type="https://private-user-images.githubusercontent.com/158601854/301945553-da4a96b3-9b85-4108-9d7d-10adb4117c1d.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MDc0OTk5MjQsIm5iZiI6MTcwNzQ5OTYyNCwicGF0aCI6Ii8xNTg2MDE4NTQvMzAxOTQ1NTUzLWRhNGE5NmIzLTliODUtNDEwOC05ZDdkLTEwYWRiNDExN2MxZC5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwMjA5JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDIwOVQxNzI3MDRaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT05NjU4MzExMzYzY2I3NmJjNjU5MzhlOTcxNmU0OGQ1ZmZhZWY2NTE3YzZlZTgxMWExZTZlZWE2NTEyMDMwMjA4JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.LEfhTKA73M1I7Z6910IJzO9fGgJKC6H7HtWfrUSEkiE">
+
 
     <style>
         body, html {
@@ -58,8 +60,8 @@
         }
 
         .secaoClara {
-            background-color: #282e34;
-            color: #ddd;
+            background-color: #f4f4f4;
+            color: #667;
         }
 
         .secaoEscura {
@@ -76,7 +78,7 @@
             font-size: 27px;
             letter-spacing: 8px;
             text-transform: uppercase;
-            opacity: 1;
+            opacity: 0.7;
         }
 
         .rotulo {
@@ -95,13 +97,13 @@
             margin: 0;
             padding: 0;
             overflow: hidden;
-            background-color: #1e19197b;
-            opacity: 1;
+            background-color: #1e1919;
+            opacity: 0.5;
         }
 
         li {
             float: left;
-            margin-right: 5px;
+            border-right: 1px solid #bbb;
         }
 
         li:last-child {
@@ -114,16 +116,14 @@
             text-align: center;
             padding: 14px 16px;
             text-decoration: none;
-            background-color: #08007f;
-            border-radius: 15px;
         }
 
         li a:hover:not(.active) {
-            background-color: #261f84;
+            background-color: #d83619;
         }
 
         .active {
-            background-color: #08007f;
+            background-color: #d83619;
         }
 
         @media(max-width: 560px) {
@@ -155,7 +155,69 @@
         .qrCodeContainer img {
             width: 100%;
             height: auto;
-        }        
+        }      
+        
+        .sobre {
+    padding: 20px;
+    margin: 0;
+    background-image: linear-gradient(to bottom,rgb(225, 6, 6),rgb(222, 76, 76), rgb(249, 171, 179));
+    color:white;
+}
+
+.alinhadoAoCentro {
+    text-align: center;
+    padding: 10px;
+}
+
+.alinhadoTextoSobre {
+    text-align: justify;
+    font-size: 18px;
+}
+
+.coluna {
+    float: left;
+    width: 32%;
+    margin-bottom: 15px;
+    padding: 0 8px;
+}
+
+.cartao {
+    box-shadow: 0 4px 20px 0 rgb(0, 0, 0);
+    margin: 8px;
+    font-size: 16px; 
+}
+
+.imagemDeIdentificacao {
+    width: 100%;
+    height: 400px;
+}
+
+.titulacao {
+    color: grey;
+}
+
+.botao {
+    border-radius: 5px; 
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: black;
+    text-align: center;
+    cursor: pointer;
+    width: 50%;
+    font-size: 16px;
+}
+
+.botao:hover {
+    opacity: 0.5;
+}
+
+.alinharBotaoAoCentro {
+    text-align: center;
+
+}
        
     </style>
 </head>
@@ -268,6 +330,65 @@ Apesar da interface simples, a complexidade técnica dos cálculos exige um conh
         <img src="https://live.staticflickr.com/65535/53517864913_f79c13151f_o.png" alt="QR Code">
     </div>
   
+    <h2 class="alinhadoAoCentro">PrecisionTech Group</h2>
+    <div class="coluna">
+        <div class="cartao">
+            <img class="imagemDeIdentificacao" src="https://live.staticflickr.com/65535/53519145128_c21642f65b_o.jpg " alt="Lebron James">
+            <div class="alinharBotaoAoCentro">
+            <h2>Davi de Sales Lima</h2>
+            <p class="titulacao">Líder do projeto</p>
+            <p>O responsável pelo projeto, desempenha a função de CEO oferecendo suporte às demais áreas.</p>
+            <h3>@davi_salesl</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="coluna">
+        <div class="cartao">
+        <img class="imagemDeIdentificacao" src="https://live.staticflickr.com/65535/53519293394_7cff58d558_o.jpg " alt="Michael Jordan">
+        <div class="alinharBotaoAoCentro">
+        <h2 class="alinharBotaoAoCentro">Henrique Linhares</h2>
+        <p class="titulacao">Desenvolvedor Back-End</p>
+        <p >
+            Desenvolvedor back-end comprometido em transformar lógica de negócios em soluções eficientes</p>
+        <h3>@h.linhares_</h3>
+        </div>
+        </div>
+    </div>
+    <div class="coluna">
+        <div class="cartao">
+        <img class="imagemDeIdentificacao" src="https://live.staticflickr.com/65535/53519407645_7910e63b6d_o.jpg " alt="Kobe Bryant">
+        <div class="alinharBotaoAoCentro">
+        <h2>Diogo Pereira dos Santos</h2>
+        <p class="titulacao">Desenvolvedor Front-End</p>
+        <p>Desenvolvedor front-end comprometido em criar experiências web. Com proficiência em HTML, CSS e JavaScript</p>
+        <h3>@diogopereiras23</h3>
+        </div>
+        </div>
+    </div>
+     <div class="coluna">
+        <div class="cartao">
+        <img class="imagemDeIdentificacao" src="https://live.staticflickr.com/65535/53518089717_c57612a71f_o.jpg" alt="Kobe Bryant">
+        <div class="alinharBotaoAoCentro">
+        <h2>Danielly Cristina de Assis</h2>
+        <p class="titulacao">Designer</p>
+        <p>Designer dedicada e comprometida em criar experiências visuais impactantes e esteticamente agradáveis.</p>
+        <h3>@_ssdanielly</h3>
+        </div>
+        </div>
+    </div>
+     <div class="coluna">
+        <div class="cartao">
+        <img class="imagemDeIdentificacao" src="https://live.staticflickr.com/65535/53519145133_6793318d13_o.jpg " alt="Kobe Bryant">
+        <div class="alinharBotaoAoCentro">
+        <h2>Luiz Miguel Gallo Giglioti</h2>
+        <p class="titulacao">Administrador de Banco de Dados</p>
+        <p>Administrador de banco de dados comprometido em assegurar a integridade, segurança e desempenho eficiente dos sistema.</p>
+        <h3>@_luizmiguel07_</h3>
+        </div>
+        </div>
+    </div>
+
 </body>
 
 </html>
