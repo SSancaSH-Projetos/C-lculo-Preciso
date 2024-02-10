@@ -27,6 +27,14 @@
             background-attachment: fixed;
         }
 
+        .sextaImagem{
+            position: relative;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: scroll;
+        }
+
         .primeiraImagem {
             background-image: url('https://live.staticflickr.com/65535/53517614666_dfb4cff54a_o.jpg');
             min-height: 85%;
@@ -51,6 +59,11 @@
         .quintaImagem {
             background-image: url('https://live.staticflickr.com/65535/53517895973_69ebaee85f_o.png');
             min-height: 460px;
+        }
+
+        .sextaImagem {
+            background-image: url('https://live.staticflickr.com/65535/53519691016_50e2b8a078_o.jpg');
+            min-height: 700px;
         }
 
         .secao {
@@ -128,7 +141,7 @@
         }
 
         @media(max-width: 560px) {
-            .primeiraImagem, .segundaImagem, .terceiraImagem, .quartaImagem, .quintaImagem {
+            .primeiraImagem, .segundaImagem, .terceiraImagem, .quartaImagem, .quintaImagem, .sextaImagem {
                 background-attachment: scroll;
             }
         }
@@ -142,20 +155,7 @@
             line-height: 0.8cm;
             color: black;
             position: relative;
-        }
-
-        .qrCodeContainer {
-            position: absolute;
-            top: 65px; 
-            right: 10px; 
-            width: 100px; 
-            height: auto; 
-        }
-
-        .qrCodeContainer img {
-            width: 100%;
-            height: auto;
-        }      
+        }    
         
 .sobre {
     padding: 20px;
@@ -182,18 +182,21 @@
 }
 
 .cartao {
-    box-shadow: 0 4px 20px 0 rgb(0, 0, 0);
+    box-shadow: 0 4px 22px 0 rgb(202, 202, 202);
     margin: 8px;
     font-size: 16px; 
+    border-radius: 15px;
 }
 
 .imagemDeIdentificacao {
     width: 100%;
     height: 400px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
 }
 
 .titulacao {
-    color: black;
+    color: white;
 }
 
 @media screen and (max-width: 768px) {
@@ -204,8 +207,13 @@
 
 .footer {
     background-image: linear-gradient(to bottom,#282e34,#4f4c79, #08007f);
-    padding: 5px;
+    padding: 15px;
+    position: static;
     clear: both; 
+    bottom: 0; /* Alinhe o rodapé na parte inferior */
+    width: 100%;
+    align-items: center;
+    
 }
 
 .fa {
@@ -331,6 +339,21 @@ Apesar da interface simples, a complexidade técnica dos cálculos exige um conh
           em quatro áreas principais: back-end, front-end, banco de dados e design.
 
     </p>
+
+    <div class="sextaImagem">
+        <div class="texto">
+            <span class="rotulo transicao">
+                nossa pagina no GitHub
+            </span>
+        </div>
+    </div>
+    <section class="secao secaoEscura">
+        <h2>O que voce encontra:</h2>
+        <p>
+            No nosso repositório, você pode encontrar todos os arquivos do nosso projeto "Cálculo Preciso".
+             Lá, você terá acesso ao código deste portfólio e a outros arquivos relacionados ao nosso projeto.
+        </p>
+
     </section>
 
     <div id="fimDaPagina"></div>
@@ -342,10 +365,6 @@ Apesar da interface simples, a complexidade técnica dos cálculos exige um conh
         }
     </script>
 
-    <div class="qrCodeContainer">
-        <img src="https://live.staticflickr.com/65535/53517864913_f79c13151f_o.png" alt="QR Code">
-    </div>
-  
     <h2 class="alinhadoAoCentro">PrecisionTech Group</h2>
     <div class="coluna">
         <div class="cartao">
