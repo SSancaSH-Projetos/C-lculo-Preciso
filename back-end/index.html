@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciamento de Peças</title>
+    <style>
+        .error {
+            color: red;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            margin-top: 0;
+            color: #333;
+        }
+
+        h3 {
+            color: #555;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .error {
+            color: red;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 5px;
+        }
+    
+
+    </style>
+</head>
+<body>
+    <h2>Gerenciamento de Peças</h2>
+    <div>
+        <h3>Cadastro de Peças</h3>
+            <form id="partForm">
+                <label for="partName">Nome da Peça:</label><br>
+                <input type="text" id="partName" name="partName" required><br>
+
+                <label for="partDescription">Descrição:</label><br>
+                <textarea id="partDescription" name="partDescription" required></textarea><br>
+
+                <label for="partMaterial">Matéria-Prima:</label><br>
+                <input type="text" id="partMaterial" name="partMaterial" required><br>
+
+                <label for="partCostPerKg">Custo por Kg:</label><br>
+                <input type="number" id="partCostPerKg" name="partCostPerKg" min="0" step="0.01" required><br>
+
+                <label for="partHeight">Altura:</label><br>
+                <input type="number" id="partHeight" name="partHeight" min="0" step="0.01" required><br>
+
+                <label for="partWidth">Largura:</label><br>
+                <input type="number" id="partWidth" name="partWidth" min="0" step="0.01" required><br>
+
+                <label for="partLength">Comprimento:</label><br>
+                <input type="number" id="partLength" name="partLength" min="0" step="0.01" required><br>
+
+                <button type="button" onclick="createPeca()">Cadastrar</button>
+            </form>
+    </div>
+    
+    <div>
+        <h3>Lista de Peças</h3>
+        <ul id="partList"></ul>
+    </div>
+
+    <script>
+        async function createPeca() {
+            const partData = {
+                nome: document.getElementById("partName").value,
+                descricao: document.getElementById("partDescription").value,
+                materiaPrima: document.getElementById("partMaterial").value,
+                custoKg: parseFloat(document.getElementById("partCostPerKg").value),
+                altura: parseFloat(document.getElementById("partHeight").value),
+                largura: parseFloat(document.getElementById("partWidth").value),
+                comprimento: parseFloat(document.getElementById("partLength").value)
+            };
+
+            try {
+                const response = await fetch('http://10.110.12.39:8080/pecas', { // Corrigido o URL
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(partData)
+                });
+
+                if (!response.ok) {
+                    throw new Error('Erro ao cadastrar a peça.');
+                }
+
+                const newPeca = await response.json();
+                alert('Peça cadastrada com sucesso!');
+                resetForm();
+                fetchPeças();
+            } catch (error) {
+                console.error('Erro:', error);
+                alert('Erro ao cadastrar a peça. Por favor, tente novamente.');
+            }
+        }
+
+        function resetForm() {
+            document.getElementById("partForm").reset();
+        }
+
+        async function fetchPeças() {
+            const response = await fetch('http://10.110.12.39:8080/pecas'); // Corrigido o URL
+            const pecas = await response.json();
+
+            const partList = document.getElementById("partList");
+            partList.innerHTML = "";
+
+            pecas.forEach(peca => {
+                const listItem = document.createElement("li");
+                listItem.textContent = `${peca.nome}: ${peca.descricao}`;
+                partList.appendChild(listItem);
+            });
+        }
+
+        // Carregar a lista de peças ao carregar a página
+        window.onload = fetchPeças;
+    </script>
+</body>
+</html>
