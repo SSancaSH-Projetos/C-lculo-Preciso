@@ -23,6 +23,8 @@ const LoginScreen = ({ navigation }) => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
+  
+
   const areFieldsFilled = () => {
     return username.trim() !== "" && password.trim() !== "";
   };
