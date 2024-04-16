@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+
+.body-container {
+  background-image: url("../images/bg3.jpg");
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+
+.login-container {
+  background-color: rgba(98, 98, 98, 0.8);
+  border-radius: 5px 90px 5px 5px;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+}
+
+.logoCalculoPreciso {
+  width: 200px;
+  position: absolute;
+  /* Adicionado */
+  left: 80%;
+  /* Adicionado */
+  top: 1.5%;
+  transform: translateY(-20%);
+  transform: translateX(-50%);
+  /* Adicionado */
+}
+
+
+.spinning-parts {
+  display: flex;
+  margin: 5%;
+  background-color: rgba(98, 98, 98, 0.8);
+  border-radius: 5px 5px 5px 90px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  width: 30vw;
+  font-size: 25px;
+  font-family: "Orbitron";
+
+}
+
+.buttons-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px
+}
+
+.parts-3d {
+  width: 50vw;
+  height: 80vh;
+}
+
+.login-text-box{
+  width: 100%;
+}
