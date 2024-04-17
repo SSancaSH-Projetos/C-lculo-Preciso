@@ -1,0 +1,68 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Simple A-Frame Scene with Controls</title>
+        <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+        <style>
+            #scene-frame {
+                width: 800px;
+                height: 600px;
+                border: 1px solid black;
+                margin: 20px auto;
+            }
+            #button-container {
+                text-align: center;
+            }
+            .button {
+                display: inline-block;
+                padding: 10px 20px;
+                margin: 10px;
+                background-color: #4CAF50;
+                color: white;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+            #radius-input {
+                padding: 5px;
+                margin: 10px;
+                width: 100px;
+            }
+        </style>
+    </head>
+    <body style="background-color: rgb(0, 0, 0);">
+        <div id="scene-frame">
+            <a-scene embedded>
+                <!-- Camera -->
+                <a-entity camera position="0 1.6 0" look-controls></a-entity>
+
+                
+                <!-- Sphere -->
+                <a-sphere id="sphere" position="0 1.25 -5" radius="1.25" color="#aaa"  material="roughness: 0.2"></a-sphere>
+
+
+            
+                <a-sky color="#000"></a-sky>
+            </a-scene>
+        </div>
+
+        <div id="button-container">
+            <input type="number" id="radius-input" placeholder="Enter radius">
+            <button class="button" onclick="changeSphereRadius()">Change Radius</button>
+        </div>
+
+        <script>
+            function changeSphereRadius() {
+                var newRadius = parseFloat(document.getElementById('radius-input').value);
+                if (!isNaN(newRadius)) {
+                    var sphere = document.getElementById('sphere');
+                    sphere.setAttribute('radius', newRadius);
+                } else {
+                    alert('Please enter a valid number for the radius.');
+                }
+            }
+        </script>
+    </body>
+    </html>

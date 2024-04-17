@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+
+.body-container {
+  background-image: url("../images/bg3.jpg");
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 100px;
+  margin-left: 0;
+  margin-top: 30px;
+
+}
+
+.login-container {
+  background-color: rgba(98, 98, 98, 0.8);
+  border-radius: 5px 90px 5px 5px;
+  display: flex;
+  flex-direction: column;
+  columns: 40%;
+  color: #fff;
+}
+
+.logoCalculoPreciso {
+  width: 150px;
+  margin-top: 10%;
+  align-items: center;
+  margin-left: 25%;
+}
+
+
+.spinning-parts {
+  display: flex;
+  margin: 5%;
+  background-color: rgba(98, 98, 98, 0.8);
+  border-radius: 5px 5px 5px 90px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  width: 30vw;
+  font-size: 25px;
+  font-family: "Orbitron";
+
+}
+
+.buttons-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px
+}
+
+.parts-3d {
+  width: 50vw;
+  height: 80vh;
+}
+
+.login-text-box {
+  width: 100%;
+}
+
+
+.navbar {
+  overflow: hidden;
+  background-color: #666;
+  padding: 20px;
+  border-top-right-radius: 40px;
+  border-bottom-right-radius: 40px;
+}
+
+.navbar a {
+  float: right;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+
+}
+
+
+.navbar a:hover {
+  background-color: #dddddd8c;
+}
+
+/* Style the header */
+header {
+
+
+
+  width: 100%;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+  border: 0;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+
+}
