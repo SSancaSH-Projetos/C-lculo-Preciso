@@ -11,13 +11,12 @@ import java.util.Objects;
 @NoArgsConstructor
 @Entity
 public class Usuario {
+
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private String email;
     private String nome;
     private String curso;
     private TipoUsuario tipoUsuario;
-    private String email;
     private String senha;
 
     public enum TipoUsuario {
