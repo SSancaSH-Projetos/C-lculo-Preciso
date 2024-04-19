@@ -25,4 +25,6 @@ public class Material {
     @Column(name = "preco_cavaco")
     private Double precoCavaco;
 
+    @OneToOne(mappedBy = "material")
+    private Peca peca;
 }

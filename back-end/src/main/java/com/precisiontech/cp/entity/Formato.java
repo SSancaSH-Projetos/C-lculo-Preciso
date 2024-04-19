@@ -5,19 +5,19 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Data
+import java.io.Serializable;
+
 @AllArgsConstructor
 @NoArgsConstructor
+@Data
 @Entity
-public class Maquina {
+@Table(name = "formato")
+public class Formato implements Serializable {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String nome;
-    private double precoPorHora;
+    private String volume;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "peca_id")
-    private Peca peca;
 
 }

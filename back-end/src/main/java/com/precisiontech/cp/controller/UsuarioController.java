@@ -1,30 +1,65 @@
 package com.precisiontech.cp.controller;
 
-import com.precisiontech.cp.repository.AlunoRepository;
-import com.precisiontech.cp.repository.ProfessorRepository;
+import com.precisiontech.cp.entity.Usuario;
+import com.precisiontech.cp.repository.UsuarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/usuarios")
 public class UsuarioController {
 
     @Autowired
-    private AlunoRepository alunoRepository;
+    private UsuarioRepository usuarioRepository;
 
-    @Autowired
-    private ProfessorRepository professorRepository;
-
-    @PostMapping("/alunos")
-    public void cadastrarAluno(@RequestBody Aluno aluno) {
-        alunoRepository.save(aluno);
+    @GetMapping
+    public ResponseEntity<List<Usuario>> getAllUsuarios() {
+        List<Usuario> usuarios = usuarioRepository.findAll();
+        return ResponseEntity.ok(usuarios);
     }
 
-    @PostMapping("/professores")
-    public void cadastrarProfessor(@RequestBody Professor professor) {
-        professorRepository.save(professor);
+    @GetMapping("/{email}")
+    public ResponseEntity<Usuario> getUsuarioByEmail(@PathVariable String email) {
+        Optional<Usuario> usuarioOptional = usuarioRepository.findById(email);
+        return usuarioOptional.map(ResponseEntity::ok)
+                .orElseGet(() -> ResponseEntity.notFound().build());
+    }
+
+    @PostMapping
+    public ResponseEntity<Usuario> createUsuario(@RequestBody Usuario usuario) {
+        Usuario createdUsuario = usuarioRepository.save(usuario);
+        return ResponseEntity.status(HttpStatus.CREATED).body(createdUsuario);
+    }
+
+    @PutMapping("/{email}")
+    public ResponseEntity<Usuario> updateUsuario(@PathVariable String email, @RequestBody Usuario usuarioDetails) {
+        Optional<Usuario> usuarioOptional = usuarioRepository.findById(email);
+        if (usuarioOptional.isPresent()) {
+            Usuario usuario = usuarioOptional.get();
+            usuario.setNome(usuarioDetails.getNome());
+            usuario.setCurso(usuarioDetails.getCurso());
+            usuario.setTipoUsuario(usuarioDetails.getTipoUsuario());
+            usuario.setSenha(usuarioDetails.getSenha());
+            Usuario updatedUsuario = usuarioRepository.save(usuario);
+            return ResponseEntity.ok(updatedUsuario);
+        } else {
+            return ResponseEntity.notFound().build();
+        }
+    }
+
+    @DeleteMapping("/{email}")
+    public ResponseEntity<Void> deleteUsuario(@PathVariable String email) {
+        Optional<Usuario> usuarioOptional = usuarioRepository.findById(email);
+        if (usuarioOptional.isPresent()) {
+            usuarioRepository.deleteById(email);
+            return ResponseEntity.noContent().build();
+        } else {
+            return ResponseEntity.notFound().build();
+        }
     }
 }

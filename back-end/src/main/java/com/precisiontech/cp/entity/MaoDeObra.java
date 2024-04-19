@@ -1,9 +1,6 @@
 package com.precisiontech.cp.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -11,7 +8,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Entity
+@Entity(name = "MaoDeObra")
 public class MaoDeObra {
 
     @Id
@@ -20,5 +17,8 @@ public class MaoDeObra {
     private String profissional;
     private double precoPorHora;
 
-    // Outros métodos, getters e setters, etc...
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "peca_id")
+    private Peca peca;
+
 }

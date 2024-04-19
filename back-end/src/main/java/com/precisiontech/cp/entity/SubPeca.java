@@ -5,19 +5,22 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Data
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+
 @AllArgsConstructor
 @NoArgsConstructor
+@Data
 @Entity
-public class Maquina {
+@Table(name = "subpeca")
+public class SubPeca implements Serializable {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nome;
-    private double precoPorHora;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "peca_id")
-    private Peca peca;
 
 }
