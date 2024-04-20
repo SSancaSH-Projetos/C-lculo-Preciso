@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+
+
+.body-container {
+  background-image: url("../images/bg3.jpg");
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 0;
+
+}
+
+.logoCalculoPreciso {
+  width: 250px;
+  align-items: center;
+}
+
+.logo-container{
+  display: flex;
+  justify-content: center;
+  margin: 2vh;
+}
+
+.precision-tech-container{
+  display: flex;
+  justify-content: center;
+}
+
+h2 {
+  color: white;
+  font-family: "Orbitron";
+  font-size: 2.5em;
+}
+
+h3 {
+  color: white;
+  font-family: "Orbitron";
+}
+
+h4 {
+  color: white;
+  font-family: "Orbitron";
+}
+
+h6 {
+  color: white;
+  font-family: "Orbitron";
+  font-size: 0.4em;
+}
+
+.main-container {
+  display: flex;
+  width: 70%;
+  height: 100%;
+  justify-content: space-around;
+
+}
+
+.historico-tabela {
+  font-size: 1.2em; /* Tamanho da fonte */
+  border-collapse: collapse; /* Para garantir que as células da tabela fiquem bem alinhadas */
+}
+
+.historico-tabela th,
+.historico-tabela td {
+  border: 1px solid #000; /* Adiciona bordas às células da tabela */
+  padding: 8px; /* Adiciona espaçamento interno para melhor legibilidade */
+  text-align: center; /* Centraliza o texto dentro das células */
+  color: #fff; /* Cor do texto branco */
+}
+
+.historico-tabela th {
+  background-color: #f2f2f2; /* Cor de fundo mais clara para cabeçalhos da tabela */
+  color: #000; /* Cor do texto preto para cabeçalhos */
+}
+
+.historico-tabela tr:nth-child(even) {
+  background-color: #333; /* Cor de fundo escura para linhas pares */
+}
+
+.historico-tabela tr:hover {
+  background-color: #666; /* Cor de fundo ao passar o mouse sobre uma linha */
+}
+
+.cards-container{
+  display: flex;
+}
+
+.card {
+  background-color: #6d6d6d;
+  border-radius: 5px;
+  padding: 20px;
+  color: white;
+  margin: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card i {
+  font-size: 60px;
+  margin-bottom: 10px;
+  color: #4CAF50;
+}
+.card .value {
+  font-size: 30px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.metric {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+
+
+.historico-container {
+  background-color: rgba(98, 98, 98, 0.8);
+  border-radius: 5px 90px 5px 5px;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  padding: 7%;
+}
+
+.informacoes-container {
+  background-color: rgba(98, 98, 98, 0.8);
+  border-radius: 5px 5px 5px 90px;
+  display: flex;
+  padding: 7%;
+  flex-direction: column;
+  color: #fff;
+  margin-top: 2%;
+}
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 2%;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 36vh;
+  width: 30vw;
+  font-size: 25px;
+  font-family: "Orbitron";
+
+}
+
+.buttons-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px
+}
+
+.parts-3d {
+  width: 50vw;
+  height: 80vh;
+}
+
+.login-text-box {
+  width: 100%;
+}
+
+
+
+
+.navbar a:hover {
+  background-color: #dddddd8c;
+}
+
+/* Style the header */
+header {
+  width: 100%;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+  border: 0;
+  padding-top: 10px;
+}
+
+.layout-container {
+  background-color: rgba(98, 98, 98, 0.8);
+  border-radius: 5px 90px 5px 5px;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  font-family: "Orbitron";
+  height: 80vh;
+  width: 30vw;
+}
+
+.buttons{
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.btn {
+  background-color: #C0C4D2;
+  border: none;
+  color: #fff;
+  font-size: 1.5em;
+  padding: 10px 10px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 0 5px 5px 0;
+  /* Ajusta apenas os cantos à direita */
+  width: 60%;
+  position: flex;
+
+  font-family: "Orbitron";
+}
+
+
+

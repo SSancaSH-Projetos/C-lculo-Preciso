@@ -2,10 +2,10 @@
 <html lang="pt-BR ">
 
 <head>
-  <script src="assets/js/script.js" defer></script>
   <title>Cálculo preciso by Precision Tech</title>
-  <link rel="stylesheet" href="assets/css/styleDashboard.css">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/geral.css">
+  <link rel="stylesheet" href="assets/css/dashboard.css">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -25,51 +25,98 @@
 
 <body class="body-container">
 
-  <h2>Calculadora de Peças de Usinagem</h2>
+  <h2>Cálculo Preciso</h2>
 
-  <div class="container">
+  <div class="main-container">
 
     <div class="layout-container">
-      <!-- Conteúdo do layou<h1>Meu Título</h1>t-container -->
-      <img class="logoCalculoPreciso" src="assets/images/logoBranco.png" alt="PrecisionTechLogo">
-      <!-- <a href="dashboard.html"><button class="btn" style="background-color: #C0C4D2;">Tela Inicial</button></a> -->
-      <a href="cadastroPeca.html"><button class="btn" style="background-color: #C0C4D2;">Nova Peça</button></a>
-      <a href="custos.html"><button class="btn" style="background-color: #C0C4D2;">Custos</button> </a>
-      <a href="relatorio.html"><button class="btn" style="background-color: #C0C4D2;">Relatorios</button></a>
-      <h3> By PrecisionTech </h3>
+      <div class="logo-container">
+        <img class="logoCalculoPreciso" src="assets/images/logoBranco.png" alt="PrecisionTechLogo">
+      </div>
+      <div class="buttons">
+        <a href="cadastroPeca.html"><button class="btn" style="background-color: #C0C4D2;">Nova Peça</button></a>
+        <a href="custos.html"><button class="btn" style="background-color: #C0C4D2;">Custos</button> </a>
+        <a href="relatorio.html"><button class="btn" style="background-color: #C0C4D2;">Relatorios</button></a>
+      </div>
+      <div class="precision-tech-container">
+        <h3> By PrecisionTech </h3>
+      </div>
     </div>
 
 
-    <div class="container4">
-      <div class="container2">
-        <form id="usinagemForm" class="login-form">
-
-          <h4>Historico</h4>
-
-          <h6>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-          </h6>
+    <div class="content-container">
+      <div class="historico-container">
+        <h4 class="sub-titulos">Histórico</h4>
+        <form id="usinagemForm" class="historico-tabela">
+          <table>
+            <thead>
+              <tr>
+                <th>Nome da Peça</th>
+                <th>Responsável</th>
+                <th>Atualizado (Dia)</th>
+                <th># de Sub-Peças</th>
+                <th>Orçamento</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Peça 1</td>
+                <td>Responsável 1</td>
+                <td>19/04/2024</td>
+                <td>5</td>
+                <td>R$ 100,00</td>
+              </tr>
+              <tr>
+                <td>Peça 2</td>
+                <td>Responsável 2</td>
+                <td>18/04/2024</td>
+                <td>3</td>
+                <td>R$ 75,00</td>
+              </tr>
+              <tr>
+                <td>Peça 3</td>
+                <td>Responsável 3</td>
+                <td>17/04/2024</td>
+                <td>7</td>
+                <td>R$ 150,00</td>
+              </tr>
+              <!-- Adicione mais linhas conforme necessário -->
+            </tbody>
+          </table>
+          <div style="width: 100%; display: flex; justify-content: center; margin-top: 4%;">
+            <a href="historico.html" class="btn" style="background-color: #727272;">Clique para ver o histórico completo</a>
+          </div>
         </form>
       </div>
       <!-- outro container -->
-      <div class="container3">
-        <form id="usinagemForm" class="login-form">
-          <h4>Informações</h4>
-
-          <h6>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-          </h6>
-        </form>
+      <div class="informacoes-container">
+        <h4 class="sub-titulos">Informações</h4>
+        <div class="cards-container">
+            <div class="card">
+                <i class="fas fa-cogs"></i>
+                <div class="metric">Quantidade de Peças Calculadas</div>
+                <div class="value">1000</div>
+            </div>
+            <div class="card">
+                <i class="fas fa-recycle"></i>
+                <div class="metric">Quantidade de Cavaco Produzido</div>
+                <div class="value">500 kg</div>
+            </div>
+            <div class="card">
+                <i class="fas fa-tree"></i>
+                <div class="metric">Quantidade de Matéria Prima Consumida</div>
+                <div class="value">2000 kg</div>
+            </div>
+            <!-- Adicione mais cards conforme necessário -->
+        </div>
       </div>
     </div>
   </div>
 
 </body>
+
+<footer class="footer">
+  <p class="footer-text">© 2024 Cálculo Preciso by Precision Tech - Todos os direitos reservados</p>
+</footer>
 
 </html>

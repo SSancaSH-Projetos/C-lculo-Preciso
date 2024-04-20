@@ -21,28 +21,11 @@
     color: #fff;
     margin-right: 1%;
     font-family: "Orbitron";
-    height: 90vh;
     width: 60vw;
     margin-left: 100px;
 }
 
-.navbar {
-    overflow: hidden;
-    background-color: #626371dc;
-    padding: 20px;
-    border-top-right-radius: 40px;
-    border-bottom-right-radius: 40px
-}
 
-.navbar a {
-    float: right;
-    font-size: 16px;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-
-}
 
 table {
     border-collapse: collapse;
