@@ -1,55 +1,114 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+  <head>
+    <title>Cálculo preciso by Precision Tech</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/images/favicon-32x32.png"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/geral.css" />
+    <link rel="stylesheet" href="assets/css/cadastroUsuario.css" />
+    <script src="assets/js/cadastroProfessor.js" defer></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
 
-<head>
-  <title>Cálculo preciso by Precision Tech</title>
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/geral.css">
-  <link rel="stylesheet" href="assets/css/cadastroUsuario.css">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
+  <body class="body-container">
+    <div class="main-container">
+      <div class="content-container">
+        <div class="login-container">
+          <form class="login-form">
+            <div
+              style="
+                width: 80%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+              "
+            >
+              <img
+                class="logoCalculoPreciso"
+                src="assets/images/logoBranco.png"
+                alt="PrecisionTechLogo"
+              />
 
-<body class="body-container">
-  <div class="main-container">
-    <div class="content-container">    
-      <div class="login-container">
-        <form class="login-form">
-          <div style="width: 80%; display: flex; flex-direction: column; align-items: center;">
-            <img class="logoCalculoPreciso" src="assets/images/logoBranco.png" alt="PrecisionTechLogo">
+              <div class="cadastro-elementos">
+                <label for="usuario">Usuário</label>
+                <input
+                  class="login-text-box"
+                  type="text"
+                  id="usuario"
+                  name="usuario"
+                  placeholder="Ex: ProfJoao"
+                />
+                <br />
+                <label for="usuario">Email:</label>
+                <input
+                  class="login-text-box"
+                  type="text"
+                  id="email"
+                  name="email"
+                  placeholder="Ex: joaoprof@gmail.com"
+                />
+                <br />
+                <label for="senha">Senha:</label>
+                <input
+                  class="login-text-box"
+                  type="text"
+                  id="senha"
+                  name="senha"
+                  placeholder="Ex: Pass#123"
+                />
+                <br />
+                <label for="senha">Confirmar senha:</label>
+                  <input
+                    class="login-text-box"
+                    type="text"
+                    id="confirmarSenha"
+                    name="confirmarSenha"
+                    placeholder="Ex: Pass#123"
+                  /><br>
 
-            <div class="cadastro-elementos">
-              <label for="usuario">Usuário</label>
-              <input class="login-text-box" type="text" id="usuario" name="usuario" placeholder="Ex: ProfJoao">
-              <br>
-              <label for="usuario">Email:</label>
-              <input class="login-text-box" type="text" id="email" name="email"
-              placeholder="Ex: joaoprof@gmail.com">
-              <br>
-              <label for="senha">Senha:</label>
-              <input class="login-text-box" type="text" id="senha" name="senha" placeholder="Ex: Pass#123">
-              <br>
-              <label for="senha">Confirmar senha:</label>
-              <input class="login-text-box" type="text" id="confirmarSenha" name="confirmarSenha"
-              placeholder="Ex: Pass#123">
+                  <div class="radio-group">
+                    <input type="radio" id="professor" name="tipo_usuario" value="professor">
+                    <label for="professor"><span>Sou professor</span></label>
+                    
+                    <input type="radio" id="aluno" name="tipo_usuario" value="aluno">
+                    <label for="aluno"><span>Sou aluno</span></label>
+                  </div>
+
+              <br />
+              <div>
+                <button
+                  class="btn"
+                  style="
+                    background-color: #c0c4d2;
+                    font-size: 30px;
+                    width: 100%;
+                  "
+                  href="index.html"
+                >
+                  Cadastre-se
+                </button>
+              </div>
             </div>
-            <br>
-            <div>
-              <button class="btn" style="background-color: #C0C4D2; font-size: 30px; width: 100%;" href="index.html">Cadastre-se</button>
-            </div>
-
-          </div>
-          <br><br>
-          <div style="color: #fff; font-weight: 800;">By PRECISION TECH</div>
-        </form>
+            <br /><br />
+            <div style="color: #fff; font-weight: 800">By PRECISION TECH</div>
+          </form>
+        </div>
       </div>
     </div>
-  </div>
-</body>
+  </body>
 
   <footer class="footer">
-    <p class="footer-text">© 2024 Cálculo Preciso by Precision Tech - Todos os direitos reservados</p>
+    <p class="footer-text">
+      © 2024 Cálculo Preciso by Precision Tech - Todos os direitos reservados
+    </p>
   </footer>
-
 </html>
