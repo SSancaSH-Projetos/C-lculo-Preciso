@@ -1,0 +1,69 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "Turma",
+    "collectionId": "9a50bf7e-f933-4256-9402-7452ebf7be5c",
+    "dateExported": "2024-04-26T18:30:03.061Z",
+    "version": "1.2",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "e26a90f2-ae35-41f4-822a-c575011b262e",
+            "colId": "9a50bf7e-f933-4256-9402-7452ebf7be5c",
+            "containerId": "",
+            "name": "pegarTurmas",
+            "url": "http://localhost:8080/turmas",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2024-04-26T18:13:28.299Z",
+            "modified": "2024-04-26T18:13:46.884Z",
+            "headers": []
+        },
+        {
+            "_id": "e37f8d3e-4e38-4750-99be-6c375fafdcba",
+            "colId": "9a50bf7e-f933-4256-9402-7452ebf7be5c",
+            "containerId": "",
+            "name": "criarNovaTurma",
+            "url": "http://localhost:8080/turmas",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2024-04-26T18:14:47.232Z",
+            "modified": "2024-04-26T18:15:23.652Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\r\n  \"codTurma\": \"INF101\",\r\n  \"nome\": \"Introdução à Programação\"\r\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "e711ad79-389a-4efa-8094-c9f72713b487",
+            "colId": "9a50bf7e-f933-4256-9402-7452ebf7be5c",
+            "containerId": "",
+            "name": "deleteTurma",
+            "url": "http://localhost:8080/turmas/1",
+            "method": "DELETE",
+            "sortNum": 30000,
+            "created": "2024-04-26T18:15:41.864Z",
+            "modified": "2024-04-26T18:16:10.569Z",
+            "headers": []
+        },
+        {
+            "_id": "16fa3403-224c-4b63-9004-fefb629171c5",
+            "colId": "9a50bf7e-f933-4256-9402-7452ebf7be5c",
+            "containerId": "",
+            "name": "atualizarTurma",
+            "url": "http://localhost:8080/turmas/2",
+            "method": "PUT",
+            "sortNum": 40000,
+            "created": "2024-04-26T18:16:35.813Z",
+            "modified": "2024-04-26T18:17:28.093Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\r\n  \"codTurma\": \"INF1012\",\r\n  \"nome\": \"Introdução à Programação\"\r\n}",
+                "form": []
+            }
+        }
+    ],
+    "ref": "BTOvBaeMLpeaYxb3YIPyl9I3GdF5HlNzmLNJxxPLpWCHWWT8q8CtYq2CVc9uGpATQN8wcLvawJ4nUslXzLZRyA"
+}
