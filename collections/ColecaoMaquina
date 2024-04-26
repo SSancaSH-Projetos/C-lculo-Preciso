@@ -1,0 +1,69 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "Maquina",
+    "collectionId": "a919164e-0c17-463d-96b5-8b9908ea4200",
+    "dateExported": "2024-04-26T19:44:01.123Z",
+    "version": "1.2",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "7e0c7270-53d6-4628-aab5-2cf5b8e6270f",
+            "colId": "a919164e-0c17-463d-96b5-8b9908ea4200",
+            "containerId": "",
+            "name": "pegarTodosMaquina",
+            "url": "http://localhost:8080/maquinas",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2024-04-26T19:28:32.317Z",
+            "modified": "2024-04-26T19:29:52.396Z",
+            "headers": []
+        },
+        {
+            "_id": "8b77016f-df72-49a2-b548-ef5e7db43ab0",
+            "colId": "a919164e-0c17-463d-96b5-8b9908ea4200",
+            "containerId": "",
+            "name": "criarMaquina",
+            "url": "http://localhost:8080/maquinas",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2024-04-26T19:30:01.696Z",
+            "modified": "2024-04-26T19:42:30.049Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nome\": \"Torno CNC\",\n  \"preco_por_hora\": 25.0,\n  \"peca_id\": 1\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "0139b7a9-1371-4328-bece-2aaee77c85af",
+            "colId": "a919164e-0c17-463d-96b5-8b9908ea4200",
+            "containerId": "",
+            "name": "atualizaMaquina",
+            "url": "http://localhost:8080/maquinas/1",
+            "method": "PUT",
+            "sortNum": 30000,
+            "created": "2024-04-26T19:42:46.129Z",
+            "modified": "2024-04-26T19:43:12.847Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nome\": \"Torno do Senai\",\n  \"preco_por_hora\": 25.0,\n  \"peca_id\": 1\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "8ae39aec-e4ad-4883-9f86-3217901034a3",
+            "colId": "a919164e-0c17-463d-96b5-8b9908ea4200",
+            "containerId": "",
+            "name": "deletaMaquina",
+            "url": "http://localhost:8080/maquinas/1",
+            "method": "DELETE",
+            "sortNum": 40000,
+            "created": "2024-04-26T19:43:20.354Z",
+            "modified": "2024-04-26T19:43:34.562Z",
+            "headers": []
+        }
+    ],
+    "ref": "fVBkuTNrZtS6imLTLkFIoz4mQM94Q_06iWEg0YxahcqiMLa3RaNzrS_WiAF2MiBYlbTTpW2z-9-5tjdGrLYFnw"
+}

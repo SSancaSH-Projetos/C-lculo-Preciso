@@ -5,10 +5,14 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Entity(name = "MaoDeObra")
+@Entity
+@Table(name = "MaoDeObra")
 public class MaoDeObra {
 
     @Id
@@ -17,8 +21,7 @@ public class MaoDeObra {
     private String profissional;
     private double precoPorHora;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "peca_id")
-    private Peca peca;
+    @ManyToMany(mappedBy = "maosDeObra")
+    private List<Peca> pecas = new ArrayList<>();
 
 }

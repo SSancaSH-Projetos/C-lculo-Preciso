@@ -1,0 +1,69 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "Material",
+    "collectionId": "8f308a07-a480-45b0-abea-da2a7f7133b2",
+    "dateExported": "2024-04-26T19:21:59.572Z",
+    "version": "1.2",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "7a1caeea-440b-473a-ac42-d6eb1f097bfa",
+            "colId": "8f308a07-a480-45b0-abea-da2a7f7133b2",
+            "containerId": "",
+            "name": "pegarTodosMateriais",
+            "url": "http://localhost:8080/material",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2024-04-26T19:16:46.177Z",
+            "modified": "2024-04-26T19:17:09.958Z",
+            "headers": []
+        },
+        {
+            "_id": "6a4aba4f-8c78-43a3-99d3-b36ed55c26af",
+            "colId": "8f308a07-a480-45b0-abea-da2a7f7133b2",
+            "containerId": "",
+            "name": "criarMaterial",
+            "url": "http://localhost:8080/material",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2024-04-26T19:17:21.759Z",
+            "modified": "2024-04-26T19:20:22.492Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nome\": \"Titãnio\",\n  \"precoPorKg\": 20.0,\n  \"precoCavaco\": 5.0,\n  \"pecaid\": 1\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "2a5829dd-a724-4123-9002-04e6ff027a85",
+            "colId": "8f308a07-a480-45b0-abea-da2a7f7133b2",
+            "containerId": "",
+            "name": "atualizaMaterial",
+            "url": "http://localhost:8080/material/2",
+            "method": "PUT",
+            "sortNum": 30000,
+            "created": "2024-04-26T19:20:38.644Z",
+            "modified": "2024-04-26T19:21:17.884Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nome\": \"Aço\",\n  \"precoPorKg\": 20.0,\n  \"precoCavaco\": 5.0,\n  \"pecaid\": 1\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "4d0f85f6-1934-43cb-a8eb-faae344b6290",
+            "colId": "8f308a07-a480-45b0-abea-da2a7f7133b2",
+            "containerId": "",
+            "name": "deletaMaterial",
+            "url": "http://localhost:8080/material/2",
+            "method": "DELETE",
+            "sortNum": 40000,
+            "created": "2024-04-26T19:21:37.707Z",
+            "modified": "2024-04-26T19:21:48.482Z",
+            "headers": []
+        }
+    ],
+    "ref": "C0UpXpga22MlPj6W-bT3QGeVJ8fxmhBKzqoRBJ_U7VO6WLnyZyW73T_XI7ZWW4p5ELq7E6i6OvJC9Bf97DAlDg"
+}
