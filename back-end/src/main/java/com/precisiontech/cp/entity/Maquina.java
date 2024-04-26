@@ -12,6 +12,7 @@ import lombok.NoArgsConstructor;
 public class Maquina {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nome;
     private double precoPorHora;

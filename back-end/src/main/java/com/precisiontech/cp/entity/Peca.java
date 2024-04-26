@@ -25,7 +25,12 @@ public class Peca implements Serializable {
     private String nomeDaPeca;
     private Date dataDeCriacao;
 
-    @OneToMany(mappedBy = "peca", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+    @JoinTable(
+            name = "Peca_MaoDeObra",
+            joinColumns = @JoinColumn(name = "peca_id"),
+            inverseJoinColumns = @JoinColumn(name = "mao_de_obra_id")
+    )
     private List<MaoDeObra> maosDeObra = new ArrayList<>();
 
     @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
