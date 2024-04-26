@@ -1,0 +1,74 @@
+{
+    "sourceFile": "Front-End/assets/css/cadastroPeca.css",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 14,
+            "patches": [
+                {
+                    "date": 1714150710857,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1714150719638,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,6 +34,7 @@\n \r\n }\r\n \r\n .sub-pecas-adicionadas{\r\n-  \r\n+  background-color: aliceblue;\r\n+  padding: 2%;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1714150732617,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,5 +36,7 @@\n \r\n .sub-pecas-adicionadas{\r\n   background-color: aliceblue;\r\n   padding: 2%;\r\n+  margin: 2%;\r\n+  border: \r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1714150742300,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,6 +37,6 @@\n .sub-pecas-adicionadas{\r\n   background-color: aliceblue;\r\n   padding: 2%;\r\n   margin: 2%;\r\n-  border: \r\n+  border: dashed 1px #fff;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1714150759971,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,9 +34,9 @@\n \r\n }\r\n \r\n .sub-pecas-adicionadas{\r\n-  background-color: aliceblue;\r\n+  background-color: rgb(189, 189, 189);\r\n   padding: 2%;\r\n   margin: 2%;\r\n   border: dashed 1px #fff;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1714150766870,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,9 +34,9 @@\n \r\n }\r\n \r\n .sub-pecas-adicionadas{\r\n-  background-color: rgb(189, 189, 189);\r\n+  background-color: rgb(189, 189, 189.);\r\n   padding: 2%;\r\n   margin: 2%;\r\n   border: dashed 1px #fff;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1714150773637,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,9 +34,9 @@\n \r\n }\r\n \r\n .sub-pecas-adicionadas{\r\n-  background-color: rgb(189, 189, 189.);\r\n+  background-color: rgba(189, 189, 189, 0.5);\r\n   padding: 2%;\r\n   margin: 2%;\r\n   border: dashed 1px #fff;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1714150793490,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,7 +36,6 @@\n \r\n .sub-pecas-adicionadas{\r\n   background-color: rgba(189, 189, 189, 0.5);\r\n   padding: 2%;\r\n-  margin: 2%;\r\n   border: dashed 1px #fff;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1714150800617,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,6 +36,7 @@\n \r\n .sub-pecas-adicionadas{\r\n   background-color: rgba(189, 189, 189, 0.5);\r\n   padding: 2%;\r\n+  margin-bottom: 2%;\r\n   border: dashed 1px #fff;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1714150825824,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,5 +38,6 @@\n   background-color: rgba(189, 189, 189, 0.5);\r\n   padding: 2%;\r\n   margin-bottom: 2%;\r\n   border: dashed 1px #fff;\r\n+  color: #fff;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1714150906951,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -39,5 +39,9 @@\n   padding: 2%;\r\n   margin-bottom: 2%;\r\n   border: dashed 1px #fff;\r\n   color: #fff;\r\n+}\r\n+\r\n+.novo-calculo{\r\n+  \r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1714150914760,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -42,6 +42,10 @@\n   color: #fff;\r\n }\r\n \r\n .novo-calculo{\r\n-  \r\n+  background-color: rgba(189, 189, 189, 0.5);\r\n+  padding: 2%;\r\n+  margin-bottom: 2%;\r\n+  border: dashed 1px #fff;\r\n+  color: #fff;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1714150997791,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -47,5 +47,6 @@\n   padding: 2%;\r\n   margin-bottom: 2%;\r\n   border: dashed 1px #fff;\r\n   color: #fff;\r\n+  \r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1714151003233,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -42,9 +42,9 @@\n   color: #fff;\r\n }\r\n \r\n .novo-calculo{\r\n-  flex\r\n+  flex: ;\r\n   background-color: rgba(189, 189, 189, 0.5);\r\n   padding: 2%;\r\n   margin-bottom: 2%;\r\n   border: dashed 1px #fff;\r\n"
+                },
+                {
+                    "date": 1714151748387,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -61,6 +61,6 @@\n \r\n .inputsContainer{\r\n   display: flex;\r\n   flex-direction: column;\r\n-  gap\r\n+  gap[]\r\n }\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1714150710857,
+            "name": "Commit-0",
+            "content": ".cadastro-container {\r\n  width: 100%;\r\n  background-color: rgba(98, 98, 98, 0.8);\r\n  padding: 5%;\r\n  border-radius: 0px 40px 0 0;\r\n}\r\n\r\n.login-text-box{\r\n  font-size: 1.1em;\r\n}\r\n\r\n.peca-inputs{\r\n  font-size: 1.1em;\r\n  color: #fff;\r\n  display: none;\r\n  background-color: rgba(98, 98, 98, 0.8);\r\n  padding: 20px;\r\n  margin-top: 10px;\r\n  margin-bottom: 10px;\r\n}\r\n\r\n\r\n.select-element{\r\n  font-size: 1.1em;\r\n  font-family: Orbitron;\r\n}\r\n\r\n.cadastro-elementos .cadastro-sub-partes{\r\n  display: flex;\r\n  flex-direction: column;\r\n  color: #fff;\r\n  font-family: Orbitron;\r\n  gap:10px;\r\n\r\n}\r\n\r\n.sub-pecas-adicionadas{\r\n  \r\n}"
+        }
+    ]
+}
