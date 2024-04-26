@@ -163,7 +163,7 @@ var somaVolumes = listaObjetosJSON.reduce(function(total, objeto) {
 // Criar um elemento para exibir a soma dos volumes
 var divSomaVolumes = document.createElement('div');
 divSomaVolumes.classList.add('soma-volumes');
-divSomaVolumes.textContent = 'Soma dos Volumes: ' + somaVolumes + ' mm³';
+divSomaVolumes.textContent = 'Volume total: ' + somaVolumes.toFixed(0) + ' mm³ | '  + somaVolumes.toFixed(0)/1000 + ' cm³';
 
 // Adicionar a div da soma dos volumes à classe 'sub-pecas-final'
 var subPecasFinal = document.querySelector('.sub-pecas-final');

@@ -7,6 +7,8 @@
 
 .login-text-box{
   font-size: 1.1em;
+  height: 30px;
+
 }
 
 .peca-inputs{
@@ -21,11 +23,21 @@
   margin-bottom: 10px;
 }
 
+.peca-inputs input{
+  height: 30px;
+  font-size: 1.2em;
+}
+
 
 .select-element{
   font-size: 1.1em;
   font-family: Orbitron;
+  width: 300px;
+  height: 30px;
+  margin-bottom: 3%;
+  margin-top: 3%;
 }
+
 
 .cadastro-elementos .cadastro-sub-partes{
   display: flex;
