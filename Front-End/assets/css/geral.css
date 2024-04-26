@@ -35,7 +35,22 @@ html{
   /* Ajusta apenas os cantos à direita */
   width: 60%;
   position: flex;
+  font-family: "Orbitron";
+}
 
+.btn-padrao {
+  background-color: #C0C4D2;
+  border: none;
+  color: #fff;
+  font-size: 1.5em;
+  padding: 10px 10px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 0 5px 5px 0;
+  /* Ajusta apenas os cantos à direita */
+  width: 100%;
+  position: flex;
   font-family: "Orbitron";
 }
 
