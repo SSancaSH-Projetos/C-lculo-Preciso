@@ -1,168 +1,150 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+  <head>
+    <title>Cálculo preciso by Precision Tech</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/geral.css" />
+    <link rel="stylesheet" href="assets/css/cadastroPeca.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
 
-<head>
-  <title>Cálculo preciso by Precision Tech</title>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/css/geral.css" />
-  <link rel="stylesheet" href="assets/css/cadastroPeca.css" />
-  <script type="text/javascript" src="assets/js/cadastroPeca.js"></script>"
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-</head>
-
-<body class="body-container">
-  <header>
-    <div class="navbar">
-      <a href="dashboard.html"> <i class="fa-solid fa-home" style="color: #ffffff;"></i> Início</a> 
-      <a href="professor.html"> <i class="fa-solid fa-user" style="color: #ffffff;"></i> Professor</a> 
-      <a href="alunos.html"> <i class="fa-solid fa-users" style="color: #ffffff;"></i> Meus Alunos </a>
-      <a href="turmas.html"> <i class="fa-solid fa-school" style="color: #ffffff;"></i> Turmas</a> 
-      <a href="informacoes.html" ><i class="fa-solid fa-info" style="color: #ffffff;"> </i> Informações</a>
-      <a href="index.html"> Sair <i class="fa-solid fa-right-from-bracket" style="color: #ffffff;"></i></a>
-    </div>
-  </header>
-
-  <h2>Cálculo Preciso</h2>
-
-  <div class="main-container">
-    <div class="layout-container">
-      <div class="logo-container">
-        <img class="logoCalculoPreciso" src="assets/images/logoBranco.png" alt="PrecisionTechLogo" />
-      </div>
-      <div class="buttons">
-        <a href="cadastroPeca.html"><button class="btn btn-sidebar" >Nova Peça</button></a>
-        <a href="custos.html"><button class="btn btn-sidebar">Custos</button>
+  <body class="body-container">
+    <header>
+      <div class="navbar">
+        <a href="professor.html">
+          <i class="fa-solid fa-user" style="color: #ffffff;"></i> Professor</a>
+        <a href="aluno.html">
+          <i class="fa-solid fa-users" style="color: #ffffff;"></i> Meus Alunos
         </a>
-        <a href="relatorio.html"><button class="btn btn-sidebar">Relatorios</button></a>
+        <a href="informações.html">Informações</a>
+        <a href="index.html">
+          Sair <i class="fa-solid fa-right-from-bracket" style="color: #ffffff;"></i></a>
       </div>
-      <div class="precision-tech-container">
-        <h3>By PrecisionTech</h3>
+    </header>
+
+    <h2>Cálculo Preciso</h2>
+
+    <div class="main-container">
+      <div class="layout-container">
+        <div class="logo-container">
+          <img
+            class="logoCalculoPreciso"
+            src="assets/images/logoBranco.png"
+            alt="PrecisionTechLogo"
+          />
+        </div>
+        <div class="buttons">
+          <a href="cadastroPeca.html"
+            ><button class="btn btn-sidebar" >Nova Peça</button></a
+          >
+          <a href="custos.html"
+            ><button class="btn btn-sidebar">Custos</button>
+          </a>
+          <a href="relatorio.html"
+            ><button class="btn btn-sidebar">Relatorios</button></a
+          >
+        </div>
+        <div class="precision-tech-container">
+          <h3>By PrecisionTech</h3>
+        </div>
       </div>
-    </div>
 
-    <div class="content-container">
-      <div class="cadastro-container">
-        <h2>Dados da Peça</h2>
-        <div class="cadastro-elementos">
-          <div class="cadastro-sub-partes">
-            <label for="usuario">Nome Da Peça</label>
-            <input class="login-text-box" type="text" id="usuario" name="usuario" placeholder="Ex: ProfJoao" />
-            <label for="senha">Código da Peça:</label>
-            <input class="login-text-box" type="text" id="senha" name="senha" placeholder="Ex: Pass#123" />
-            <label for="material">Material:</label>
-            <select id="material" class="select-element">
-              <option value="aco">Aço</option>
-              <option value="ferro">Ferro</option>
-              <option value="aluminio">Alumínio</option>
-            </select>
-            <br>
-            <div class="sub-pecas-final"> Não há peças adicionadas ainda.</div>
-            <div></div>
-          </div>
-
-          <div class="cadastro-sub-partes">
-            <div class="subPeca">
-              <h2>Adicionar Sub-Peça</h2>
+      <div class="content-container">
+        <div class="cadastro-container">
+          <h2>Dados da Peça</h2>
+          <form class="cadastro-elementos">
+            <div class="cadastro-sub-partes">
+              <label for="usuario">Nome Da Peça</label>
+              <input
+                class="login-text-box"
+                type="text"
+                id="usuario"
+                name="usuario"
+                placeholder="Ex: ProfJoao"
+              />
+              <label for="senha">Código da Peça:</label>
+              <input
+                class="login-text-box"
+                type="text"
+                id="senha"
+                name="senha"
+                placeholder="Ex: Pass#123"
+              />
+              <label for="material">Material:</label>
+              <select id="material" class="select-element">
+                <option value="aco">Aço</option>
+                <option value="ferro">Ferro</option>
+                <option value="aluminio">Alumínio</option>
+              </select>
+              <div></div>
             </div>
 
-            <div class="sub-pecas-adicionadas"> Não há peças adicionadas ainda.</div>
-
-
-
-            <div class="novo-calculo">
-
+            <div class="cadastro-sub-partes">
+              <div class="subPeca">
+                <h2>Adicionar Sub-Peça</h2>
+              </div>
               <div class="dropdown">
-                <select id="formato-da-sub-peca" onchange="mostrarInputs()" class="select-element"
-                  placeholder="Selecione uma opção">
+                <select id="formato-da-sub-peca"
+                  onchange="mostrarInputs()"
+                  class="select-element"
+                  placeholder="Selecione uma opção"
+                >
                   <option value="" disabled selected hidden>
                     Selecione uma opção
                   </option>
-                  <option value="none">Selecione uma opção</option>
-                  <option value="Cilindrico">Cilíndrico</option>
-                  <option value="Cubica">Cúbica</option>
-                  <option value="Piramide">Pirâmide</option>
+                  <option value="Cilíndrico">Cilíndrico</option>
+                  <option value="Quadrado">Quadrado</option>
+                  <option value="Triangular">Triangular</option>
                 </select>
               </div>
+            </div>
 
+            <div id="inputsContainer" class="peca-inputs" >
+              <label for="ladoQuadrado">Lado do Quadrado:</label>
+              <input type="number" id="ladoQuadrado" name="ladoQuadrado" />
+            </div>
 
-              <div id="inputCubico" class="peca-inputs">
-                <div>
-                  <label for="nomePecaCubica">Nome da Sub-peça:</label>
-                  <input style="width: 100%;" type="text" id="nomePecaCubica" name="nomePecaCubica" />
-                </div>
-                <div>
-                  <label for="ladoCubo">Lado do Quadrado (cm):</label>
-                  <input style="width: 100%;" type="number" id="ladoCubo" name="ladoCubo" />
-                </div>
-              </div>
+            <script>
+              function mostrarInputs() {
+                var selectElement = document.querySelector("#formato-da-sub-peca");
+                var selectedOption =
+                  selectElement.options[selectElement.selectedIndex].value;
+                var inputsContainer =
+                  document.getElementById("inputsContainer");
 
+                if (selectedOption === "Quadrado") {
+                  inputsContainer.style.display = "block";
+                } else {
+                  inputsContainer.style.display = "none";
+                }
+              }
+            </script>
 
-              <div id="inputCilindrico" class="peca-inputs">
-                <div>
-                  <label for="nomeCilindro">Nome da Sub-peça:</label>
-                  <input style="width: 100%;" type="text" id="nomeCilindro" name="nomeCilindro" />
-                </div>
-                <div>
-                  <label for="raioCilindro">Raio (cm):</label>
-                  <input style="width: 100%;" type="number" id="raioCilindro" name="raioCilindro" />
-                </div>
-                <div>
-                  <label for="alturaCilindro">Altura (cm):</label>
-                  <input style="width: 100%;" type="number" id="alturaCilindro" name="alturaCilindro" />
-                </div>
-              </div>
-
-
-              <div id="inputPiramide" class="peca-inputs">
-                <div>
-                  <label for="nomePiramide">Nome da Sub-peça:</label>
-                  <input style="width: 100%;" type="text" id="nomePiramide" name="nomePiramide" />
-                </div>
-                <div>
-                  <label for="basePiramide">Lado da base da pirâmide(cm):</label>
-                  <input style="width: 100%;" type="number" id="basePiramide" name="basePiramide" />
-                </div>
-                <div>
-                  <label for="alturaPiramide">Altura da pirâmide (cm):</label>
-                  <input style="width: 100%;" type="number" id="alturaPiramide" name="alturaPiramide" />
-                </div>
-              </div>
-
-
-
-              <button class="btn" style="
+            <div style="margin-top: 5%">
+              <button
+                class="btn"
+                style="
                   background-color: #c0c4d2;
                   align-items: self-end;
-                  color: black;
                   width: 100%;
-                  font-size: 1.1em;
-                " onclick="criarObjetoJSON()">
-                Adicionar ao cálculo
+                "
+              >
+                Guardar
               </button>
-
             </div>
-          </div>
-
-          <div style="margin-top: 5%">
-            <button class="btn" style="
-                  background-color: #3d3d3d;
-                  align-items: self-end;
-                  width: 100%;
-                ">
-              Guardar
-            </button>
-          </div>
+          </form>
         </div>
       </div>
     </div>
-  </div>
 
-  <footer class="footer">
-    <p class="footer-text">
-      © 2024 Cálculo Preciso by Precision Tech - Todos os direitos reservados
-    </p>
-  </footer>
-</body>
-
+    <footer class="footer">
+      <p class="footer-text">
+        © 2024 Cálculo Preciso by Precision Tech - Todos os direitos reservados
+      </p>
+    </footer>
+  </body>
 </html>

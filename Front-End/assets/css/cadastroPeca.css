@@ -7,37 +7,23 @@
 
 .login-text-box{
   font-size: 1.1em;
-  height: 30px;
-
 }
 
 .peca-inputs{
-  display: none;
-  flex-direction: column;
-  gap:15px;
   font-size: 1.1em;
   color: #fff;
+  display: none;
   background-color: rgba(98, 98, 98, 0.8);
   padding: 20px;
   margin-top: 10px;
   margin-bottom: 10px;
 }
 
-.peca-inputs input{
-  height: 30px;
-  font-size: 1.2em;
-}
-
 
 .select-element{
   font-size: 1.1em;
   font-family: Orbitron;
-  width: 300px;
-  height: 30px;
-  margin-bottom: 3%;
-  margin-top: 3%;
 }
-
 
 .cadastro-elementos .cadastro-sub-partes{
   display: flex;
@@ -46,39 +32,4 @@
   font-family: Orbitron;
   gap:10px;
 
-}
-
-.sub-pecas-adicionadas{
-  background-color: rgba(189, 189, 189, 0.5);
-  padding: 2%;
-  margin-bottom: 1%;
-  margin-bottom: 2%;
-  border: dashed 1px #fff;
-  color: #fff;
-}
-
-.novo-calculo{
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  background-color: rgba(189, 189, 189, 0.5);
-  padding: 2%;
-  margin-bottom: 2%;
-  border: dashed 1px #fff;
-  color: #fff;
-
-}
-
-.sub-peca{
-  background-color: rgb(100, 100, 100);
-  margin-bottom: 2%;
-  padding: 3%;
-}
-.sub-pecas-final{
-  background-color: rgba(189, 189, 189, 0.5);
-  padding: 2%;
-  margin-bottom: 1%;
-  margin-bottom: 2%;
-  border: dashed 1px #fff;
-  color: #fff;
 }

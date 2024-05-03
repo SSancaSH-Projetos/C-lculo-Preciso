@@ -30,6 +30,20 @@ public class UsuarioController {
                 .orElseGet(() -> ResponseEntity.notFound().build());
     }
 
+    @PostMapping("/login")
+    public ResponseEntity<String> login(@RequestBody Usuario usuarioLogin) {
+        Optional<Usuario> usuarioOptional = usuarioRepository.findById(usuarioLogin.getEmail());
+        if (usuarioOptional.isPresent()) {
+            Usuario usuario = usuarioOptional.get();
+            if (usuario.getSenha().equals(usuarioLogin.getSenha())) {
+                // Autenticação bem-sucedida
+                return ResponseEntity.ok("{\"message\": \"Login bem-sucedido\"}");
+            }
+        }
+        // Se o e-mail ou a senha estiverem incorretos, retorna status 401 (Unauthorized)
+        return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("{\"message\": \"Credenciais Inválidas\"}");
+    }
+
     @PostMapping
     public ResponseEntity<Usuario> createUsuario(@RequestBody Usuario usuario) {
         Usuario createdUsuario = usuarioRepository.save(usuario);
