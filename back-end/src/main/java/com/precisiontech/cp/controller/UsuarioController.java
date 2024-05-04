@@ -36,6 +36,20 @@ public class UsuarioController {
         return ResponseEntity.status(HttpStatus.CREATED).body(createdUsuario);
     }
 
+    @PostMapping("/login")
+    public ResponseEntity<String> login(@RequestBody Usuario usuario) {
+
+        Optional<Usuario> usuarioEncontrado = usuarioRepository.findById(usuario.getEmail());
+
+        if (usuarioEncontrado.isPresent()
+                && usuarioEncontrado.get().getEmail().equals(usuario.getEmail())
+                && usuarioEncontrado.get().getSenha().equals(usuario.getSenha())) {
+            return ResponseEntity.ok("{\"message:\":\"Login bem-sucedido!\"}"); // Aqui você retornaria um token de autenticação, por exemplo
+        } else {
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("{\"message:\":\"credenciais inválidas!\"}");
+        }
+    }
+
     @PutMapping("/{email}")
     public ResponseEntity<Usuario> updateUsuario(@PathVariable String email, @RequestBody Usuario usuarioDetails) {
         Optional<Usuario> usuarioOptional = usuarioRepository.findById(email);
