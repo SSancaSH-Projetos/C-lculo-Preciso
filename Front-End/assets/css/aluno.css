@@ -1,4 +1,4 @@
-.meusalunos-container{
+.meusalunos-container {
     width: 100%;
     background-color: rgba(98, 98, 98, 0.8);
     padding: 5%;
@@ -6,3 +6,47 @@
 
 }
 
+/* Estilos para o modal */
+.modal {
+    display: none;
+    /* Escondido por padrão */
+    position: fixed;
+    /* Ficar fixo na tela */
+    z-index: 1;
+    /* Colocar o modal sobre tudo */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    /* Permitir rolar */
+    background-color: rgb(0, 0, 0);
+    /* Fundo preto com opacidade */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Fundo preto com opacidade */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    /* Centralizar na tela */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    /* Largura do modal */
+}
+
+/* Botão para fechar o modal */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
