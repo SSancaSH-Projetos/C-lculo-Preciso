@@ -1,6 +1,7 @@
 package com.precisiontech.cp.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.precisiontech.cp.DTO.MaoDeObraDTO;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -25,5 +26,14 @@ public class MaoDeObra {
     @JsonIgnore
     @ManyToMany(mappedBy = "maosDeObra")
     private List<Peca> pecas = new ArrayList<>();
+
+    public static MaoDeObraDTO fromEntity(MaoDeObra maoDeObra) {
+        return new MaoDeObraDTO(
+                maoDeObra.getId(),
+                maoDeObra.getProfissional(),
+                maoDeObra.getPrecoPorHora()
+        );
+    }
+
 
 }

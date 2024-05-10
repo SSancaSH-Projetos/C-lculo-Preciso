@@ -1,10 +1,12 @@
 package com.precisiontech.cp.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.precisiontech.cp.DTO.MaterialDTO;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 import java.util.List;
 
@@ -28,7 +30,17 @@ public class Material {
     private Double precoCavaco;
 
     @JsonIgnore
+    @ToString.Exclude
     @OneToMany(mappedBy = "material")
     private List<Peca> pecas;
+
+    public static MaterialDTO fromEntity(Material material) {
+        return new MaterialDTO(
+                material.getId(),
+                material.getNome(),
+                material.getPrecoPorKg(),
+                material.getPrecoCavaco()
+        );
+    }
 
 }

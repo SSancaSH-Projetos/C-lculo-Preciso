@@ -5,3 +5,11 @@
     padding-bottom: 3%;
     border-radius: 0px 40px 0px 0px;
 }
+
+.button-edit-delete{
+    background-color: rgba(51, 68, 83, 0.411);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}

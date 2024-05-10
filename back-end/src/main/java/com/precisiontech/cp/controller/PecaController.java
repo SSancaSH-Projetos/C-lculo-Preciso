@@ -1,5 +1,7 @@
 package com.precisiontech.cp.controller;
 
+import com.precisiontech.cp.DTO.MaoDeObraDTO;
+import com.precisiontech.cp.DTO.MaterialDTO;
 import com.precisiontech.cp.DTO.PecaDTORequest;
 import com.precisiontech.cp.DTO.PecaDTOResponse;
 import com.precisiontech.cp.entity.*;
@@ -8,7 +10,9 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 @RestController
@@ -56,6 +60,14 @@ public class PecaController {
 
         Peca finalPeca = pecaRepository.save(peca);
 
+        Optional<Material> materialOptional = materialRepository.findById(finalPeca.getMaterial().getId());
+        materialOptional.ifPresent(materialEntity -> {
+            List<Peca> pecas = materialEntity.getPecas();
+            pecas.add(finalPeca);
+
+            materialRepository.save(materialEntity);
+        });
+
 
         peca.getSubPecas().forEach(subPeca -> {
             if (subPeca.getFormato() != null) {
@@ -66,6 +78,16 @@ public class PecaController {
 
         peca.getSubPecas().forEach(subPecaRepository::save);
 
+        List<Maquina> maquinasAtualizadas = new ArrayList<>();
+
+        peca.getMaquinas().forEach(maquina -> {
+            List<Peca> pecas = new ArrayList<>(maquina.getPecas());
+            pecas.add(finalPeca);
+            maquina.setPecas(pecas);
+            maquinasAtualizadas.add(maquina);
+        });
+
+        maquinaRepository.saveAll(maquinasAtualizadas);
 
         return toDTO(peca);
     }
@@ -86,14 +108,20 @@ public class PecaController {
 
     private PecaDTOResponse toDTO(Peca peca) {
 
+        List<MaoDeObraDTO> maosDeObraDTO = peca.getMaosDeObra().stream()
+                .map(MaoDeObra::fromEntity)
+                .collect(Collectors.toList());
+
+        MaterialDTO materialDTO = Material.fromEntity(peca.getMaterial());
+
         return new PecaDTOResponse(
                 peca.getId(),
                 peca.getCodigo(),
                 peca.getNomeDaPeca(),
                 peca.getDataDeCriacao(),
-                peca.getMaosDeObra(),
+                maosDeObraDTO,
                 peca.getMaquinas(),
-                peca.getMaterial(),
+                materialDTO,
                 peca.getSubPecas()
         );
     }

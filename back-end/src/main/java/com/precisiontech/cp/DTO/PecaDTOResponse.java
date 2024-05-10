@@ -19,8 +19,8 @@ public class PecaDTOResponse {
     private String codigo;
     private String nomeDaPeca;
     private Date dataDeCriacao;
-    private List<MaoDeObra> maosDeObra;
+    private List<MaoDeObraDTO> maosDeObra;
     private List<Maquina> maquina;
-    private Material material;
+    private MaterialDTO material;
     private List<SubPeca> subPecas;
 }

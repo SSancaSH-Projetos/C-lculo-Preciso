@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
 
-html{
+html {
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -13,10 +13,10 @@ html{
   margin-left: 0;
   margin-top: 0px;
 
-} 
+}
 
-.page-title{
-  text-align: center; 
+.page-title {
+  text-align: center;
   color: #ffffff;
   font-family: "Orbitron";
   font-size: 1.6em;
@@ -70,7 +70,8 @@ h6 {
 .tabela {
   font-size: 1.2em;
   border-collapse: collapse;
-  width: 100%; /* Faz a tabela ocupar todo o espaço horizontal do container */
+  width: 100%;
+  /* Faz a tabela ocupar todo o espaço horizontal do container */
 }
 
 .tabela th,
@@ -96,7 +97,7 @@ h6 {
 
 
 
-.buttons{
+.buttons {
   margin-top: 5vh;
   margin-bottom: 5vh;
   display: flex;
@@ -105,13 +106,13 @@ h6 {
 }
 
 
-.logo-container{
+.logo-container {
   display: flex;
   justify-content: center;
   margin: 2vh;
 }
 
-.precision-tech-container{
+.precision-tech-container {
   display: flex;
   justify-content: center;
 }
@@ -139,7 +140,7 @@ h6 {
   width: 100%;
   text-align: center;
   padding: 10px;
-
+  margin-top: 10%;
 }
 
 .main-container {
@@ -192,6 +193,19 @@ h6 {
   width: 35vw;
 }
 
+.layout-container1 {
+  background-color: rgba(98, 98, 98, 0.8);
+  border-radius: 5px 5px 5px 90px;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  font-family: "Orbitron";
+  height: 40vh;
+  width: 25vw;
+  align-items: center;
+  margin-top: 20px;
+}
+
 .logoCalculoPreciso {
   width: 150px;
   align-items: center;
@@ -232,21 +246,22 @@ h6 {
   width: 100%;
 }
 
-.sub-titulos{
+.sub-titulos {
   font-size: 1.6em;
   margin-top: 1%;
 }
 
-.btn-sidebar{
-  background-color: #C0C4D2; 
-  height: 100px; 
+.btn-sidebar {
+  background-color: #C0C4D2;
+  height: 100px;
   font-weight: 600;
 }
 
 
 .navbar {
   display: flex;
-  justify-content: flex-end; /* Alinha os itens no final do contêiner */
+  justify-content: flex-end;
+  /* Alinha os itens no final do contêiner */
   background-color: #626371dc;
   padding: 20px;
   font-family: Orbitron;

@@ -16,4 +16,12 @@ public class MaoDeObraDTO {
     private Long id;
     private String profissional;
     private double precoPorHora;
+
+    public static MaoDeObra of(MaoDeObraDTO maoDeObra){
+        MaoDeObra m = new MaoDeObra();
+        m.setId(maoDeObra.getId());
+        m.setProfissional(maoDeObra.getProfissional());
+        m.setPrecoPorHora(maoDeObra.getPrecoPorHora());
+        return m;
+    }
 }

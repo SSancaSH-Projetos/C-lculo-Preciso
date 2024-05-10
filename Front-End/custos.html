@@ -7,6 +7,9 @@
   <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
   <link rel="stylesheet" href="assets/css/geral.css">
   <link rel="stylesheet" href="assets/css/custo.css">
+
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
   
   <script src="assets/js/geral.js"></script>
   <meta charset="UTF-8">
@@ -35,10 +38,16 @@
         <img class="logoCalculoPreciso" src="assets/images/logoBranco.png" alt="PrecisionTechLogo">
       </div>
       <div class="buttons">
-        <a href="cadastroPeca.html"><button class="btn btn-sidebar" style="">Nova Peça</button></a>
+        <a href="cadastroPeca.html"><button class="btn btn-sidebar">Nova Peça</button></a>
         <a href="custos.html"><button class="btn btn-sidebar">Custos</button> </a>
-        <a href="relatorio.html"><button class="btn btn-sidebar" ">Relatorios</button></a>
+        <a href="relatorio.html"><button class="btn btn-sidebar">Relatorios</button></a>
       </div>
+
+      <div class="layout-container1">
+        <model-viewer id="parts" class="parts-3d" controls auto-rotate src="assets/3DModels/cogwheel.glb"
+          camera-controls></model-viewer>
+      </div><br>
+
       <div class=" precision-tech-container">
             <h3> By PrecisionTech </h3>
       </div>
@@ -63,40 +72,40 @@
                   <td>Ferro</td>
                   <td>RS 32,00/kg</td>
                   <td>
-                    <i class="fa-solid fa-pencil"></i>
-                    <i class="fa-solid fa-trash"></i>
+                    <button class="button-edit-delete"><i class="fa-solid fa-pencil"></i></button>
+                    <button class="button-edit-delete"><i class="fa-solid fa-trash"></i></button>
                   </td>
                 </tr>
                 <tr>
                   <td>Alumínio</td>
                   <td>RS 32,00/kg</td>
                   <td>
-                    <i class="fa-solid fa-pencil"></i>
-                    <i class="fa-solid fa-trash"></i>
+                    <button class="button-edit-delete"><i class="fa-solid fa-pencil"></i></button>
+                    <button class="button-edit-delete"><i class="fa-solid fa-trash"></i></button>
                   </td>
                 </tr>
                 <tr>
                   <td>Aço</td>
                   <td>RS 32,00/kg</td>
                   <td>
-                    <i class="fa-solid fa-pencil"></i>
-                    <i class="fa-solid fa-trash"></i>
+                    <button class="button-edit-delete"><i class="fa-solid fa-pencil"></i></button>
+                    <button class="button-edit-delete"><i class="fa-solid fa-trash"></i></button>
                   </td>
                 </tr>
                 <tr>
                   <td>Chumbo</td>
                   <td>RS 32,00/kg</td>
                   <td>
-                    <i class="fa-solid fa-pencil"></i>
-                    <i class="fa-solid fa-trash"></i>
+                    <button class="button-edit-delete"><i class="fa-solid fa-pencil"></i></button>
+                    <button class="button-edit-delete"><i class="fa-solid fa-trash"></i></button>
                   </td>
                 </tr>
                 <tr>
                   <td>Cobre</td>
                   <td>RS 32,00/kg</td>
                   <td>
-                    <i class="fa-solid fa-pencil"></i>
-                    <i class="fa-solid fa-trash"></i>
+                    <button class="button-edit-delete"><i class="fa-solid fa-pencil"></i></button>
+                    <button class="button-edit-delete"><i class="fa-solid fa-trash"></i></button>
                   </td>
                 </tr>
               </tbody>
@@ -120,24 +129,24 @@
                 <td>Operador CNC</td>
                 <td>R$ 50,00/h</td>
                 <td>
-                  <i class="fa-solid fa-pencil"></i>
-                  <i class="fa-solid fa-trash"></i>
+                  <button class="button-edit-delete"><i class="fa-solid fa-pencil"></i></button>
+                  <button class="button-edit-delete"><i class="fa-solid fa-trash"></i></button>
                 </td>
               </tr>
               <tr>
                 <td>Programador CNC</td>
                 <td>R$ 60,00/h</td>
                 <td>
-                  <i class="fa-solid fa-pencil"></i>
-                  <i class="fa-solid fa-trash"></i>
+                  <button class="button-edit-delete"><i class="fa-solid fa-pencil"></i></button>
+                  <button class="button-edit-delete"><i class="fa-solid fa-trash"></i></button>
                 </td>
               </tr>
               <tr>
                 <td>Supervisor CNC</td>
                 <td>R$ 70,00/h</td>
                 <td>
-                  <i class="fa-solid fa-pencil"></i>
-                  <i class="fa-solid fa-trash"></i>
+                  <button class="button-edit-delete"><i class="fa-solid fa-pencil"></i></button>
+                  <button class="button-edit-delete"><i class="fa-solid fa-trash"></i></button>
                 </td>
               </tr>
               <!-- Adicione mais tipos de mão de obra conforme necessário -->
@@ -161,24 +170,24 @@
                 <td>Torno CNC</td>
                 <td>R$ 100,00/h</td>
                 <td>
-                  <i class="fa-solid fa-pencil"></i>
-                  <i class="fa-solid fa-trash"></i>
+                  <button class="button-edit-delete"><i class="fa-solid fa-pencil"></i></button>
+                  <button class="button-edit-delete"><i class="fa-solid fa-trash"></i></button>
                 </td>
               </tr>
               <tr>
                 <td>Fresadora CNC</td>
                 <td>R$ 120,00/h</td>
                 <td>
-                  <i class="fa-solid fa-pencil"></i>
-                  <i class="fa-solid fa-trash"></i>
+                  <button class="button-edit-delete"><i class="fa-solid fa-pencil"></i></button>
+                  <button class="button-edit-delete"><i class="fa-solid fa-trash"></i></button>
                 </td>
               </tr>
               <tr>
                 <td>Centro de Usinagem CNC</td>
                 <td>R$ 150,00/h</td>
                 <td>
-                  <i class="fa-solid fa-pencil"></i>
-                  <i class="fa-solid fa-trash"></i>
+                  <button class="button-edit-delete"><i class="fa-solid fa-pencil"></i></button>
+                  <button class="button-edit-delete"><i class="fa-solid fa-trash"></i></button>
                 </td>
               </tr>
               <!-- Adicione mais tipos de máquinas conforme necessário -->
