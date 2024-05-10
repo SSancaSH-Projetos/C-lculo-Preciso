@@ -48,24 +48,36 @@
             <h2 class="page-title">Meus Alunos <a id="addStudentButton"><i class="fa-solid fa-plus"></i></a></h2>
 
 
-            <!-- Modal -->
-            <div id="addStudentModal" class="modal">
-                <div class="modal-content">
-                    <span class="close">&times;</span>
-                    <h2>Cadastrar Aluno</h2>
-                    <form id="studentForm">
-                        <label for="email">Email:</label>
-                        <input type="email" id="email" name="email" required><br>
-                        <label for="name">Nome:</label>
-                        <input type="text" id="name" name="name" required><br>
-                        <label for="course">Curso:</label>
-                        <input type="text" id="course" name="course" required><br>
-                        <label for="password">Senha:</label>
-                        <input type="password" id="password" name="password" required><br>
-                        <button type="submit">Cadastrar</button>
-                    </form>
+            <div id="addStudentModal" class="modal" tabindex="-1" role="dialog">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <h5 class="modal-title">Cadastrar Aluno</h5>
+
+                        </div>
+                        <div class="modal-body">
+                            <form id="studentForm" class="studentForm">
+                                <label for="email">Email:</label>
+                                <input type="email" class="input" id="email" name="email" required><br>
+                                <label for="name">Nome:</label>
+                                <input type="text" class="input" id="name" name="name" required><br>
+                                <label for="course">Curso:</label>
+                                <input type="text" class="input" id="course" name="course" required><br>
+                                <label for="password">Senha:</label>
+                                <input type="password" class="input" id="password" name="password" required><br>
+                                <button style="width: 100%;" class="btn btn-secondary" data-dismiss="modal" type="submit">Cadastrar</button>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <p>Precision Tech</p>
+                        </div>
+                    </div>
                 </div>
             </div>
+
 
             <div class="meusalunos-container">
                 <table class="tabela" id="alunosTable">

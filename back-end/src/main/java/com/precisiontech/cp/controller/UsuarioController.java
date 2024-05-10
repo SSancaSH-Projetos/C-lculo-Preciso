@@ -30,6 +30,16 @@ public class UsuarioController {
                 .orElseGet(() -> ResponseEntity.notFound().build());
     }
 
+    @GetMapping("/professores")
+    public List<Usuario> getProfessores() {
+        return usuarioRepository.findByTipoUsuario(Usuario.TipoUsuario.valueOf("PROFESSOR"));
+    }
+
+    @GetMapping("/alunos")
+    public List<Usuario> getAlunos() {
+        return usuarioRepository.findByTipoUsuario(Usuario.TipoUsuario.valueOf("ALUNO"));
+    }
+
     @PostMapping
     public ResponseEntity<Usuario> createUsuario(@RequestBody Usuario usuario) {
         Usuario createdUsuario = usuarioRepository.save(usuario);

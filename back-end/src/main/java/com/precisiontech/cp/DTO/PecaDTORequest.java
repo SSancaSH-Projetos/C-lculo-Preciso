@@ -14,7 +14,12 @@ public class PecaDTORequest {
     private Long id;
     private String codigo;
     private String nomeDaPeca;
-    private Date dataDeCriacao;
+    private Double volumeTotal; // vem do front
+    private Double custoDeProducao; // (materia prima * kg da materia) + (mao de obra * qtd de mao de obra * tempo) + (máquinas * quantidade * tempo)
+    private Double tempoDeUsinagem; // soma dos tempos do operador
+    private Double pesoTarugo;
+    private Double quantidadeDeCavaco;
+    private Double valorDoCavaco;
     private List<Long> maosDeObraIds;
     private List<Long> maquinas;
     private Long materialId;

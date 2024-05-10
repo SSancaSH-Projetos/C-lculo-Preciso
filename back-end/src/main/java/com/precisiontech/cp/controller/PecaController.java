@@ -11,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
@@ -118,6 +119,12 @@ public class PecaController {
                 peca.getId(),
                 peca.getCodigo(),
                 peca.getNomeDaPeca(),
+                peca.getVolumeTotal(),
+                peca.getCustoDeProducao(),
+                peca.getTempoDeUsinagem(),
+                peca.getPesoTarugo(),
+                peca.getQuantidadeDeCavaco(),
+                peca.getValorDoCavaco(),
                 peca.getDataDeCriacao(),
                 maosDeObraDTO,
                 peca.getMaquinas(),
@@ -151,9 +158,15 @@ public class PecaController {
         peca.setId(pecaDTORequest.getId());
         peca.setCodigo(pecaDTORequest.getCodigo());
         peca.setNomeDaPeca(pecaDTORequest.getNomeDaPeca());
-        peca.setDataDeCriacao(pecaDTORequest.getDataDeCriacao());
+        peca.setVolumeTotal(pecaDTORequest.getVolumeTotal());
+        peca.setCustoDeProducao(pecaDTORequest.getCustoDeProducao());
+        peca.setTempoDeUsinagem(pecaDTORequest.getTempoDeUsinagem());
+        peca.setPesoTarugo(pecaDTORequest.getPesoTarugo());
+        peca.setQuantidadeDeCavaco(pecaDTORequest.getQuantidadeDeCavaco());
+        peca.setValorDoCavaco(pecaDTORequest.getValorDoCavaco());
+        peca.setDataDeCriacao(Calendar.getInstance().getTime());
         peca.setMaosDeObra(maosDeObra);
-        peca.setMaquinas(maquinas);
+            peca.setMaquinas(maquinas);
         peca.setSubPecas(subPecas);
         peca.setMaterial(material);
 

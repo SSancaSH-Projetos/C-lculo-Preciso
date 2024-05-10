@@ -13,7 +13,7 @@ import java.util.Objects;
 public class Usuario {
 
     @Id
-    private String   email;
+    private String  email;
     private String nome;
     private String curso;
     private TipoUsuario tipoUsuario;

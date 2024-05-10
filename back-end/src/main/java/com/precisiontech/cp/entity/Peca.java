@@ -24,9 +24,12 @@ public class Peca implements Serializable {
     private Long id;
     private String codigo;
     private String nomeDaPeca;
-    private Double volumeTotal;
+    private Double volumeTotal; // vem do front
+    private Double custoDeProducao; // (materia prima * kg da materia) + (mao de obra * qtd de mao de obra * tempo) + (máquinas * quantidade * tempo)
+    private Double tempoDeUsinagem; // soma dos tempos do operador
     private Double pesoTarugo;
-    
+    private Double quantidadeDeCavaco;
+    private Double valorDoCavaco;
     private Date dataDeCriacao;
 
     @ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE})

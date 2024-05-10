@@ -30,6 +30,7 @@ public class MaoDeObraController {
 
     @PostMapping
     public ResponseEntity<MaoDeObra> createMaoDeObra(@RequestBody MaoDeObra maoDeObra) {
+        System.out.println(maoDeObra);
         MaoDeObra savedMaoDeObra = maoDeObraRepository.save(maoDeObra);
         return ResponseEntity.status(HttpStatus.CREATED).body(savedMaoDeObra);
     }

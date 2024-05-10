@@ -1,6 +1,6 @@
 // Função para buscar e exibir usuários na tabela
 function fetchUsuarios() {
-    fetch('http://localhost:8080/usuarios')
+    fetch('http://localhost:8080/usuarios/alunos')
         .then(response => response.json())
         .then(data => exibirUsuarios(data))
         .catch(error => {
