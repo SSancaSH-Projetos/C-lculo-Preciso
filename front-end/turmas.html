@@ -9,7 +9,6 @@
   <link rel="stylesheet" href="assets/css/turma.css" />
   <script src="assets/js/cadastroTurma.js" defer></script>
 
-  <script src="assets/js/geral.js"></script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
@@ -43,13 +42,57 @@
         <h3>By PrecisionTech</h3>
       </div>
     </div>
-    <div id="novaTurmaForm" class="form-criar-nova-turma">
-      <h2>Cadastrar Turma</h2>
-      <input id="nomeTurma" class="inputs-de-turma" type="text" placeholder="Nome da Turma">
-      <input id="codigoTurma" class="inputs-de-turma" type="text" placeholder="Código da Turma">
-      <input id="sala" class="inputs-de-turma" type="text" placeholder="Sala">
-      <button id="criarTurmaButton" class="btn-criar-turma">Criar Turma</button>
+
+    <div class="content-container">
+      <div id="addTurmaModal" class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button onclick="fecharModal()" type="button" class="close" data-dismiss="modal"
+                aria-label="Fechar">
+                <span aria-hidden="true">&times;</span>
+              </button>
+              <h5 class="modal-title">Cadastrar Turma</h5>
+            </div>
+            <div class="modal-body">
+              <form id="formMaoDeObra" class="form">
+
+                <label for="nomeTurma">Nome da Turma:</label>
+                <input id="nomeTurma" name="nomeTurma" class="inputs-de-turma" type="text"
+                  placeholder="Ex: Análise e Desenvolvimento de Sistemas">
+                <label for="codigoTurma">Código:</label>
+                <input id="codigoTurma" name="codigoTurma" class="inputs-de-turma" type="text" placeholder="Ex: 3TDS">
+                <label for="sala">Sala:</label>
+                <input id="sala" name="sala" class="inputs-de-turma" type="text" placeholder="Ex: L233">
+
+                <button onclick="handleCadastrarTurma()" style="width: 100%;" class="btn btn-secondary"
+                  data-dismiss="modal" type="button">Cadastrar Turma</button>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <p>Precision Tech</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-turma">
+        <h2>Turmas <a id="addTurmaButton" onclick="abrirModal()"><i class="fa-solid fa-plus"></i></a> </h2>
+        <table class="tabela" id="turmas-table">
+          <thead>
+            <tr>
+              <th>Código</th>
+              <th>Nome da Turma</th>
+              <th>Ações</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- As máquinas serão adicionadas dinamicamente pelo JavaScript -->
+          </tbody>
+        </table>
+      </div>
+
     </div>
+
   </div>
   </div>
 
@@ -59,5 +102,9 @@
     </p>
   </footer>
 </body>
+
+<script src="assets/js/geral.js"></script>
+<script src="assets/js/turmas.js"></script>
+
 
 </html>

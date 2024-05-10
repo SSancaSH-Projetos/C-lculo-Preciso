@@ -114,7 +114,7 @@ function cadastrar(tipoItem) {
             console.log("Item cadastrado com sucesso:", data);
             fecharModal(modalId);
             document.getElementById(modalId).reset();
-
+            
         })
         .catch(function (error) {
             console.error("Erro:", error);
