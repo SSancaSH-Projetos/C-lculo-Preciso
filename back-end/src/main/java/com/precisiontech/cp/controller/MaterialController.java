@@ -17,11 +17,23 @@ import java.util.Optional;
 @RequestMapping("/material")
 public class MaterialController {
     @Autowired
-    private  MaterialRepository materialRepository;
+    private MaterialRepository materialRepository;
+
     @GetMapping
-    public List<Material> getAllMaterial() {
-        return materialRepository.findAll();
+    public ResponseEntity<List<Material>> getAllMaterial() {
+        try {
+            List<Material> materials = materialRepository.findAll();
+            if (!materials.isEmpty()) {
+                return ResponseEntity.ok(materials);
+            } else {
+                return ResponseEntity.noContent().build(); // Retorna 204 No Content se a lista estiver vazia
+            }
+
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build(); // Retorna 500 Internal Server Error se ocorrer uma exceção
+        }
     }
+
 
     @GetMapping("/{id}")
     public ResponseEntity<Material> getMaterialById(@PathVariable Long id) {
@@ -29,6 +41,7 @@ public class MaterialController {
                 .map(ResponseEntity::ok)
                 .orElse(ResponseEntity.notFound().build());
     }
+
 
     @PostMapping
     public ResponseEntity<Material> createMaterial(@RequestBody Material material) {

@@ -1,15 +1,17 @@
 package com.precisiontech.cp.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@DiscriminatorValue("material")
 public class Material {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -25,6 +27,8 @@ public class Material {
     @Column(name = "preco_cavaco")
     private Double precoCavaco;
 
-    @OneToOne(mappedBy = "material")
-    private Peca peca;
+    @JsonIgnore
+    @OneToMany(mappedBy = "material")
+    private List<Peca> pecas;
+
 }

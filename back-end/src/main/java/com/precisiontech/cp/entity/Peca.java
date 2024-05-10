@@ -1,5 +1,6 @@
 package com.precisiontech.cp.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -33,11 +34,17 @@ public class Peca implements Serializable {
     )
     private List<MaoDeObra> maosDeObra = new ArrayList<>();
 
-    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    @JoinColumn(name = "material_id", referencedColumnName = "id")
+    @ManyToOne
+    @JoinColumn(name = "material_id") // Chave estrangeira na tabela Peca
     private Material material;
 
-    @OneToMany(mappedBy = "peca", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+
+    @ManyToMany(mappedBy = "pecas", cascade = {CascadeType.PERSIST, CascadeType.MERGE})
     private List<Maquina> maquinas = new ArrayList<>();
+
+
+    @OneToMany(mappedBy = "peca")
+    private List<SubPeca> subPecas;
+
 
 }

@@ -1,5 +1,6 @@
 package com.precisiontech.cp.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -21,6 +22,7 @@ public class MaoDeObra {
     private String profissional;
     private double precoPorHora;
 
+    @JsonIgnore
     @ManyToMany(mappedBy = "maosDeObra")
     private List<Peca> pecas = new ArrayList<>();
 

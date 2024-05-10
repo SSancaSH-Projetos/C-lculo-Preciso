@@ -1,5 +1,6 @@
 package com.precisiontech.cp.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -21,6 +22,15 @@ public class SubPeca implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nome;
+
+    @ManyToOne
+    @JoinColumn(name = "formato_id")
+    private Formato formato;
+
+    @JsonIgnore
+    @ManyToOne
+    @JoinColumn(name = "peca_id")
+    private Peca peca;
 
 
 }

@@ -1,5 +1,6 @@
 package com.precisiontech.cp.entity;
 
+import jakarta.persistence.DiscriminatorValue;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
@@ -12,7 +13,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Data
 @Entity
-@Table(name = "cilindro")
+@DiscriminatorValue("Piramide")
 public class Piramide extends Formato {
 
     private String tipoBase;
