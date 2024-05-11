@@ -11,6 +11,11 @@
 
 }
 
+h3{
+  color: #fff;
+  font-family: 'Orbitron';
+}
+
 .peca-inputs{
   display: none;
   flex-direction: column;
@@ -81,4 +86,33 @@
   margin-bottom: 2%;
   border: dashed 1px #fff;
   color: #fff;
+}
+
+.materiais-e-custos{
+  color:#fff;
+}
+
+.materiais-e-custos-item{
+  background-color: rgba(189, 189, 189, 0.5);
+  margin: 10px;
+  padding: 10px;
+  font-family: "Orbitron";
+}
+
+.materiais-e-custos-item-input{
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  padding: 5px;
+}
+
+.materiais-e-custos-item-input * {
+  
+  font-size: 1em;
+  font-family: 'Orbitron';
+}
+
+.input-volume{
+  font-family:"Orbitron";
+  padding: 5px;
 }

@@ -1,3 +1,73 @@
+// variáveis para envio ao back-end
+var subPecas = [];
+
+
+
+
+// Carrega os dados para a página
+fetch('http://localhost:8080/maodeobra')
+  .then(response => response.json())
+  .then(data => {
+    const listaMaoDeObra = document.getElementById('listaMaoDeObra');
+
+    data.forEach(profissional => {
+      const itemLista = document.createElement('li');
+      itemLista.innerHTML = `
+      <div class="materiais-e-custos-item">
+        <div>${profissional.profissional}</div>
+        <div>Preço por hora: R$ ${profissional.precoPorHora.toFixed(2)}</div>
+        <div class="materiais-e-custos-item-input">
+          <input id="${profissional.id}qtdProfissionais" type="number" placeholder="Nº de profissionais"><br>
+          <input id="${profissional.id}qtdHoras" type="number" placeholder="Quantidade de horas">
+        <div>
+      </div>
+    `;
+      listaMaoDeObra.appendChild(itemLista);
+    });
+  })
+  .catch(error => console.error('Erro ao buscar dados de mão de obra:', error));
+
+
+fetch('http://localhost:8080/maquinas')
+  .then(response => response.json())
+  .then(data => {
+    const listaMaoDeObra = document.getElementById('listaMaquinas');
+
+    data.forEach(maquina => {
+      const itemLista = document.createElement('li');
+      itemLista.innerHTML = `
+      <div class="materiais-e-custos-item">
+        <div>${maquina.nome}</div>
+        <div>Preço por hora: R$ ${maquina.precoPorHora.toFixed(2)}</div>
+        <div class="materiais-e-custos-item-input">
+          <input id="${maquina.id}qtdMaquinas" type="number" placeholder="Nº de maquinas"><br>
+          <input id="${maquina.id}qtdHoras" type="number" placeholder="Quantidade de horas">
+        <div>
+      </div>
+    `;
+      listaMaoDeObra.appendChild(itemLista);
+    });
+  })
+  .catch(error => console.error('Erro ao buscar dados de mão de obra:', error));
+
+
+fetch('http://localhost:8080/material')
+  .then(response => response.json())
+  .then(data => {
+    const listaDeMateriais = document.getElementById('listaDeMateriais');
+
+    data.forEach(maquina => {
+      const option = document.createElement('option');
+      option.value = maquina.id;
+      option.text = maquina.nome;
+      listaDeMateriais.appendChild(option);
+    });
+  })
+  .catch(error => console.error('Erro ao buscar dados de materiais:', error));
+
+
+
+
 function mostrarInputs() {
   var selectElement = document.querySelector("#formato-da-sub-peca");
   var selectedOption = selectElement.options[selectElement.selectedIndex].value;
@@ -28,145 +98,133 @@ function mostrarInputs() {
     inputPiramide.style.display = "none";
   }
 }
-var listaObjetosJSON = []; // Lista para armazenar os objetos JSON criados
 
-function criarObjetoJSON() {
-  // Obter os elementos dos formulários
+function criarSubPartes() {
   var selectElement = document.querySelector("#formato-da-sub-peca");
   var geometria = selectElement.options[selectElement.selectedIndex].value;
   var dimensoes = {};
 
-  // Dependendo do formato da sub-peça selecionado, obter os valores correspondentes
   if (geometria === "Cubica") {
-    
-  var nomeSubpeca = document.getElementById("nomePecaCubica").value;
-    var lado = parseFloat(document.getElementById("ladoCubo").value); // Convertendo o valor para número
+    var nomeSubpeca = document.getElementById("nomePecaCubica").value;
+    var lado = parseFloat(document.getElementById("ladoCubo").value);
     dimensoes.lado = lado;
-
-    // Calculando a área da base
-    var areaBase = lado * lado;
-
-    // Calculando o volume
-    var volume = lado * lado * lado;
-
-    // Adicionando os valores de área da base e volume ao objeto dimensoes
-    dimensoes.areaBase = areaBase;
-    dimensoes.volume = volume;
+    dimensoes.areaBase = lado * lado;
+    dimensoes.volume = lado * lado * lado;
   }
 
   if (geometria === "Cilindrico") {
-    
-  var nomeSubpeca = document.getElementById("nomeCilindro").value;
+    var nomeSubpeca = document.getElementById("nomeCilindro").value;
     var raio = parseFloat(document.getElementById("raioCilindro").value);
     var altura = parseFloat(document.getElementById("alturaCilindro").value);
-
-    // Calculando o volume
-    var volume = Math.PI * Math.pow(raio, 2) * altura;
-
-    // Criar o objeto dimensoes para armazenar os valores do cilindro
     dimensoes.raio = raio;
-    dimensoes.altura = altura;
-    dimensoes.volume = volume;
-}
+    dimensoes.alturaCilindro = altura;
+    dimensoes.volume = Math.PI * Math.pow(raio, 2) * altura;
+  }
 
-if (geometria === "Piramide") {
-  var nomeSubpeca = document.getElementById("nomePiramide").value;
-  var basePiramide = parseFloat(document.getElementById("basePiramide").value);
-  var alturaPiramide = parseFloat(document.getElementById("alturaPiramide").value);
-
-  // Verificar se os valores de base e altura são válidos
-  if (!isNaN(basePiramide) && !isNaN(alturaPiramide)) {
-      // Calculando a área da base da pirâmide
-      var areaDaBasePiramide = 0.5 * basePiramide * alturaPiramide;
-
-      // Calculando o volume da pirâmide
-      var volumePiramide = (1/3) * areaDaBasePiramide * alturaPiramide;
-
-      // Criar o objeto dimensoes para armazenar os valores da pirâmide
+  if (geometria === "Piramide") {
+    var nomeSubpeca = document.getElementById("nomePiramide").value;
+    var basePiramide = parseFloat(document.getElementById("basePiramide").value);
+    var alturaPiramide = parseFloat(document.getElementById("alturaPiramide").value);
+    if (!isNaN(basePiramide) && !isNaN(alturaPiramide)) {
       dimensoes.basePiramide = basePiramide;
       dimensoes.alturaPiramide = alturaPiramide;
-      dimensoes.areaDaBasePiramide = areaDaBasePiramide;
-      dimensoes.volumePiramide = volumePiramide;
-  } else {
-      // Valores inválidos, exibir mensagem de erro e destacar os inputs incorretos
+      dimensoes.areaDaBasePiramide = 0.5 * basePiramide * alturaPiramide;
+      dimensoes.volumePiramide = (1 / 3) * dimensoes.areaDaBasePiramide * alturaPiramide;
+    } else {
       if (isNaN(basePiramide)) {
-          document.getElementById("basePiramide").style.border = "2px solid red";
+        document.getElementById("basePiramide").style.border = "2px solid red";
       }
       if (isNaN(alturaPiramide)) {
-          document.getElementById("alturaPiramide").style.border = "2px solid red";
+        document.getElementById("alturaPiramide").style.border = "2px solid red";
       }
       alert("Valores inválidos. Por favor, verifique os campos destacados em vermelho.");
+      return; // Retorna sem adicionar à lista se os valores forem inválidos
+    }
   }
-}
 
-
-  // Criar o objeto JSON com os dados
   var objetoJSON = {
-    nomeSubpeca: nomeSubpeca,
-    geometria: geometria,
-    dimensoes: dimensoes,
+    nome: nomeSubpeca,
+    raio: dimensoes.raio,
+    alturaCilindro: dimensoes.alturaCilindro,
+    volume: dimensoes.volume,
   };
-  console.log("teste", objetoJSON)
 
-  // Adicionar o objeto JSON à lista
-  listaObjetosJSON.push(objetoJSON);
+  subPecas.push(objetoJSON);
 
-// Limpar a div antes de adicionar novos elementos
-document.querySelector('.sub-pecas-adicionadas').innerHTML = '';
+  document.querySelector('.sub-pecas-adicionadas').innerHTML = '';
 
-// Iterar sobre a lista de objetos JSON e adicionar os valores à div
-listaObjetosJSON.forEach(function(objeto) {
-  var divSubPeca = document.createElement('div');
-  divSubPeca.classList.add('sub-peca');
-  divSubPeca.innerHTML = `
-    <div class="nome-subpeca"><strong>Nome da Sub-peça:</strong> ${objeto.nomeSubpeca}</div>
-    <div><strong>Geometria:</strong> ${objeto.geometria}</div>
+  subPecas.forEach(function (objeto) {
+    var divSubPeca = document.createElement('div');
+    divSubPeca.classList.add('sub-peca');
+    divSubPeca.innerHTML = `
+    <div class="nome-subpeca"><strong>Nome da Sub-peça:</strong> ${objeto.nome}</div>
+    <div><strong>Geometria:</strong> Cilíndrica</div>
     <div><strong>Dimensões:</strong></div>
+    <div style="margin-left: 3%;">
+      <div><strong>Raio:</strong> ${objeto.raio} cm</div>
+      <div><strong>Altura:</strong> ${objeto.alturaCilindro} cm</div>
+      <div><strong>Volume:</strong> ${objeto.volume.toFixed(0)} mm³</div>
+    </div>
   `;
 
-  // Adicionar inputs específicos para cada tipo de peça
-  if (objeto.geometria === "Cubica") {
-    divSubPeca.innerHTML += `
-      <div style="margin-left: 3%;">
-        <div><strong>Lado:</strong> ${objeto.dimensoes.lado} cm</div>
-        <div><strong>Área da Base:</strong> ${objeto.dimensoes.areaBase} mm²</div>
-        <div><strong>Volume:</strong> ${objeto.dimensoes.volume} mm³</div>
-      </div>
-    `;
-  } else if (objeto.geometria === "Cilindrico") {
-    divSubPeca.innerHTML += `
-      <div style="margin-left: 3%;">
-        <div><strong>Raio:</strong> ${objeto.dimensoes.raio} cm</div>
-        <div><strong>Altura:</strong> ${objeto.dimensoes.altura} cm</div>
-        <div><strong>Volume:</strong> ${objeto.dimensoes.volume} mm³</div>
-      </div>
-    `;
-  } else if (objeto.geometria === "Piramide") {
-    divSubPeca.innerHTML += `
-      <div style="margin-left: 3%;">
-        <div><strong>Lado da Base da Pirâmide:</strong> ${objeto.dimensoes.basePiramide} cm</div>
-        <div><strong>Altura da Piramide:</strong> ${objeto.dimensoes.alturaPiramide} cm</div>
-        <div><strong>Área da Base da Pirâmide:</strong> ${objeto.dimensoes.areaDaBasePiramide} mm²</div>
-        <div><strong>Volume da Pirâmide:</strong> ${objeto.dimensoes.volumePiramide} mm³</div>
-      </div>
-    `;
-  }
+    document.querySelector('.sub-pecas-adicionadas').appendChild(divSubPeca);
+  });
 
-  document.querySelector('.sub-pecas-adicionadas').appendChild(divSubPeca);
-});
+  // Calcula a soma dos volumes
+  var somaVolumes = subPecas.reduce(function (total, objeto) {
+    return total + objeto.volume;
+  }, 0);
 
-// Calcular a soma dos volumes
-var somaVolumes = listaObjetosJSON.reduce(function(total, objeto) {
-  return total + objeto.dimensoes.volume;
-}, 0);
-
-// Criar um elemento para exibir a soma dos volumes
-var divSomaVolumes = document.createElement('div');
-divSomaVolumes.classList.add('soma-volumes');
-divSomaVolumes.textContent = 'Volume total: ' + somaVolumes.toFixed(0) + ' mm³ | '  + somaVolumes.toFixed(0)/1000 + ' cm³';
-
-// Adicionar a div da soma dos volumes à classe 'sub-pecas-final'
-var subPecasFinal = document.querySelector('.sub-pecas-final');
-subPecasFinal.innerHTML = '';
-subPecasFinal.appendChild(divSomaVolumes);
+  // Exibe a soma dos volumes na página
+  var subPecasFinal = document.querySelector('.sub-pecas-final');
+  subPecasFinal.innerHTML = `<span>Volume da peça: </span><input id="volumeDaPeca" class='input-volume' value=${somaVolumes.toFixed(0)}>`;
 }
+
+
+function handleSalvarPeca() {
+
+  let codigo = document.getElementById("codPeca").value;
+  let nomePeca = document.getElementById("nomePeca").value;
+  let volumeDaPeca = document.getElementById("volumeDaPeca")?.value;
+  let pesoDoTarugo = document.getElementById("tarugo").value;
+  let listaDeMateriais = document.getElementById("listaDeMateriais");
+  let valorDaOpcaoSelecionada = listaDeMateriais.value;
+
+  console.log(subPecas)
+
+  let dataToSubmit = {
+    "codigo": codigo,
+    "nomeDaPeca": nomePeca,
+    "volumeTotal": volumeDaPeca,
+    "custoDeProducao": 100.0,
+    "tempoDeUsinagem": 12.5,
+    "pesoTarugo": pesoDoTarugo,
+    "quantidadeDeCavaco": 15.0,
+    "valorDoCavaco": 50.0,
+    "maosDeObraIds": [1],
+    "maquinas": [1, 2],
+    "materialId": valorDaOpcaoSelecionada,
+    "subPecas": subPecas
+  };
+
+  fetch('http://localhost:8080/pecas', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(dataToSubmit)
+  })
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      return response.json();
+    })
+    .then(data => {
+      console.log('Dados enviados com sucesso:', data);
+    })
+    .catch(error => {
+      console.error('Houve um problema ao enviar os dados:', error);
+    });
+}
+
