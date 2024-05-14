@@ -1,54 +1,51 @@
 // variáveis para envio ao back-end
 var subPecas = [];
-
-
+var materiais = [];
+var maoDeObra = [];
 
 
 // Carrega os dados para a página
 fetch('http://localhost:8080/maodeobra')
   .then(response => response.json())
   .then(data => {
-    const listaMaoDeObra = document.getElementById('listaMaoDeObra');
+    const selectMaoDeObra = document.getElementById('selectMaoDeObra');
+
+    const selectElement = document.createElement('select');
+    selectElement.setAttribute('id', 'maoDeObraSelect');
 
     data.forEach(profissional => {
-      const itemLista = document.createElement('li');
-      itemLista.innerHTML = `
-      <div class="materiais-e-custos-item">
-        <div>${profissional.profissional}</div>
-        <div>Preço por hora: R$ ${profissional.precoPorHora.toFixed(2)}</div>
-        <div class="materiais-e-custos-item-input">
-          <input id="${profissional.id}qtdProfissionais" type="number" placeholder="Nº de profissionais"><br>
-          <input id="${profissional.id}qtdHoras" type="number" placeholder="Quantidade de horas">
-        <div>
-      </div>
-    `;
-      listaMaoDeObra.appendChild(itemLista);
+      const optionElement = document.createElement('option');
+      optionElement.setAttribute('value', profissional.id);
+      optionElement.textContent = `${profissional.profissional} - Preço por hora: R$ ${profissional.precoPorHora.toFixed(2)}`;
+      selectElement.appendChild(optionElement);
     });
+
+    selectMaoDeObra.appendChild(selectElement);
   })
   .catch(error => console.error('Erro ao buscar dados de mão de obra:', error));
 
 
+
+// Carrega os dados para a página
 fetch('http://localhost:8080/maquinas')
   .then(response => response.json())
   .then(data => {
-    const listaMaoDeObra = document.getElementById('listaMaquinas');
+    const selectMaquinas = document.getElementById('selectMaquinas');
+
+    const selectElement = document.createElement('select');
+    selectElement.setAttribute('id', 'maquinasSelect');
 
     data.forEach(maquina => {
-      const itemLista = document.createElement('li');
-      itemLista.innerHTML = `
-      <div class="materiais-e-custos-item">
-        <div>${maquina.nome}</div>
-        <div>Preço por hora: R$ ${maquina.precoPorHora.toFixed(2)}</div>
-        <div class="materiais-e-custos-item-input">
-          <input id="${maquina.id}qtdMaquinas" type="number" placeholder="Nº de maquinas"><br>
-          <input id="${maquina.id}qtdHoras" type="number" placeholder="Quantidade de horas">
-        <div>
-      </div>
-    `;
-      listaMaoDeObra.appendChild(itemLista);
+      const optionElement = document.createElement('option');
+      optionElement.setAttribute('value', maquina.id);
+      optionElement.textContent = `${maquina.nome} - Preço por hora: R$ ${maquina.precoPorHora.toFixed(2)}`;
+      selectElement.appendChild(optionElement);
     });
+
+    selectMaquinas.appendChild(selectElement);
   })
-  .catch(error => console.error('Erro ao buscar dados de mão de obra:', error));
+  .catch(error => console.error('Erro ao buscar dados de máquinas:', error));
+
 
 
 fetch('http://localhost:8080/material')
@@ -103,9 +100,10 @@ function criarSubPartes() {
   var selectElement = document.querySelector("#formato-da-sub-peca");
   var geometria = selectElement.options[selectElement.selectedIndex].value;
   var dimensoes = {};
+  var nomeSubpeca;
 
   if (geometria === "Cubica") {
-    var nomeSubpeca = document.getElementById("nomePecaCubica").value;
+    nomeSubpeca = document.getElementById("nomePecaCubica").value;
     var lado = parseFloat(document.getElementById("ladoCubo").value);
     dimensoes.lado = lado;
     dimensoes.areaBase = lado * lado;
@@ -113,7 +111,7 @@ function criarSubPartes() {
   }
 
   if (geometria === "Cilindrico") {
-    var nomeSubpeca = document.getElementById("nomeCilindro").value;
+    nomeSubpeca = document.getElementById("nomeCilindro").value;
     var raio = parseFloat(document.getElementById("raioCilindro").value);
     var altura = parseFloat(document.getElementById("alturaCilindro").value);
     dimensoes.raio = raio;
@@ -122,14 +120,14 @@ function criarSubPartes() {
   }
 
   if (geometria === "Piramide") {
-    var nomeSubpeca = document.getElementById("nomePiramide").value;
+    nomeSubpeca = document.getElementById("nomePiramide").value;
     var basePiramide = parseFloat(document.getElementById("basePiramide").value);
     var alturaPiramide = parseFloat(document.getElementById("alturaPiramide").value);
     if (!isNaN(basePiramide) && !isNaN(alturaPiramide)) {
       dimensoes.basePiramide = basePiramide;
       dimensoes.alturaPiramide = alturaPiramide;
       dimensoes.areaDaBasePiramide = 0.5 * basePiramide * alturaPiramide;
-      dimensoes.volumePiramide = (1 / 3) * dimensoes.areaDaBasePiramide * alturaPiramide;
+      dimensoes.volume = (1 / 3) * dimensoes.areaDaBasePiramide * alturaPiramide;
     } else {
       if (isNaN(basePiramide)) {
         document.getElementById("basePiramide").style.border = "2px solid red";
@@ -144,25 +142,31 @@ function criarSubPartes() {
 
   var objetoJSON = {
     nome: nomeSubpeca,
-    raio: dimensoes.raio,
-    alturaCilindro: dimensoes.alturaCilindro,
-    volume: dimensoes.volume,
+    formato: geometria,
+    ...dimensoes
   };
 
   subPecas.push(objetoJSON);
 
   document.querySelector('.sub-pecas-adicionadas').innerHTML = '';
 
+  console.log("teste", subPecas)
+
   subPecas.forEach(function (objeto) {
     var divSubPeca = document.createElement('div');
     divSubPeca.classList.add('sub-peca');
     divSubPeca.innerHTML = `
     <div class="nome-subpeca"><strong>Nome da Sub-peça:</strong> ${objeto.nome}</div>
-    <div><strong>Geometria:</strong> Cilíndrica</div>
+    <div><strong>Geometria:</strong> ${objeto.formato}</div>
     <div><strong>Dimensões:</strong></div>
     <div style="margin-left: 3%;">
+      ${objeto.formato === "Cilindrico" ? `
       <div><strong>Raio:</strong> ${objeto.raio} cm</div>
-      <div><strong>Altura:</strong> ${objeto.alturaCilindro} cm</div>
+      <div><strong>Altura:</strong> ${objeto.alturaCilindro} cm</div>` : ''}
+      ${objeto.formato === "Cubica" ? `<div><strong>Lado:</strong> ${objeto.lado} cm</div>` : ''}
+      ${objeto.formato === "Piramide" ? `
+      <div><strong>Base:</strong> ${objeto.basePiramide} cm</div>
+      <div><strong>Altura:</strong> ${objeto.alturaPiramide} cm</div>` : ''}
       <div><strong>Volume:</strong> ${objeto.volume.toFixed(0)} mm³</div>
     </div>
   `;
@@ -176,9 +180,58 @@ function criarSubPartes() {
   }, 0);
 
   // Exibe a soma dos volumes na página
-  var subPecasFinal = document.querySelector('.sub-pecas-final');
-  subPecasFinal.innerHTML = `<span>Volume da peça: </span><input id="volumeDaPeca" class='input-volume' value=${somaVolumes.toFixed(0)}>`;
+  var subPecasFinal = document.querySelector('#relatorio-subpecas');
+  subPecasFinal.innerHTML = `<span>Volume da peça: </span><input readonly id="volumeDaPeca" class='input-volume' value=${somaVolumes.toFixed(0)}>`;
 }
+
+function addMaoDeObra() {
+  var id = maoDeObra.length + 1; // Gera um ID sequencial
+  var nome = document.getElementById("maoDeObraSelect").value;
+  var numeroDeProfissionais = parseInt(document.getElementById("numeroDeProfissionais").value);
+  var quantidadeDeHorasProfissional = parseInt(document.getElementById("quantidadeDeHorasProfissional").value);
+
+  console.log(id,nome,numeroDeProfissionais, quantidadeDeHorasProfissional);
+
+  if (nome && !isNaN(numeroDeProfissionais) && !isNaN(quantidadeDeHorasProfissional)) {
+      var maoDeObraObj = {
+          id: id,
+          nome: nome,
+          numeroDeProfissionais: numeroDeProfissionais,
+          quantidadeDeHorasProfissional: quantidadeDeHorasProfissional
+      };
+
+      maoDeObra.push(maoDeObraObj);
+
+      document.getElementById("selectMaoDeObra").value = "";
+      document.getElementById("numeroDeProfissionais").value = "";
+      document.getElementById("quantidadeDeHorasProfissional").value = "";
+
+      var listaMaoDeObra = document.getElementById("listaMaoDeObra");
+
+      // Limpa o conteúdo atual da lista
+      listaMaoDeObra.innerHTML = "";
+  
+      maoDeObra.forEach(function(maoDeObraObj) {
+          var li = document.createElement("li");
+          li.textContent = "Nome: " + maoDeObraObj.nome + ", Profissionais: " + maoDeObraObj.numeroDeProfissionais + ", Horas: " + maoDeObraObj.quantidadeDeHorasProfissional;
+          listaMaoDeObra.appendChild(li);
+      });
+
+      // Calcula o total de profissionais demandados
+      var totalProfissionais = maoDeObra.reduce((acc, curr) => acc + curr.numeroDeProfissionais, 0);
+      
+      // Calcula a quantidade total de horas demandadas
+      var horasTotais = maoDeObra.reduce((acc, curr) => acc + curr.quantidadeDeHorasProfissional, 0);
+      
+      // Atualiza o elemento de resumo
+      document.getElementById("relatorio-maoDeObra").textContent = "Total de Profissionais: " + totalProfissionais + ", Horas Totais: " + horasTotais;
+
+  } else {
+      alert("Por favor, preencha todos os campos corretamente.");
+  }
+}
+
+
 
 
 function handleSalvarPeca() {
@@ -227,4 +280,3 @@ function handleSalvarPeca() {
       console.error('Houve um problema ao enviar os dados:', error);
     });
 }
-

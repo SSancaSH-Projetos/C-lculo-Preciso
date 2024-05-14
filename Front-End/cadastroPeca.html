@@ -55,14 +55,13 @@
             <input class="login-text-box" type="text" id="nomePeca" name="nomePeca" placeholder="Ex: Componente Xcel" />
             <label for="material">Material:</label>
             <select id="listaDeMateriais" class="select-element">
-              
+
             </select>
             <label for="senha">Peso do tarugo:</label>
             <input class="login-text-box" type="text" id="tarugo" name="tarugo"
               placeholder="Digite o peso do tarugo (KG)" />
             <br>
-            <div class="sub-pecas-final"> Não há peças adicionadas ainda.</div>
-            <div></div>
+
           </div>
 
           <div class="cadastro-sub-partes">
@@ -135,13 +134,7 @@
 
 
 
-              <button class="btn" style="
-                  background-color: #c0c4d2;
-                  align-items: self-end;
-                  color: black;
-                  width: 100%;
-                  font-size: 1.1em;
-                " onclick="criarSubPartes()">
+              <button class="btn btn-calculo" onclick="criarSubPartes()">
                 Adicionar ao cálculo
               </button>
 
@@ -153,15 +146,66 @@
               <h2>Materiais e Custos</h2>
             </div>
 
-            <h3>Mão de Obra</h3>
-            <ul id="listaMaoDeObra" class="materiais-e-custos">
-              <!-- Lista de mão de obra será inserida aqui -->
-            </ul>
+            <div class="box-materiais-e-custos">
+              <h3>Mão de Obra</h3>
+              <ul id="listaMaoDeObra" class="materiais-e-custos">
+                <!-- Lista de mão de obra será inserida aqui -->
+              </ul>
 
-            <h3>Máquinas</h3>
-            <ul id="listaMaquinas" class="materiais-e-custos">
-              <!-- Lista de mão de obra será inserida aqui -->
-            </ul>
+              <div class="materiais-e-custos-item-input">
+                <div id="selectMaoDeObra">
+
+                </div>
+                <br>
+                <label for="numeroDeProfissionais" style="color: #ffffff;">Nº de profissionais</label>
+                <input type="number" id="numeroDeProfissionais" name="numeroDeProfissionais" placeholder="Ex:2">
+                <label for="quantidadeDeHorasProfissional" style="color: #ffffff;">Quantidade de Horas</label>
+                <input type="number" id="quantidadeDeHorasProfissional" name="quantidadeDeHorasProfissional"
+                  placeholder="Ex: 10">
+              </div>
+              <br>
+              <button class="btn btn-calculo" onclick="addMaoDeObra()"> Adicionar Mão de Obra </button>
+
+            </div>
+
+            <div class="box-materiais-e-custos">
+              <h3>Máquinas</h3>
+
+              <ul id="listaMaquinas" class="materiais-e-custos">
+                <!-- Lista de mão de obra será inserida aqui -->
+              </ul>
+
+              <div class="materiais-e-custos-item-input">
+                <div id="selectMaquinas">
+
+                </div>
+                <br>
+                <label for="numeroDeMaquinas" style="color: #ffffff;">Nº de máquinas</label>
+                <input type="number" id="numeroDeMaquinas" name="numeroDeMaquinas" placeholder="Ex:2">
+                <label for="quantidadeDeHorasMaquina" style="color: #ffffff;">Quantidade de Horas</label>
+                <input type="number" id="quantidadeDeHorasMaquina" name="quantidadeDeHorasMaquina" placeholder="Ex: 10">
+              </div>
+
+            </div>
+          </div>
+
+          <div>
+            <div class="subPeca">
+              <h2>Resumo</h2>
+            </div>
+
+            <div style="color: #fff;">
+              <div id="relatorio-subpecas" class="relatorio-final"> Não há peças adicionadas ainda.</div>
+              <div id="relatorio-maoDeObra" class="relatorio-final"> Não mão de obra associada ainda.</div>
+              <div id="relatorio-maquinas" class="relatorio-final"> Não máquinas associadas ainda.</div>
+              <div id="relatorio-custoDeProducao" class="relatorio-final"> Não foi possível ser calculado ainda o custo
+                de produção</div>
+              <div id="relatorio-tempoDeUsinagem" class="relatorio-final"> Não foi possível calcular ainda o tempo de
+                usinagem</div>
+              <div id="relatorio-cavaco" class="relatorio-final"> Não foi possível calcular ainda a quantidade de cavaco
+                gerado</div>
+
+            </div>
 
           </div>
 
