@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="assets/css/relatorio.css">
   
   <script src="assets/js/geral.js"></script>
+  <script src="assets/js/relatorio.js"></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -34,7 +35,7 @@
         <img class="logoCalculoPreciso" src="assets/images/logoBranco.png" alt="PrecisionTechLogo">
       </div>
       <div class="buttons">
-        <a href="cadastroPeca.html"><button class="btn btn-sidebar" style="">Nova Peça</button></a>
+        <a href="cadastroPeca.html"><button class="btn btn-sidebar">Nova Peça</button></a>
         <a href="custos.html"><button class="btn btn-sidebar">Custos</button> </a>
         <a href="relatorio.html"><button class="btn btn-sidebar">Relatorios</button></a>
       </div>
@@ -46,11 +47,11 @@
     <div class="content-container">
       <div class="relatorio-de-peca">
         <h2>Relatório</h2>
-        <p>Responsável: Diogo Silva</p>
-            <p>Máquina: Torno CNC</p>
-            <p>Material: alumínio</p>
-            <p>Código da peça: 32</p>
-            <p>Peça: Adaptador Storz 1.1/2' ' ER X 2.1/2'</p>
+        <p id="codigo">Código da peça:</p>
+        <p id="listaDeNomesDePecas">Peça:</p>        
+        <p id="maoDeObra">Responsável: </p>
+        <p id="maquina" >Máquina: </p>
+        <p id="material">Material: </p>
       </div>>
     </div>
   </div>

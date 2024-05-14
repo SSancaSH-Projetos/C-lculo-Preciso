@@ -85,6 +85,9 @@
                   <option value="Cilindrico">Cilíndrico</option>
                   <option value="Cubica">Cúbica</option>
                   <option value="Piramide">Pirâmide</option>
+                  <option value="Retangulo">Retângulo</option>
+                  <option value="Trapezio">Trapézio</option>
+                  <!--    <option value="Cone">Cone</option> -->
                 </select>
               </div>
 
@@ -100,6 +103,24 @@
                 </div>
               </div>
 
+              <div id="inputRetangulo" class="peca-inputs" style="display: none;">
+                <div>
+                  <label for="nomeRetangulo">Nome da Sub-peça:</label>
+                  <input style="width: 100%;" type="text" id="nomeRetangulo" name="nomeRetangulo" />
+                </div>
+                <div>
+                  <label for="baseRetangulo">Base (cm):</label>
+                  <input style="width: 100%;" type="number" id="baseRetangulo" name="baseRetangulo" />
+                </div>
+                <div>
+                  <label for="alturaRetangulo">Altura (cm):</label>
+                  <input style="width: 100%;" type="number" id="alturaRetangulo" name="alturaRetangulo" />
+                </div>
+                <div>
+                  <label for="comprimentoRetangulo">Comprimento (cm):</label>
+                  <input style="width: 100%;" type="number" id="comprimentoRetangulo" name="comprimentoRetangulo" />
+                </div>
+              </div>
 
               <div id="inputCilindrico" class="peca-inputs">
                 <div>
@@ -132,7 +153,43 @@
                 </div>
               </div>
 
+              <div id="inputTrapezio" class="peca-inputs" style="display: none;">
+                <div>
+                  <label for="nomeTrapezio">Nome da Sub-peça:</label>
+                  <input style="width: 100%;" type="text" id="nomeTrapezio" name="nomeTrapezio" />
+                </div>
+                <div>
+                  <label for="baseMenorTrapezio">Comprimento da Base Menor (cm):</label>
+                  <input style="width: 100%;" type="number" id="baseMenorTrapezio" name="baseMenorTrapezio" />
+                </div>
+                <div>
+                  <label for="baseMaiorTrapezio">Comprimento da Base Maior (cm):</label>
+                  <input style="width: 100%;" type="number" id="baseMaiorTrapezio" name="baseMaiorTrapezio" />
+                </div>
+                <div>
+                  <label for="alturaTrapezio">Altura (cm):</label>
+                  <input style="width: 100%;" type="number" id="alturaTrapezio" name="alturaTrapezio" />
+                </div>
+                <div>
+                  <label for="comprimentoTrapezio">Comprimento (cm):</label>
+                  <input style="width: 100%;" type="number" id="comprimentoTrapezio" name="comprimentoTrapezio" />
+                </div>
+              </div>
 
+              <div id="inputCone" class="peca-inputs" style="display: none;">
+                <div>
+                  <label for="nomeCone">Nome da Sub-peça:</label>
+                  <input style="width: 100%;" type="text" id="nomeCone" name="nomeCone" />
+                </div>
+                <div>
+                  <label for="raioCone">Raio (cm):</label>
+                  <input style="width: 100%;" type="number" id="raioCone" name="raioCone" />
+                </div>
+                <div>
+                  <label for="alturaCone">Altura (cm):</label>
+                  <input style="width: 100%;" type="number" id="alturaCone" name="alturaCone" />
+                </div>
+              </div>
 
               <button class="btn btn-calculo" onclick="criarSubPartes()">
                 Adicionar ao cálculo

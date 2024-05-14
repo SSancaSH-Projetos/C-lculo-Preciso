@@ -48,6 +48,16 @@ public class PecaController {
         return pecas.stream().map(this::toDTO).collect(Collectors.toList());
     }
 
+    @GetMapping("/nome")
+    public List<String> getNomes() {
+        return pecaRepository.findNome();
+    }
+
+    @GetMapping("/codigo")
+    public List<String> getCodigo() {
+        return pecaRepository.findCodigo();
+    }
+
     @GetMapping("/{id}")
     public PecaDTOResponse getPecaById(@PathVariable Long id) {
         Peca peca = pecaRepository.findById(id)

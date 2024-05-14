@@ -1,0 +1,214 @@
+{
+    "sourceFile": "relatorio.html",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 49,
+            "patches": [
+                {
+                    "date": 1715710001342,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1715710027259,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,9 +33,9 @@\n       <div class=\"logo-container\">\r\n         <img class=\"logoCalculoPreciso\" src=\"assets/images/logoBranco.png\" alt=\"PrecisionTechLogo\">\r\n       </div>\r\n       <div class=\"buttons\">\r\n-        <a href=\"cadastroPeca.html\"><button class=\"btn btn-sidebar\" style=\"\">Nova Peça</button></a>\r\n+        <a href=\"cadastroPeca.html\"><button class=\"btn btn-sidebar\" style=\"1\">Nova Peça</button></a>\r\n         <a href=\"custos.html\"><button class=\"btn btn-sidebar\">Custos</button> </a>\r\n         <a href=\"relatorio.html\"><button class=\"btn btn-sidebar\">Relatorios</button></a>\r\n       </div>\r\n       <div class=\"precision-tech-container\">\r\n"
+                },
+                {
+                    "date": 1715710034139,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,9 +33,9 @@\n       <div class=\"logo-container\">\r\n         <img class=\"logoCalculoPreciso\" src=\"assets/images/logoBranco.png\" alt=\"PrecisionTechLogo\">\r\n       </div>\r\n       <div class=\"buttons\">\r\n-        <a href=\"cadastroPeca.html\"><button class=\"btn btn-sidebar\" style=\"1\">Nova Peça</button></a>\r\n+        <a href=\"cadastroPeca.html\"><button class=\"btn btn-sidebar\" style=\"\">Nova Peça</button></a>\r\n         <a href=\"custos.html\"><button class=\"btn btn-sidebar\">Custos</button> </a>\r\n         <a href=\"relatorio.html\"><button class=\"btn btn-sidebar\">Relatorios</button></a>\r\n       </div>\r\n       <div class=\"precision-tech-container\">\r\n"
+                },
+                {
+                    "date": 1715710491893,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,8 +7,9 @@\n   <link rel=\"stylesheet\" href=\"assets/css/geral.css\">\r\n   <link rel=\"stylesheet\" href=\"assets/css/relatorio.css\">\r\n   \r\n   <script src=\"assets/js/geral.js\"></script>\r\n+  <script></script>\r\n   <meta charset=\"UTF-8\">\r\n   <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n </head>\r\n \r\n"
+                },
+                {
+                    "date": 1715710498106,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n   <link rel=\"stylesheet\" href=\"assets/css/geral.css\">\r\n   <link rel=\"stylesheet\" href=\"assets/css/relatorio.css\">\r\n   \r\n   <script src=\"assets/js/geral.js\"></script>\r\n-  <script></script>\r\n+  <script src=\"assets/js/\"></script>\r\n   <meta charset=\"UTF-8\">\r\n   <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n </head>\r\n \r\n"
+                },
+                {
+                    "date": 1715710503801,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n   <link rel=\"stylesheet\" href=\"assets/css/geral.css\">\r\n   <link rel=\"stylesheet\" href=\"assets/css/relatorio.css\">\r\n   \r\n   <script src=\"assets/js/geral.js\"></script>\r\n-  <script src=\"assets/js/\"></script>\r\n+  <script src=\"assets/js/relatorio.js\" defer></script>\r\n   <meta charset=\"UTF-8\">\r\n   <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n </head>\r\n \r\n"
+                },
+                {
+                    "date": 1715710509592,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n   <link rel=\"stylesheet\" href=\"assets/css/geral.css\">\r\n   <link rel=\"stylesheet\" href=\"assets/css/relatorio.css\">\r\n   \r\n   <script src=\"assets/js/geral.js\"></script>\r\n-  <script src=\"assets/js/relatorio.js\" defer></script>\r\n+  <script src=\"assets/js/relatorio.js\"></script>\r\n   <meta charset=\"UTF-8\">\r\n   <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n </head>\r\n \r\n"
+                },
+                {
+                    "date": 1715710632599,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -43,18 +43,9 @@\n         <h3> By PrecisionTech </h3>\r\n       </div>\r\n     </div>\r\n \r\n-    <div class=\"content-container\">\r\n-      <div class=\"relatorio-de-peca\">\r\n-        <h2>Relatório</h2>\r\n-        <p>Responsável: Diogo Silva</p>\r\n-            <p>Máquina: Torno CNC</p>\r\n-            <p>Material: alumínio</p>\r\n-            <p>Código da peça: 32</p>\r\n-            <p>Peça: Adaptador Storz 1.1/2' ' ER X 2.1/2'</p>\r\n-      </div>>\r\n-    </div>\r\n+   c\r\n   </div>\r\n \r\n   <footer class=\"footer\">\r\n     <p class=\"footer-text\">© 2024 Cálculo Preciso by Precision Tech - Todos os direitos reservados</p>\r\n"
+                },
+                {
+                    "date": 1715710782552,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -43,9 +43,18 @@\n         <h3> By PrecisionTech </h3>\r\n       </div>\r\n     </div>\r\n \r\n-   c\r\n+    <div class=\"content-container\">\r\n+      <div class=\"relatorio-de-peca\">\r\n+        <h2>Relatório</h2>\r\n+        <p id=\"responsavel\">Responsável: </p>\r\n+        <p id=\"maquina\">Máquina: </p>\r\n+        <p id=\"material\">Material: </p>\r\n+        <p id=\"codigo\">Código da peça: </p>\r\n+        <p id=\"peca\">Peça: </p>\r\n+      </div>>\r\n+    </div>\r\n   </div>\r\n \r\n   <footer class=\"footer\">\r\n     <p class=\"footer-text\">© 2024 Cálculo Preciso by Precision Tech - Todos os direitos reservados</p>\r\n"
+                },
+                {
+                    "date": 1715711799514,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -46,9 +46,9 @@\n \r\n     <div class=\"content-container\">\r\n       <div class=\"relatorio-de-peca\">\r\n         <h2>Relatório</h2>\r\n-        <p id=\"responsavel\">Responsável: </p>\r\n+        <p id=\"res\">Responsável: </p>\r\n         <p id=\"maquina\">Máquina: </p>\r\n         <p id=\"material\">Material: </p>\r\n         <p id=\"codigo\">Código da peça: </p>\r\n         <p id=\"peca\">Peça: </p>\r\n"
+                },
+                {
+                    "date": 1715711805057,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -46,9 +46,9 @@\n \r\n     <div class=\"content-container\">\r\n       <div class=\"relatorio-de-peca\">\r\n         <h2>Relatório</h2>\r\n-        <p id=\"res\">Responsável: </p>\r\n+        <p id=\"maoDeObra\">Responsável: </p>\r\n         <p id=\"maquina\">Máquina: </p>\r\n         <p id=\"material\">Material: </p>\r\n         <p id=\"codigo\">Código da peça: </p>\r\n         <p id=\"peca\">Peça: </p>\r\n"
+                },
+                {
+                    "date": 1715711987680,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -49,10 +49,8 @@\n         <h2>Relatório</h2>\r\n         <p id=\"maoDeObra\">Responsável: </p>\r\n         <p id=\"maquina\">Máquina: </p>\r\n         <p id=\"material\">Material: </p>\r\n-        <p id=\"codigo\">Código da peça: </p>\r\n-        <p id=\"peca\">Peça: </p>\r\n       </div>>\r\n     </div>\r\n   </div>\r\n \r\n"
+                },
+                {
+                    "date": 1715712208709,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -46,8 +46,10 @@\n \r\n     <div class=\"content-container\">\r\n       <div class=\"relatorio-de-peca\">\r\n         <h2>Relatório</h2>\r\n+        <p id=\"codigo\" st>Código da peça: </p>\r\n+        <p id=\"peca\">Peça: </p>\r\n         <p id=\"maoDeObra\">Responsável: </p>\r\n         <p id=\"maquina\">Máquina: </p>\r\n         <p id=\"material\">Material: </p>\r\n       </div>>\r\n"
+                },
+                {
+                    "date": 1715712215044,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -46,9 +46,9 @@\n \r\n     <div class=\"content-container\">\r\n       <div class=\"relatorio-de-peca\">\r\n         <h2>Relatório</h2>\r\n-        <p id=\"codigo\" st>Código da peça: </p>\r\n+        <p id=\"codigo\" style=\"#fff\">Código da peça: </p>\r\n         <p id=\"peca\">Peça: </p>\r\n         <p id=\"maoDeObra\">Responsável: </p>\r\n         <p id=\"maquina\">Máquina: </p>\r\n         <p id=\"material\">Material: </p>\r\n"
+                },
+                {
+                    "date": 1715712220493,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -46,9 +46,9 @@\n \r\n     <div class=\"content-container\">\r\n       <div class=\"relatorio-de-peca\">\r\n         <h2>Relatório</h2>\r\n-        <p id=\"codigo\" style=\"#fff\">Código da peça: </p>\r\n+        <p id=\"codigo\" style=\"color:#fff\">Código da peça: </p>\r\n         <p id=\"peca\">Peça: </p>\r\n         <p id=\"maoDeObra\">Responsável: </p>\r\n         <p id=\"maquina\">Máquina: </p>\r\n         <p id=\"material\">Material: </p>\r\n"
+                },
+                {
+                    "date": 1715712226628,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -47,9 +47,9 @@\n     <div class=\"content-container\">\r\n       <div class=\"relatorio-de-peca\">\r\n         <h2>Relatório</h2>\r\n         <p id=\"codigo\" style=\"color:#fff\">Código da peça: </p>\r\n-        <p id=\"peca\">Peça: </p>\r\n+        <p id=\"peca\" style=\"color:#fff\">Peça: </p>\r\n         <p id=\"maoDeObra\">Responsável: </p>\r\n         <p id=\"maquina\">Máquina: </p>\r\n         <p id=\"material\">Material: </p>\r\n       </div>>\r\n"
+                },
+                {
+                    "date": 1715712234029,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -48,11 +48,11 @@\n       <div class=\"relatorio-de-peca\">\r\n         <h2>Relatório</h2>\r\n         <p id=\"codigo\" style=\"color:#fff\">Código da peça: </p>\r\n         <p id=\"peca\" style=\"color:#fff\">Peça: </p>\r\n-        <p id=\"maoDeObra\">Responsável: </p>\r\n-        <p id=\"maquina\">Máquina: </p>\r\n-        <p id=\"material\">Material: </p>\r\n+        <p id=\"maoDeObra\" style=\"color:#fff\">Responsável: </p>\r\n+        <p id=\"maquina\" style=\"color:#fff\">Máquina: </p>\r\n+        <p id=\"material\"style=\"color:#fff\">Material: </p>\r\n       </div>>\r\n     </div>\r\n   </div>\r\n \r\n"
+                },
+                {
+                    "date": 1715712316764,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -46,9 +46,9 @@\n \r\n     <div class=\"content-container\">\r\n       <div class=\"relatorio-de-peca\">\r\n         <h2>Relatório</h2>\r\n-        <p id=\"codigo\" style=\"color:#fff\">Código da peça: </p>\r\n+        <p id=\"codigo\" style=\"background-color:#fff\">Código da peça: </p>\r\n         <p id=\"peca\" style=\"color:#fff\">Peça: </p>\r\n         <p id=\"maoDeObra\" style=\"color:#fff\">Responsável: </p>\r\n         <p id=\"maquina\" style=\"color:#fff\">Máquina: </p>\r\n         <p id=\"material\"style=\"color:#fff\">Material: </p>\r\n"
+                },
+                {
+                    "date": 1715712333474,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -46,9 +46,9 @@\n \r\n     <div class=\"content-container\">\r\n       <div class=\"relatorio-de-peca\">\r\n         <h2>Relatório</h2>\r\n-        <p id=\"codigo\" style=\"background-color:#fff\">Código da peça: </p>\r\n+        <p id=\"codigo\" style=\"background-color:#fff\" col>Código da peça: </p>\r\n         <p id=\"peca\" style=\"color:#fff\">Peça: </p>\r\n         <p id=\"maoDeObra\" style=\"color:#fff\">Responsável: </p>\r\n         <p id=\"maquina\" style=\"color:#fff\">Máquina: </p>\r\n         <p id=\"material\"style=\"color:#fff\">Material: </p>\r\n"
+                },
+                {
+                    "date": 1715712339075,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -46,9 +46,9 @@\n \r\n     <div class=\"content-container\">\r\n       <div class=\"relatorio-de-peca\">\r\n         <h2>Relatório</h2>\r\n-        <p id=\"codigo\" style=\"background-color:#fff\" col>Código da peça: </p>\r\n+        <p id=\"codigo\" style=\"background-color:#fff; \" >Código da peça: </p>\r\n         <p id=\"peca\" style=\"color:#fff\">Peça: </p>\r\n         <p id=\"maoDeObra\" style=\"color:#fff\">Responsável: </p>\r\n         <p id=\"maquina\" style=\"color:#fff\">Máquina: </p>\r\n         <p id=\"material\"style=\"color:#fff\">Material: </p>\r\n"
+                },
+                {
+                    "date": 1715712348184,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -46,9 +46,9 @@\n \r\n     <div class=\"content-container\">\r\n       <div class=\"relatorio-de-peca\">\r\n         <h2>Relatório</h2>\r\n-        <p id=\"codigo\" style=\"background-color:#fff; \" >Código da peça: </p>\r\n+        <p id=\"codigo\" style=\"background-color:#fff; color: #000;\" >Código da peça: </p>\r\n         <p id=\"peca\" style=\"color:#fff\">Peça: </p>\r\n         <p id=\"maoDeObra\" style=\"color:#fff\">Responsável: </p>\r\n         <p id=\"maquina\" style=\"color:#fff\">Máquina: </p>\r\n         <p id=\"material\"style=\"color:#fff\">Material: </p>\r\n"
+                },
+                {
+                    "date": 1715712361759,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -47,9 +47,9 @@\n     <div class=\"content-container\">\r\n       <div class=\"relatorio-de-peca\">\r\n         <h2>Relatório</h2>\r\n         <p id=\"codigo\" style=\"background-color:#fff; color: #000;\" >Código da peça: </p>\r\n-        <p id=\"peca\" style=\"color:#fff\">Peça: </p>\r\n+        <p id=\"peca\"style=\"background-color:#fff; color: #000;\">Peça: </p>\r\n         <p id=\"maoDeObra\" style=\"color:#fff\">Responsável: </p>\r\n         <p id=\"maquina\" style=\"color:#fff\">Máquina: </p>\r\n         <p id=\"material\"style=\"color:#fff\">Material: </p>\r\n       </div>>\r\n"
+                },
+                {
+                    "date": 1715712370670,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -48,10 +48,10 @@\n       <div class=\"relatorio-de-peca\">\r\n         <h2>Relatório</h2>\r\n         <p id=\"codigo\" style=\"background-color:#fff; color: #000;\" >Código da peça: </p>\r\n         <p id=\"peca\"style=\"background-color:#fff; color: #000;\">Peça: </p>\r\n-        <p id=\"maoDeObra\" style=\"color:#fff\">Responsável: </p>\r\n-        <p id=\"maquina\" style=\"color:#fff\">Máquina: </p>\r\n+        <p id=\"maoDeObra\" style=\"background-color:#fff; color: #000;\">Responsável: </p>\r\n+        <p id=\"maquina\" style=\"background-color:#fff; color: #000;\">Máquina: </p>\r\n         <p id=\"material\"style=\"color:#fff\">Material: </p>\r\n       </div>>\r\n     </div>\r\n   </div>\r\n"
+                },
+                {
+                    "date": 1715712417442,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -50,9 +50,9 @@\n         <p id=\"codigo\" style=\"background-color:#fff; color: #000;\" >Código da peça: </p>\r\n         <p id=\"peca\"style=\"background-color:#fff; color: #000;\">Peça: </p>\r\n         <p id=\"maoDeObra\" style=\"background-color:#fff; color: #000;\">Responsável: </p>\r\n         <p id=\"maquina\" style=\"background-color:#fff; color: #000;\">Máquina: </p>\r\n-        <p id=\"material\"style=\"color:#fff\">Material: </p>\r\n+        <p id=\"material\">Material: </p>\r\n       </div>>\r\n     </div>\r\n   </div>\r\n \r\n"
+                },
+                {
+                    "date": 1715712425053,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -50,9 +50,9 @@\n         <p id=\"codigo\" style=\"background-color:#fff; color: #000;\" >Código da peça: </p>\r\n         <p id=\"peca\"style=\"background-color:#fff; color: #000;\">Peça: </p>\r\n         <p id=\"maoDeObra\" style=\"background-color:#fff; color: #000;\">Responsável: </p>\r\n         <p id=\"maquina\" style=\"background-color:#fff; color: #000;\">Máquina: </p>\r\n-        <p id=\"material\">Material: </p>\r\n+        <p id=\"material\"><div>Material: </p>\r\n       </div>>\r\n     </div>\r\n   </div>\r\n \r\n"
+                },
+                {
+                    "date": 1715712431761,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -50,9 +50,9 @@\n         <p id=\"codigo\" style=\"background-color:#fff; color: #000;\" >Código da peça: </p>\r\n         <p id=\"peca\"style=\"background-color:#fff; color: #000;\">Peça: </p>\r\n         <p id=\"maoDeObra\" style=\"background-color:#fff; color: #000;\">Responsável: </p>\r\n         <p id=\"maquina\" style=\"background-color:#fff; color: #000;\">Máquina: </p>\r\n-        <p id=\"material\"><div>Material: </p>\r\n+        <p id=\"material\"><div>Material: /d</p>\r\n       </div>>\r\n     </div>\r\n   </div>\r\n \r\n"
+                },
+                {
+                    "date": 1715712438976,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -50,9 +50,9 @@\n         <p id=\"codigo\" style=\"background-color:#fff; color: #000;\" >Código da peça: </p>\r\n         <p id=\"peca\"style=\"background-color:#fff; color: #000;\">Peça: </p>\r\n         <p id=\"maoDeObra\" style=\"background-color:#fff; color: #000;\">Responsável: </p>\r\n         <p id=\"maquina\" style=\"background-color:#fff; color: #000;\">Máquina: </p>\r\n-        <p id=\"material\"><div>Material: /d</p>\r\n+        <p id=\"material\"><div style=\"background-color:#fff; color: #000;\">Material: </div></p>\r\n       </div>>\r\n     </div>\r\n   </div>\r\n \r\n"
+                },
+                {
+                    "date": 1715712461413,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -50,9 +50,9 @@\n         <p id=\"codigo\" style=\"background-color:#fff; color: #000;\" >Código da peça: </p>\r\n         <p id=\"peca\"style=\"background-color:#fff; color: #000;\">Peça: </p>\r\n         <p id=\"maoDeObra\" style=\"background-color:#fff; color: #000;\">Responsável: </p>\r\n         <p id=\"maquina\" style=\"background-color:#fff; color: #000;\">Máquina: </p>\r\n-        <p id=\"material\"><div style=\"background-color:#fff; color: #000;\">Material: </div></p>\r\n+        <p id=\"material\"><div >Material: </div></p>\r\n       </div>>\r\n     </div>\r\n   </div>\r\n \r\n"
+                },
+                {
+                    "date": 1715712467374,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -50,9 +50,9 @@\n         <p id=\"codigo\" style=\"background-color:#fff; color: #000;\" >Código da peça: </p>\r\n         <p id=\"peca\"style=\"background-color:#fff; color: #000;\">Peça: </p>\r\n         <p id=\"maoDeObra\" style=\"background-color:#fff; color: #000;\">Responsável: </p>\r\n         <p id=\"maquina\" style=\"background-color:#fff; color: #000;\">Máquina: </p>\r\n-        <p id=\"material\"><div >Material: </div></p>\r\n+        <p id=\"material\"><div style=\"background-color:#fff; color: #000;\">Material: </div></p>\r\n       </div>>\r\n     </div>\r\n   </div>\r\n \r\n"
+                },
+                {
+                    "date": 1715712499327,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -46,13 +46,13 @@\n \r\n     <div class=\"content-container\">\r\n       <div class=\"relatorio-de-peca\">\r\n         <h2>Relatório</h2>\r\n-        <p id=\"codigo\" style=\"background-color:#fff; color: #000;\" >Código da peça: </p>\r\n-        <p id=\"peca\"style=\"background-color:#fff; color: #000;\">Peça: </p>\r\n-        <p id=\"maoDeObra\" style=\"background-color:#fff; color: #000;\">Responsável: </p>\r\n-        <p id=\"maquina\" style=\"background-color:#fff; color: #000;\">Máquina: </p>\r\n-        <p id=\"material\"><div style=\"background-color:#fff; color: #000;\">Material: </div></p>\r\n+        <p id=\"codigo\" style=\"background-color:#fff color: #000;\" >Código da peça: </p>\r\n+        <p id=\"peca\" style=\"color:#fff\">Peça: </p>\r\n+        <p id=\"maoDeObra\" style=\"color:#fff\">Responsável: </p>\r\n+        <p id=\"maquina\" style=\"color:#fff\">Máquina: </p>\r\n+        <p id=\"material\"style=\"color:#fff\">Material: </p>\r\n       </div>>\r\n     </div>\r\n   </div>\r\n \r\n"
+                },
+                {
+                    "date": 1715712505387,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -49,10 +49,10 @@\n         <h2>Relatório</h2>\r\n         <p id=\"codigo\" style=\"background-color:#fff color: #000;\" >Código da peça: </p>\r\n         <p id=\"peca\" style=\"color:#fff\">Peça: </p>\r\n         <p id=\"maoDeObra\" style=\"color:#fff\">Responsável: </p>\r\n-        <p id=\"maquina\" style=\"color:#fff\">Máquina: </p>\r\n-        <p id=\"material\"style=\"color:#fff\">Material: </p>\r\n+        <p id=\"maquina\" >Máquina: </p>\r\n+        <p id=\"material\">Material: </p>\r\n       </div>>\r\n     </div>\r\n   </div>\r\n \r\n"
+                },
+                {
+                    "date": 1715712512212,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -47,10 +47,10 @@\n     <div class=\"content-container\">\r\n       <div class=\"relatorio-de-peca\">\r\n         <h2>Relatório</h2>\r\n         <p id=\"codigo\" style=\"background-color:#fff color: #000;\" >Código da peça: </p>\r\n-        <p id=\"peca\" style=\"color:#fff\">Peça: </p>\r\n-        <p id=\"maoDeObra\" style=\"color:#fff\">Responsável: </p>\r\n+        <p id=\"peca\" >Peça: </p>\r\n+        <p id=\"maoDeObra\">Responsável: </p>\r\n         <p id=\"maquina\" >Máquina: </p>\r\n         <p id=\"material\">Material: </p>\r\n       </div>>\r\n     </div>\r\n"
+                },
+                {
+                    "date": 1715713779287,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -46,10 +46,10 @@\n \r\n     <div class=\"content-container\">\r\n       <div class=\"relatorio-de-peca\">\r\n         <h2>Relatório</h2>\r\n-        <p id=\"codigo\" style=\"background-color:#fff color: #000;\" >Código da peça: </p>\r\n-        <p id=\"peca\" >Peça: </p>\r\n+        <p id=\"codigo\" >Código da peça: </p>\r\n+        <p id=\"listaDeNomesDePecas\" >Peça: </p>\r\n         <p id=\"maoDeObra\">Responsável: </p>\r\n         <p id=\"maquina\" >Máquina: </p>\r\n         <p id=\"material\">Material: </p>\r\n       </div>>\r\n"
+                },
+                {
+                    "date": 1715713855548,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -47,9 +47,9 @@\n     <div class=\"content-container\">\r\n       <div class=\"relatorio-de-peca\">\r\n         <h2>Relatório</h2>\r\n         <p id=\"codigo\" >Código da peça: </p>\r\n-        <p id=\"listaDeNomesDePecas\" >Peça: </p>\r\n+        <div id=\"listaDeNomesDePecas\" >Peça: </p>\r\n         <p id=\"maoDeObra\">Responsável: </p>\r\n         <p id=\"maquina\" >Máquina: </p>\r\n         <p id=\"material\">Material: </p>\r\n       </div>>\r\n"
+                },
+                {
+                    "date": 1715714430768,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -47,9 +47,9 @@\n     <div class=\"content-container\">\r\n       <div class=\"relatorio-de-peca\">\r\n         <h2>Relatório</h2>\r\n         <p id=\"codigo\" >Código da peça: </p>\r\n-        <div id=\"listaDeNomesDePecas\" >Peça: </p>\r\n+        <p id=\"listaDeNomesDePecas\" >Peça: </div>\r\n         <p id=\"maoDeObra\">Responsável: </p>\r\n         <p id=\"maquina\" >Máquina: </p>\r\n         <p id=\"material\">Material: </p>\r\n       </div>>\r\n"
+                },
+                {
+                    "date": 1715714508444,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -47,9 +47,9 @@\n     <div class=\"content-container\">\r\n       <div class=\"relatorio-de-peca\">\r\n         <h2>Relatório</h2>\r\n         <p id=\"codigo\" >Código da peça: </p>\r\n-        <p id=\"listaDeNomesDePecas\" >Peça: </div>\r\n+        <p id=\"listaDeNomesDePecas\" >Peça: </p>\r\n         <p id=\"maoDeObra\">Responsável: </p>\r\n         <p id=\"maquina\" >Máquina: </p>\r\n         <p id=\"material\">Material: </p>\r\n       </div>>\r\n"
+                },
+                {
+                    "date": 1715714516445,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -47,9 +47,9 @@\n     <div class=\"content-container\">\r\n       <div class=\"relatorio-de-peca\">\r\n         <h2>Relatório</h2>\r\n         <p id=\"codigo\" >Código da peça: </p>\r\n-        <p id=\"listaDeNomesDePecas\" >Peça: </p>\r\n+        <duv id=\"listaDeNomesDePecas\" >Peça: </div>\r\n         <p id=\"maoDeObra\">Responsável: </p>\r\n         <p id=\"maquina\" >Máquina: </p>\r\n         <p id=\"material\">Material: </p>\r\n       </div>>\r\n"
+                },
+                {
+                    "date": 1715714523012,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -47,9 +47,9 @@\n     <div class=\"content-container\">\r\n       <div class=\"relatorio-de-peca\">\r\n         <h2>Relatório</h2>\r\n         <p id=\"codigo\" >Código da peça: </p>\r\n-        <duv id=\"listaDeNomesDePecas\" >Peça: </div>\r\n+        <duv id=\"listaDeNomesDePecas\" ><p></p> </div>\r\n         <p id=\"maoDeObra\">Responsável: </p>\r\n         <p id=\"maquina\" >Máquina: </p>\r\n         <p id=\"material\">Material: </p>\r\n       </div>>\r\n"
+                },
+                {
+                    "date": 1715714528458,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -47,9 +47,9 @@\n     <div class=\"content-container\">\r\n       <div class=\"relatorio-de-peca\">\r\n         <h2>Relatório</h2>\r\n         <p id=\"codigo\" >Código da peça: </p>\r\n-        <duv id=\"listaDeNomesDePecas\" ><p></p> </div>\r\n+        <duv id=\"listaDeNomesDePecas\" ><p></p></div>\r\n         <p id=\"maoDeObra\">Responsável: </p>\r\n         <p id=\"maquina\" >Máquina: </p>\r\n         <p id=\"material\">Material: </p>\r\n       </div>>\r\n"
+                },
+                {
+                    "date": 1715714535621,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -46,10 +46,10 @@\n \r\n     <div class=\"content-container\">\r\n       <div class=\"relatorio-de-peca\">\r\n         <h2>Relatório</h2>\r\n-        <p id=\"codigo\" >Código da peça: </p>\r\n-        <duv id=\"listaDeNomesDePecas\" ><p></p></div>\r\n+        <div id=\"codigo\" >Código da peça: </p>\r\n+        <duv id=\"listaDeNomesDePecas\" ><p>Peça:</p></div>\r\n         <p id=\"maoDeObra\">Responsável: </p>\r\n         <p id=\"maquina\" >Máquina: </p>\r\n         <p id=\"material\">Material: </p>\r\n       </div>>\r\n"
+                },
+                {
+                    "date": 1715714542846,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -46,9 +46,9 @@\n \r\n     <div class=\"content-container\">\r\n       <div class=\"relatorio-de-peca\">\r\n         <h2>Relatório</h2>\r\n-        <div id=\"codigo\" >Código da peça: </p>\r\n+        <div id=\"codigo\" ><p></p>Código da peça: </div>\r\n         <duv id=\"listaDeNomesDePecas\" ><p>Peça:</p></div>\r\n         <p id=\"maoDeObra\">Responsável: </p>\r\n         <p id=\"maquina\" >Máquina: </p>\r\n         <p id=\"material\">Material: </p>\r\n"
+                },
+                {
+                    "date": 1715714548628,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -46,9 +46,9 @@\n \r\n     <div class=\"content-container\">\r\n       <div class=\"relatorio-de-peca\">\r\n         <h2>Relatório</h2>\r\n-        <div id=\"codigo\" ><p></p>Código da peça: </div>\r\n+        <div id=\"codigo\" ><p>Código da peça: </p></div>\r\n         <duv id=\"listaDeNomesDePecas\" ><p>Peça:</p></div>\r\n         <p id=\"maoDeObra\">Responsável: </p>\r\n         <p id=\"maquina\" >Máquina: </p>\r\n         <p id=\"material\">Material: </p>\r\n"
+                },
+                {
+                    "date": 1715714562381,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -46,9 +46,9 @@\n \r\n     <div class=\"content-container\">\r\n       <div class=\"relatorio-de-peca\">\r\n         <h2>Relatório</h2>\r\n-        <div id=\"codigo\" ><p>Código da peça: </p></div>\r\n+        <div id=\"codigo\" ><p></p>Código da peça: </div>\r\n         <duv id=\"listaDeNomesDePecas\" ><p>Peça:</p></div>\r\n         <p id=\"maoDeObra\">Responsável: </p>\r\n         <p id=\"maquina\" >Máquina: </p>\r\n         <p id=\"material\">Material: </p>\r\n"
+                },
+                {
+                    "date": 1715714572290,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -46,9 +46,9 @@\n \r\n     <div class=\"content-container\">\r\n       <div class=\"relatorio-de-peca\">\r\n         <h2>Relatório</h2>\r\n-        <div id=\"codigo\" ><p></p>Código da peça: </div>\r\n+        <div id=\"codigo\" >Código da peça: </p>\r\n         <duv id=\"listaDeNomesDePecas\" ><p>Peça:</p></div>\r\n         <p id=\"maoDeObra\">Responsável: </p>\r\n         <p id=\"maquina\" >Máquina: </p>\r\n         <p id=\"material\">Material: </p>\r\n"
+                },
+                {
+                    "date": 1715714584004,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -46,10 +46,10 @@\n \r\n     <div class=\"content-container\">\r\n       <div class=\"relatorio-de-peca\">\r\n         <h2>Relatório</h2>\r\n-        <div id=\"codigo\" >Código da peça: </p>\r\n-        <duv id=\"listaDeNomesDePecas\" ><p>Peça:</p></div>\r\n+        <p id=\"codigo\" >Código da peça: </p>\r\n+        <duv id=\"listaDeNomesDePecas\" ><p>Peça:</p>>\r\n         <p id=\"maoDeObra\">Responsável: </p>\r\n         <p id=\"maquina\" >Máquina: </p>\r\n         <p id=\"material\">Material: </p>\r\n       </div>>\r\n"
+                },
+                {
+                    "date": 1715714591240,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -47,9 +47,9 @@\n     <div class=\"content-container\">\r\n       <div class=\"relatorio-de-peca\">\r\n         <h2>Relatório</h2>\r\n         <p id=\"codigo\" >Código da peça: </p>\r\n-        <duv id=\"listaDeNomesDePecas\" ><p>Peça:</p>>\r\n+        <p id=\"listaDeNomesDePecas\" >Peça:</p>\r\n         <p id=\"maoDeObra\">Responsável: </p>\r\n         <p id=\"maquina\" >Máquina: </p>\r\n         <p id=\"material\">Material: </p>\r\n       </div>>\r\n"
+                },
+                {
+                    "date": 1715714872728,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -46,10 +46,11 @@\n \r\n     <div class=\"content-container\">\r\n       <div class=\"relatorio-de-peca\">\r\n         <h2>Relatório</h2>\r\n-        <p id=\"codigo\" >Código da peça: </p>\r\n-        <p id=\"listaDeNomesDePecas\" >Peça:</p>\r\n+        <ul id=\"codigo\">Código da peça:</ul>\r\n+        <ul id=\"listaDeNomesDePecas\">Peça:</ul>\r\n+        \r\n         <p id=\"maoDeObra\">Responsável: </p>\r\n         <p id=\"maquina\" >Máquina: </p>\r\n         <p id=\"material\">Material: </p>\r\n       </div>>\r\n"
+                },
+                {
+                    "date": 1715714978535,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -46,11 +46,10 @@\n \r\n     <div class=\"content-container\">\r\n       <div class=\"relatorio-de-peca\">\r\n         <h2>Relatório</h2>\r\n-        <ul id=\"codigo\">Código da peça:</ul>\r\n-        <ul id=\"listaDeNomesDePecas\">Peça:</ul>\r\n-        \r\n+        <p id=\"codigo\">Código da peça:</ul>\r\n+        <ul id=\"listaDeNomesDePecas\">Peça:</ul>        \r\n         <p id=\"maoDeObra\">Responsável: </p>\r\n         <p id=\"maquina\" >Máquina: </p>\r\n         <p id=\"material\">Material: </p>\r\n       </div>>\r\n"
+                },
+                {
+                    "date": 1715714985505,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -46,10 +46,10 @@\n \r\n     <div class=\"content-container\">\r\n       <div class=\"relatorio-de-peca\">\r\n         <h2>Relatório</h2>\r\n-        <p id=\"codigo\">Código da peça:</ul>\r\n-        <ul id=\"listaDeNomesDePecas\">Peça:</ul>        \r\n+        <p id=\"codigo\">Código da peça:</p>\r\n+        <ul id=\"listaDeNomesDePecas\">Peça:</p>        \r\n         <p id=\"maoDeObra\">Responsável: </p>\r\n         <p id=\"maquina\" >Máquina: </p>\r\n         <p id=\"material\">Material: </p>\r\n       </div>>\r\n"
+                },
+                {
+                    "date": 1715717377233,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,9 +34,9 @@\n       <div class=\"logo-container\">\r\n         <img class=\"logoCalculoPreciso\" src=\"assets/images/logoBranco.png\" alt=\"PrecisionTechLogo\">\r\n       </div>\r\n       <div class=\"buttons\">\r\n-        <a href=\"cadastroPeca.html\"><button class=\"btn btn-sidebar\" style=\"\">Nova Peça</button></a>\r\n+        <a href=\"cadastroPeca.html\"><button class=\"btn btn-sidebar\">Nova Peça</button></a>\r\n         <a href=\"custos.html\"><button class=\"btn btn-sidebar\">Custos</button> </a>\r\n         <a href=\"relatorio.html\"><button class=\"btn btn-sidebar\">Relatorios</button></a>\r\n       </div>\r\n       <div class=\"precision-tech-container\">\r\n@@ -47,9 +47,9 @@\n     <div class=\"content-container\">\r\n       <div class=\"relatorio-de-peca\">\r\n         <h2>Relatório</h2>\r\n         <p id=\"codigo\">Código da peça:</p>\r\n-        <ul id=\"listaDeNomesDePecas\">Peça:</p>        \r\n+        <p id=\"listaDeNomesDePecas\">Peça:</p>        \r\n         <p id=\"maoDeObra\">Responsável: </p>\r\n         <p id=\"maquina\" >Máquina: </p>\r\n         <p id=\"material\">Material: </p>\r\n       </div>>\r\n"
+                }
+            ],
+            "date": 1715710001342,
+            "name": "Commit-0",
+            "content": "<!DOCTYPE html>\r\n<html lang=\"pt-BR\">\r\n\r\n<head>\r\n  <title>Cálculo preciso by Precision Tech</title>\r\n  <link href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css\" rel=\"stylesheet\">\r\n  <link rel=\"stylesheet\" href=\"assets/css/geral.css\">\r\n  <link rel=\"stylesheet\" href=\"assets/css/relatorio.css\">\r\n  \r\n  <script src=\"assets/js/geral.js\"></script>\r\n  <meta charset=\"UTF-8\">\r\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n</head>\r\n\r\n<body class=\"body-container\">\r\n\r\n  <header>\r\n    <div class=\"navbar\">\r\n      <a href=\"dashboard.html\"> <i class=\"fa-solid fa-home\" style=\"color: #ffffff;\"></i> Início</a> \r\n      <a href=\"professor.html\"> <i class=\"fa-solid fa-user\" style=\"color: #ffffff;\"></i> Professor</a> \r\n      <a href=\"alunos.html\"> <i class=\"fa-solid fa-users\" style=\"color: #ffffff;\"></i> Meus Alunos </a>\r\n      <a href=\"turmas.html\"> <i class=\"fa-solid fa-school\" style=\"color: #ffffff;\"></i> Turmas</a> \r\n      <a href=\"informacoes.html\" ><i class=\"fa-solid fa-info\" style=\"color: #ffffff;\"> </i> Informações</a>\r\n      <a id=\"logout\" href=\"index.html\"> Sair <i class=\"fa-solid fa-right-from-bracket\" style=\"color: #ffffff;\"></i></a>\r\n    </div>\r\n  </header>\r\n\r\n  <h2>Cálculo Preciso</h2>\r\n\r\n  <div class=\"main-container\">\r\n\r\n    <div class=\"layout-container\">\r\n      <div class=\"logo-container\">\r\n        <img class=\"logoCalculoPreciso\" src=\"assets/images/logoBranco.png\" alt=\"PrecisionTechLogo\">\r\n      </div>\r\n      <div class=\"buttons\">\r\n        <a href=\"cadastroPeca.html\"><button class=\"btn btn-sidebar\" style=\"\">Nova Peça</button></a>\r\n        <a href=\"custos.html\"><button class=\"btn btn-sidebar\">Custos</button> </a>\r\n        <a href=\"relatorio.html\"><button class=\"btn btn-sidebar\">Relatorios</button></a>\r\n      </div>\r\n      <div class=\"precision-tech-container\">\r\n        <h3> By PrecisionTech </h3>\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"content-container\">\r\n      <div class=\"relatorio-de-peca\">\r\n        <h2>Relatório</h2>\r\n        <p>Responsável: Diogo Silva</p>\r\n            <p>Máquina: Torno CNC</p>\r\n            <p>Material: alumínio</p>\r\n            <p>Código da peça: 32</p>\r\n            <p>Peça: Adaptador Storz 1.1/2' ' ER X 2.1/2'</p>\r\n      </div>>\r\n    </div>\r\n  </div>\r\n\r\n  <footer class=\"footer\">\r\n    <p class=\"footer-text\">© 2024 Cálculo Preciso by Precision Tech - Todos os direitos reservados</p>\r\n  </footer>\r\n\r\n</body>\r\n</html>\r\n"
+        }
+    ]
+}
