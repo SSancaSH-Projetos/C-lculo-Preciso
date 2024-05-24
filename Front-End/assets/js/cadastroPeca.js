@@ -4,6 +4,9 @@ var materiais = [];
 var maoDeObra = [];
 var maquina = [];
 let tarugos = [];
+let volumeDoTarugo = 0;
+let volumeCavaco = 0;
+let somaVolumes = 0;
 
 
 // Carrega os dados para a página
@@ -257,74 +260,68 @@ fetch('http://localhost:8080/material')
   console.log("teste", subPecas)
 
   
-subPecas.forEach(function (objeto) {
-  var divSubPeca = document.createElement("div");
-  divSubPeca.classList.add("sub-peca");
-  divSubPeca.innerHTML = `
-    <div class="nome-subpeca"><strong>Nome da Sub-peça:</strong> ${
-      objeto.nome
-    }</div>
-    <div><strong>Geometria:</strong> ${objeto.formato}</div>
-    <div><strong>Dimensões:</strong></div>
-    <div style="margin-left: 3%;">
-      ${
-        objeto.formato === "Cilindrico"
-          ? `
-        <div><strong>Raio:</strong> ${objeto.raio} cm</div>
-        <div><strong>Altura:</strong> ${objeto.alturaCilindro} cm</div>`
-          : ""
-      }
-      ${
-        objeto.formato === "Cubica"
-          ? `
-        <div><strong>Lado:</strong> ${objeto.lado} cm</div>`
-          : ""
-      }
-      ${
-        objeto.formato === "Piramide"
-          ? `
-        <div><strong>Base:</strong> ${objeto.basePiramide} cm</div>
-        <div><strong>Altura:</strong> ${objeto.alturaPiramide} cm</div>`
-          : ""
-      }
-      ${
-        objeto.formato === "Retangulo"
-          ? `
-        <div><strong>Base:</strong> ${objeto.base} cm</div>
-        <div><strong>Altura:</strong> ${objeto.altura} cm</div>
-        <div><strong>Comprimento:</strong> ${objeto.comprimento} cm</div>`
-          : ""
-      }
-      ${
-        objeto.formato === "Trapezio"
-          ? `
-        <div><strong>Base Menor:</strong> ${objeto.baseMenor} cm</div>
-        <div><strong>Base Maior:</strong> ${objeto.baseMaior} cm</div>
-        <div><strong>Altura:</strong> ${objeto.altura} cm</div>
-        <div><strong>Comprimento:</strong> ${objeto.comprimento} cm</div>`
-          : ""
-      }
-      <div><strong>Volume:</strong> ${objeto.volume.toFixed(0)} mm³</div>
-    </div>
-  `;
-
-  document.querySelector(".sub-pecas-adicionadas").appendChild(divSubPeca);
-});
-
-
+  subPecas.forEach(function (objeto) {
+    var divSubPeca = document.createElement("div");
+    divSubPeca.classList.add("sub-peca");
+    divSubPeca.innerHTML = `
+      <div class="nome-subpeca"><strong>Nome da Sub-peça:</strong> ${objeto.nome}</div>
+      <div><strong>Geometria:</strong> ${objeto.formato}</div>
+      <div><strong>Dimensões:</strong></div>
+      <div style="margin-left: 3%;">
+        ${objeto.formato === "Cilindrico" ? `
+          <div><strong>Raio:</strong> ${objeto.raio} cm</div>
+          <div><strong>Altura:</strong> ${objeto.alturaCilindro} cm</div>`
+          : ""}
+        ${objeto.formato === "Cubica" ? `
+          <div><strong>Lado:</strong> ${objeto.lado} cm</div>`
+          : ""}
+        ${objeto.formato === "Piramide" ? `
+          <div><strong>Base:</strong> ${objeto.basePiramide} cm</div>
+          <div><strong>Altura:</strong> ${objeto.alturaPiramide} cm</div>`
+          : ""}
+        ${objeto.formato === "Retangulo" ? `
+          <div><strong>Base:</strong> ${objeto.base} cm</div>
+          <div><strong>Altura:</strong> ${objeto.altura} cm</div>
+          <div><strong>Comprimento:</strong> ${objeto.comprimento} cm</div>`
+          : ""}
+        ${objeto.formato === "Trapezio" ? `
+          <div><strong>Base Menor:</strong> ${objeto.baseMenor} cm</div>
+          <div><strong>Base Maior:</strong> ${objeto.baseMaior} cm</div>
+          <div><strong>Altura:</strong> ${objeto.altura} cm</div>
+          <div><strong>Comprimento:</strong> ${objeto.comprimento} cm</div>`
+          : ""}
+        <div><strong>Volume:</strong> ${objeto.volume.toFixed(0)} mm³</div>
+      </div>
+    `;
+  
+    document.querySelector(".sub-pecas-adicionadas").appendChild(divSubPeca);
+  
+    // Chama a função cavaco e atualiza a div #relatorio-cavaco
+    var resultadoCavaco = cavaco();
+    document.querySelector('#relatorio-cavaco').innerHTML = `<span>Resultado Cavaco: </span><input readonly id="resultadoCavaco" class='input-cavaco' value=${resultadoCavaco.toFixed(2)}>`;
+  });
+  
   // Calcula a soma dos volumes
-  var somaVolumes = subPecas.reduce(function (total, objeto) {
+  somaVolumes = subPecas.reduce(function (total, objeto) {
     return total + objeto.volume;
   }, 0);
-
+  
   // Exibe a soma dos volumes na página
   var subPecasFinal = document.querySelector('#relatorio-subpecas');
   subPecasFinal.innerHTML = `<span>Volume da peça: </span><input readonly id="volumeDaPeca" class='input-volume' value=${somaVolumes.toFixed(0)}>`;
   console.log(somaVolumes.toFixed(0));
+  
+  // Função cavaco
+  function cavaco() {
+    var somadoOsVolumes = subPecas.reduce((acumulador, peca) => acumulador + peca.volume, 0);
+    volumeCavaco = tarugos[0].volume.toFixed(2) - somadoOsVolumes; 
+    volumeDoTarugo = tarugos[0].volume.toFixed(2);
+
+    console.log(volumeCavaco);
+    return volumeCavaco;
+  }
 }
 
-//var somaVolumesSubPecas = somaVolumes.toFixed(0);
-//export default somaVolumesSubPecas;
 
 function addMaoDeObra() {
   var id = maoDeObra.length + 1; // Gera um ID sequencial
@@ -427,11 +424,9 @@ function handleSalvarPeca() {
 
   let codigo = document.getElementById("codPeca").value;
   let nomePeca = document.getElementById("nomePeca").value;
-  let volumeDaPeca = document.getElementById("volumeDaPeca")?.value;
-  let pesoDoTarugo = document.getElementById("tarugo").value;
+  let volumeDaPeca = document.getElementById("volumeDaPeca").value;
   let listaDeMateriais = document.getElementById("listaDeMateriais");
   let valorDaOpcaoSelecionada = listaDeMateriais.value;
-  let valorDeCavaco = document.getElementById("");
 
   console.log(subPecas)
 
@@ -441,8 +436,8 @@ function handleSalvarPeca() {
     "volumeTotal": volumeDaPeca,
     "custoDeProducao": 100.0,
     "tempoDeUsinagem": 12.5,
-    "pesoTarugo": pesoDoTarugo,
-    "quantidadeDeCavaco": 15.0,
+    "pesoTarugo": volumeDoTarugo,
+    "quantidadeDeCavaco": volumeCavaco,
     "valorDoCavaco": 50.0,
     "maosDeObraIds": [1],
     "maquinas": [1, 2],
@@ -476,15 +471,6 @@ function calcularVolumeDaPeca(volumeDaPeca) {
   const resultado = volumeDaPeca * valorVolume;
   return resultado;
 }
-
-// Exemplo de uso da função
-const volumeDaPeca = 5; // Exemplo de valor para volumeDaPeca, você pode alterar conforme necessário
-const resultado = calcularVolumeDaPeca(volumeDaPeca);
-
-// Exibindo o resultado
-console.log("Resultado:", resultado);
-
-
 
 
 
@@ -619,10 +605,26 @@ function listarTarugos() {
   });
 }
 
-function cavaco() {
-  var somadoOsVolumes = subPecas.reduce((acumulador, peca) => acumulador + peca.volume, 0);
-  resultadoCavaco = tarugos[0].volume.toFixed(2) - somadoOsVolumes; 
-  console.log(resultadoCavaco);
-  return resultadoCavaco;
+// Densidade fixa de 1000 kg/m³
+const densidade = 1000;
+
+/**
+ * Converte volume fixo (somaVolumes) em milímetros cúbicos para quilogramas
+ * utilizando densidade fixa de 1000 kg/m³.
+ *
+ * @returns {number} - Massa em quilogramas.
+ */
+function calcularKG() {
+    // Converter volume de milímetros cúbicos para metros cúbicos
+    const volumeM3 = somaVolumes * 1e-9;
+    
+    // Calcular a massa em quilogramas
+    const massaKg = volumeM3 * densidade;
+    console.log(massaKg);
+    return massaKg;
 }
 
+// Calcular a massa em quilogramas
+const massa = calcularKG();
+
+console.log(`Massa: ${massa} kg`); // Saída: Massa: 0.005 kg
