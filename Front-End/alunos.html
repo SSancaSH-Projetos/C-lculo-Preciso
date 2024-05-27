@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="assets/css/geral.css">
     <link rel="stylesheet" href="assets/css/aluno.css">
 
+    <link rel="stylesheet" href="assets/media/geralMedia.css">
+    <link rel="stylesheet" href="assets/media/alunosMedia.css">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -35,7 +38,7 @@
                 <img class="logoCalculoPreciso" src="assets/images/logoBranco.png" alt="PrecisionTechLogo">
             </div>
             <div class="buttons">
-                <a href="cadastroPeca.html"><button class="btn btn-sidebar" style="">Nova Peça</button></a>
+                <a href="cadastroPeca.html"><button class="btn btn-sidebar">Nova Peça</button></a>
                 <a href="custos.html"><button class="btn btn-sidebar">Custos</button> </a>
                 <a href="relatorio.html"><button class="btn btn-sidebar">Relatorios</button></a>
             </div>
@@ -68,7 +71,8 @@
                                 <input type="text" class="input" id="course" name="course" required><br>
                                 <label for="password">Senha:</label>
                                 <input type="password" class="input" id="password" name="password" required><br>
-                                <button style="width: 100%;" class="btn btn-secondary" data-dismiss="modal" type="submit">Cadastrar</button>
+                                <button style="width: 100%;" class="btn btn-secondary" data-dismiss="modal"
+                                    type="submit">Cadastrar</button>
                             </form>
                         </div>
                         <div class="modal-footer">
@@ -82,9 +86,10 @@
             <div class="meusalunos-container">
                 <table class="tabela" id="alunosTable">
                     <thead>
-                        <tr>
+                        <tr data-id="12345">
                             <th>Aluno</th>
                             <th>Curso</th>
+                            <th>E-mail</th>
                             <th>Tipo de Usuário</th>
                             <th>Ações</th>
                         </tr>
@@ -93,6 +98,25 @@
                         <!-- Os dados serão inseridos aqui dinamicamente -->
                     </tbody>
                 </table>
+            </div>
+            <div id="editFormContainer">
+                <h3>Editar Usuário</h3>
+                <form id="editForm">
+                    <label for="editNome">Nome:</label>
+                    <input type="text" id="editNome" name="nome" required><br>
+        
+                    <label for="editCurso">Curso:</label>
+                    <input type="text" id="editCurso" name="curso" required><br>
+        
+                    <label for="editTipoUsuario">Tipo de Usuário:</label>
+                    <input type="text" id="editTipoUsuario" name="tipoUsuario" required><br>
+        
+                    <label for="editSenha">Senha:</label>
+                    <input type="password" id="editSenha" name="senha" required><br>
+        
+                    <button type="submit">Salvar</button>
+                    <button type="button" id="cancelEdit">Cancelar</button>
+                </form>
             </div>
         </div>
 

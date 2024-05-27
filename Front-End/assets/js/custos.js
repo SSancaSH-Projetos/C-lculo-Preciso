@@ -12,10 +12,13 @@ function handledeletar(idParaDeletar, tipoDelecao) {
     console.log(idParaDeletar, tipoDelecao);
     if (tipoDelecao == "maquinas-table") {
         deletar(idParaDeletar, "maquinas");
+        window.location.reload();
     } else if (tipoDelecao == "materiais-table") {
         deletar(idParaDeletar, "material");
+        window.location.reload();
     } else if (tipoDelecao == "mao-de-obra-table") {
         deletar(idParaDeletar, "maodeobra");
+        window.location.reload();
     }
 }
 
@@ -84,6 +87,7 @@ function cadastrar(tipoItem) {
         };
         url = "http://localhost:8080/material";
         modalId = "addMaterialModal";
+        window.location.reload();
     } else if (tipoItem.includes("maodeobra")) {
         formData = {
             profissional: document.getElementById("profissional").value,
@@ -91,6 +95,7 @@ function cadastrar(tipoItem) {
         };
         url = "http://localhost:8080/maodeobra";
         modalId = "addMaoDeObraModal";
+        window.location.reload();
     } else if (tipoItem.includes("maquinas")) {
         formData = {
             nome: document.getElementById("nomeMaquina").value,
@@ -98,6 +103,7 @@ function cadastrar(tipoItem) {
         };
         url = "http://localhost:8080/maquinas";
         modalId = "addMaquinaModal";
+        window.location.reload();
     }
 
     fetch(url, {

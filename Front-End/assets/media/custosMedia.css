@@ -1,0 +1,18 @@
+@media (max-width: 700px) {
+    .title-containers {
+        background-color: rgb(98 98 98 / 0%);
+        width: 330px;
+    }
+    .content-container {
+        padding-left: 1%;
+    }
+    .tabela {
+        border-collapse: collapse;
+        border-color: rgb(255, 255, 255);
+    }
+      
+      .tabela th,
+      .tabela td {
+        border: 1px solid #ffffff;
+      }
+}

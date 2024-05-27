@@ -1,0 +1,6 @@
+@media (max-width: 700px) {   
+    .container-turma {
+        background-color: rgba(98, 98, 98, 0);
+       margin-top: 10%;
+    }
+}

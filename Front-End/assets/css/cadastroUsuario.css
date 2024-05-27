@@ -1,63 +1,51 @@
-.materiais-container{
-    background-color: rgba(98, 98, 98, 0.8);
-    padding-left: 3%;
-    padding-right: 3%;
-    padding-bottom: 3%;
-    border-radius: 0px 40px 0px 0px;
-}
-
-.content-container{
-    margin:9%
-}
-
-.main-container{
+.main-container {
     display: flex;
     flex-direction: column;
 }
 
-
-
 .login-container {
-background-color: rgba(98, 98, 98, 0.8);
-border-radius: 5px 90px 5px 5px;
-display: flex;
-flex-direction: column;
-align-items: center;
-color: #fff;
+    background-color: rgba(98, 98, 98, 0.8);
+    border-radius: 5px 90px 5px 5px;
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    max-width: 400px;
+    height: 100%;
+    height: 95vh;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    font-family: "Orbitron";
+    margin-right: 15%;
+    margin-left: 15%;
 }
 
 .logoCalculoPreciso {
-width: 200px;
-}
-
-.login-form {
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-height: 80vh;
-width: 50vw;
-font-size: 15px;
-font-family: "Orbitron";
+    width: 50%;
+    max-width: 200px;
 }
 
 .buttons-container {
-display: flex;
-flex-direction: column;
-gap: 10px;
-width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    max-width: 50%;
 }
 
-.content-container{
-    margin:3%
-}
-
-.login-text-box{
+.login-text-box {
     font-size: 1em;
 }
 
-.cadastro-elementos{
+.cadastro-elementos {
     display: flex;
     flex-direction: column;
-
 }
+.footer-cadastro {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    margin-top: 5%;
+  }

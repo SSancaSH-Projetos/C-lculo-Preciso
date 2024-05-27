@@ -1,0 +1,18 @@
+{
+    "sourceFile": "assets/js/historico.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1716495434181,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1716495434181,
+            "name": "Commit-0",
+            "content": "function carregarDadosDasPecas() {\r\n  fetch(\"http://localhost:8080/pecas\")\r\n      .then((response) => {\r\n          if (!response.ok) {\r\n              throw new Error(\"Network response was not ok \" + response.statusText);\r\n          }\r\n          return response.json();\r\n      })\r\n      .then((data) => {\r\n          const dataTableBody = document.getElementById(\"data-table\").getElementsByTagName(\"tbody\")[0];\r\n\r\n          // Limpar tabela antes de adicionar novos dados\r\n          dataTableBody.innerHTML = \"\";\r\n\r\n          // Adicionar todas as peças\r\n          data.forEach((peca) => {\r\n              // Formatar a data de criação para uma representação legível\r\n              const dataDeCriacao = new Date(peca.dataDeCriacao).toLocaleDateString();\r\n\r\n              // Contar o número de sub-peças\r\n              const quantidadeSubPecas = peca.subPecas ? peca.subPecas.length : 0;\r\n\r\n              // Obter o nome da máquina\r\n              const nomeDaMaquina = peca.maquina.map((maquina) => maquina.nome).join(', ');\r\n\r\n              // Obter o nome do material\r\n              const nomeDoMaterial = peca.material.nome;\r\n\r\n              const responsavel = peca.maosDeObra.map((maosDeObra) => maosDeObra.profissional).join(', ');\r\n\r\n              const mainRow = `\r\n                  <tr>\r\n                      <td>${peca.id}</td>\r\n                      <td>${peca.codigo}</td>\r\n                      <td>${peca.nomeDaPeca}</td>\r\n                      <td>${peca.volumeTotal}mm&#x00B3</td>\r\n                      <td>R$${peca.custoDeProducao}</td>\r\n                      <td>${peca.tempoDeUsinagem}h</td>\r\n                      <td>${peca.pesoTarugo}Kg</td>\r\n                      <td>${peca.quantidadeDeCavaco}</td>\r\n                      <td>R$${peca.valorDoCavaco}</td>\r\n                      <td>${dataDeCriacao}</td> \r\n                      <td>${quantidadeSubPecas}</td> \r\n                      <td>${responsavel}</td>\r\n                      <td>${nomeDaMaquina}</td>\r\n                      <td>${nomeDoMaterial}</td>\r\n                  </tr>\r\n              `;\r\n              dataTableBody.innerHTML += mainRow;\r\n          });\r\n      })\r\n      .catch((error) => console.error(\"Erro ao buscar dados das peças:\", error));\r\n}\r\n\r\n// Função que será executada quando a página for carregada\r\nwindow.onload = function () {\r\n  carregarDadosDasPecas();\r\n};"
+        }
+    ]
+}

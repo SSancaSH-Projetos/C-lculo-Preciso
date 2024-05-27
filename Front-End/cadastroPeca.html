@@ -6,6 +6,10 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/geral.css" />
   <link rel="stylesheet" href="assets/css/cadastroPeca.css" />
+
+  <link rel="stylesheet" href="assets/media/geralMedia.css" />
+  <link rel="stylesheet" href="assets/media/cadastroDePeçaMedia.css" />
+
   <script type="text/javascript" src="assets/js/cadastroPeca.js"></script>
   <script type="text/javascript" src="assets/js/cadastroPeca2.js"></script>
   <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
@@ -57,125 +61,121 @@
             <label for="material">Material:</label>
             <select id="listaDeMateriais" class="select-element"></select>
 
-
-
-
-
-
-
-
-
-
-
+            <!-- pode ter algo aqui no futuro -->
 
             <div class="tarugo-sub-partes">
-  <div class="subPeca">
-    <h2>Adicionar Tarugo</h2>
-  </div>
+              <div class="subPeca">
+                <h2>Adicionar Tarugo</h2>
+              </div>
 
-  <div class="tarugos-adicionados"> Não há tarugos adicionados ainda.</div>
-  <br>
-  <div class="novo-calculo">
-    <div class="dropdown">
-      <select id="formato-do-tarugo" onchange="mostrarInputsTarugo()" class="select-element" placeholder="Selecione uma opção">
-        <option value="" disabled selected hidden>Selecione uma opção</option>
-        <option value="none">Selecione uma opção</option>
-        <option value="Cilindrico">Cilíndrico</option>
-        <option value="Cubica">Cúbica</option>
-        <option value="Piramide">Pirâmide</option>
-        <option value="Retangulo">Retângulo</option>
-        <option value="Trapezio">Trapézio</option>
-      </select>
-    </div>
+              <div class="tarugos-adicionados"> Não há tarugos adicionados ainda.</div>
+              <br>
+              <div class="novo-calculo">
+                <div class="dropdown">
+                  <select id="formato-do-tarugo" onchange="mostrarInputsTarugo()" class="select-element"
+                    placeholder="Selecione uma opção">
+                    <option value="" disabled selected hidden>Selecione uma opção</option>
+                    <option value="none">Selecione uma opção</option>
+                    <option value="Cilindrico">Cilíndrico</option>
+                    <option value="Cubica">Cúbica</option>
+                    <option value="Piramide">Pirâmide</option>
+                    <option value="Retangulo">Retângulo</option>
+                    <option value="Trapezio">Trapézio</option>
+                  </select>
+                </div>
 
-    <div id="inputCubicoTarugo" class="tarugo-inputs">
-      <div>
-        <label for="nomeTarugoCubico">Nome do tarugo:</label>
-        <input style="width: 100%;" type="text" id="nomeTarugoCubico" name="nomeTarugoCubico" />
-      </div>
-      <div>
-        <label for="ladoCuboTarugo">Lado do Quadrado (mm):</label>
-        <input style="width: 100%;" type="number" id="ladoCuboTarugo" name="ladoCuboTarugo" />
-      </div>
-    </div>
+                <div id="inputCubicoTarugo" class="tarugo-inputs">
+                  <div>
+                    <label for="nomeTarugoCubico">Nome do tarugo:</label>
+                    <input style="width: 100%;" type="text" id="nomeTarugoCubico" name="nomeTarugoCubico" />
+                  </div>
+                  <div>
+                    <label for="ladoCuboTarugo">Lado do Quadrado (mm):</label>
+                    <input style="width: 100%;" type="number" id="ladoCuboTarugo" name="ladoCuboTarugo" />
+                  </div>
+                </div>
 
-    <div id="inputRetanguloTarugo" class="tarugo-inputs" style="display: none;">
-      <div>
-        <label for="nomeRetanguloTarugo">Nome do tarugo:</label>
-        <input style="width: 100%;" type="text" id="nomeRetanguloTarugo" name="nomeRetanguloTarugo" />
-      </div>
-      <div>
-        <label for="baseRetanguloTarugo">Base (mm):</label>
-        <input style="width: 100%;" type="number" id="baseRetanguloTarugo" name="baseRetanguloTarugo" />
-      </div>
-      <div>
-        <label for="alturaRetanguloTarugo">Altura (mm):</label>
-        <input style="width: 100%;" type="number" id="alturaRetanguloTarugo" name="alturaRetanguloTarugo" />
-      </div>
-      <div>
-        <label for="comprimentoRetanguloTarugo">Comprimento (mm):</label>
-        <input style="width: 100%;" type="number" id="comprimentoRetanguloTarugo" name="comprimentoRetanguloTarugo" />
-      </div>
-    </div>
+                <div id="inputRetanguloTarugo" class="tarugo-inputs" style="display: none;">
+                  <div>
+                    <label for="nomeRetanguloTarugo">Nome do tarugo:</label>
+                    <input style="width: 100%;" type="text" id="nomeRetanguloTarugo" name="nomeRetanguloTarugo" />
+                  </div>
+                  <div>
+                    <label for="baseRetanguloTarugo">Base (mm):</label>
+                    <input style="width: 100%;" type="number" id="baseRetanguloTarugo" name="baseRetanguloTarugo" />
+                  </div>
+                  <div>
+                    <label for="alturaRetanguloTarugo">Altura (mm):</label>
+                    <input style="width: 100%;" type="number" id="alturaRetanguloTarugo" name="alturaRetanguloTarugo" />
+                  </div>
+                  <div>
+                    <label for="comprimentoRetanguloTarugo">Comprimento (mm):</label>
+                    <input style="width: 100%;" type="number" id="comprimentoRetanguloTarugo"
+                      name="comprimentoRetanguloTarugo" />
+                  </div>
+                </div>
 
-    <div id="inputCilindricoTarugo" class="tarugo-inputs" style="display: none;">
-      <div>
-        <label for="nomeCilindroTarugo">Nome do tarugo:</label>
-        <input style="width: 100%;" type="text" id="nomeCilindroTarugo" name="nomeCilindroTarugo" />
-      </div>
-      <div>
-        <label for="raioCilindroTarugo">Raio (mm):</label>
-        <input style="width: 100%;" type="number" id="raioCilindroTarugo" name="raioCilindroTarugo" />
-      </div>
-      <div>
-        <label for="alturaCilindroTarugo">Altura (mm):</label>
-        <input style="width: 100%;" type="number" id="alturaCilindroTarugo" name="alturaCilindroTarugo" />
-      </div>
-    </div>
+                <div id="inputCilindricoTarugo" class="tarugo-inputs" style="display: none;">
+                  <div>
+                    <label for="nomeCilindroTarugo">Nome do tarugo:</label>
+                    <input style="width: 100%;" type="text" id="nomeCilindroTarugo" name="nomeCilindroTarugo" />
+                  </div>
+                  <div>
+                    <label for="raioCilindroTarugo">Raio (mm):</label>
+                    <input style="width: 100%;" type="number" id="raioCilindroTarugo" name="raioCilindroTarugo" />
+                  </div>
+                  <div>
+                    <label for="alturaCilindroTarugo">Altura (mm):</label>
+                    <input style="width: 100%;" type="number" id="alturaCilindroTarugo" name="alturaCilindroTarugo" />
+                  </div>
+                </div>
 
-    <div id="inputPiramideTarugo" class="tarugo-inputs" style="display: none;">
-      <div>
-        <label for="nomePiramideTarugo">Nome do tarugo:</label>
-        <input style="width: 100%;" type="text" id="nomePiramideTarugo" name="nomePiramideTarugo" />
-      </div>
-      <div>
-        <label for="basePiramideTarugo">Lado da base da pirâmide(mm):</label>
-        <input style="width: 100%;" type="number" id="basePiramideTarugo" name="basePiramideTarugo" />
-      </div>
-      <div>
-        <label for="alturaPiramideTarugo">Altura da pirâmide (mm):</label>
-        <input style="width: 100%;" type="number" id="alturaPiramideTarugo" name="alturaPiramideTarugo" />
-      </div>
-    </div>
+                <div id="inputPiramideTarugo" class="tarugo-inputs" style="display: none;">
+                  <div>
+                    <label for="nomePiramideTarugo">Nome do tarugo:</label>
+                    <input style="width: 100%;" type="text" id="nomePiramideTarugo" name="nomePiramideTarugo" />
+                  </div>
+                  <div>
+                    <label for="basePiramideTarugo">Lado da base da pirâmide(mm):</label>
+                    <input style="width: 100%;" type="number" id="basePiramideTarugo" name="basePiramideTarugo" />
+                  </div>
+                  <div>
+                    <label for="alturaPiramideTarugo">Altura da pirâmide (mm):</label>
+                    <input style="width: 100%;" type="number" id="alturaPiramideTarugo" name="alturaPiramideTarugo" />
+                  </div>
+                </div>
 
-    <div id="inputTrapezioTarugo" class="tarugo-inputs" style="display: none;">
-      <div>
-        <label for="nomeTrapezioTarugo">Nome do tarugo:</label>
-        <input style="width: 100%;" type="text" id="nomeTrapezioTarugo" name="nomeTrapezioTarugo" />
-      </div>
-      <div>
-        <label for="baseMenorTrapezioTarugo">Comprimento da Base Menor (mm):</label>
-        <input style="width: 100%;" type="number" id="baseMenorTrapezioTarugo" name="baseMenorTrapezioTarugo" />
-      </div>
-      <div>
-        <label for="baseMaiorTrapezioTarugo">Comprimento da Base Maior (mm):</label>
-        <input style="width: 100%;" type="number" id="baseMaiorTrapezioTarugo" name="baseMaiorTrapezioTarugo" />
-      </div>
-      <div>
-        <label for="alturaTrapezioTarugo">Altura (mm):</label>
-        <input style="width: 100%;" type="number" id="alturaTrapezioTarugo" name="alturaTrapezioTarugo" />
-      </div>
-      <div>
-        <label for="comprimentoTrapezioTarugo">Comprimento (mm):</label>
-        <input style="width: 100%;" type="number" id="comprimentoTrapezioTarugo" name="comprimentoTrapezioTarugo" />
-      </div>
-    </div>
+                <div id="inputTrapezioTarugo" class="tarugo-inputs" style="display: none;">
+                  <div>
+                    <label for="nomeTrapezioTarugo">Nome do tarugo:</label>
+                    <input style="width: 100%;" type="text" id="nomeTrapezioTarugo" name="nomeTrapezioTarugo" />
+                  </div>
+                  <div>
+                    <label for="baseMenorTrapezioTarugo">Comprimento da Base Menor (mm):</label>
+                    <input style="width: 100%;" type="number" id="baseMenorTrapezioTarugo"
+                      name="baseMenorTrapezioTarugo" />
+                  </div>
+                  <div>
+                    <label for="baseMaiorTrapezioTarugo">Comprimento da Base Maior (mm):</label>
+                    <input style="width: 100%;" type="number" id="baseMaiorTrapezioTarugo"
+                      name="baseMaiorTrapezioTarugo" />
+                  </div>
+                  <div>
+                    <label for="alturaTrapezioTarugo">Altura (mm):</label>
+                    <input style="width: 100%;" type="number" id="alturaTrapezioTarugo" name="alturaTrapezioTarugo" />
+                  </div>
+                  <div>
+                    <label for="comprimentoTrapezioTarugo">Comprimento (mm):</label>
+                    <input style="width: 100%;" type="number" id="comprimentoTrapezioTarugo"
+                      name="comprimentoTrapezioTarugo" />
+                  </div>
+                </div>
 
-    <button class="btn btn-calculo" onclick="criarTarugos()">
-      Adicionar ao cálculo
-    </button>
-  </div>
-</div>
+                <button class="btn btn-calculo" onclick="criarTarugos()">
+                  Adicionar ao cálculo
+                </button>
+              </div>
+            </div>
             <br>
 
           </div>
@@ -320,7 +320,7 @@
               </div>
 
               <a onclick="cavaco()"><button class="btn btn-calculo" onclick="criarSubPartes()"></a>
-                Adicionar ao cálculo
+              Adicionar ao cálculo
               </button>
 
             </div>
@@ -341,51 +341,55 @@
             <div class="subPeca">
               <h2>Materiais e Custos</h2>
             </div>
+            
+            <div class="ajusta">
 
-            <div class="box-materiais-e-custos">
-              <h3>Mão de Obra</h3>
-              <ul id="listaMaoDeObra" class="materiais-e-custos">
-                <!-- Lista de mão de obra será inserida aqui -->
-              </ul>
+              <div class="box-materiais-e-custos">
+                <h3>Mão de Obra</h3>
+                <ul id="listaMaoDeObra" class="materiais-e-custos">
+                  <!-- Lista de mão de obra será inserida aqui -->
+                </ul>
 
-              <div class="materiais-e-custos-item-input">
-                <div id="selectMaoDeObra">
+                <div class="materiais-e-custos-item-input">
+                  <div id="selectMaoDeObra">
 
+                  </div>
+                  <br>
+                  <label for="numeroDeProfissionais" style="color: #ffffff;">Nº de profissionais</label>
+                  <input type="number" id="numeroDeProfissionais" name="numeroDeProfissionais" placeholder="Ex:2">
+                  <label for="quantidadeDeHorasProfissional" style="color: #ffffff;">Quantidade de Horas</label>
+                  <input type="number" id="quantidadeDeHorasProfissional" name="quantidadeDeHorasProfissional"
+                    placeholder="Ex: 10">
                 </div>
                 <br>
-                <label for="numeroDeProfissionais" style="color: #ffffff;">Nº de profissionais</label>
-                <input type="number" id="numeroDeProfissionais" name="numeroDeProfissionais" placeholder="Ex:2">
-                <label for="quantidadeDeHorasProfissional" style="color: #ffffff;">Quantidade de Horas</label>
-                <input type="number" id="quantidadeDeHorasProfissional" name="quantidadeDeHorasProfissional"
-                  placeholder="Ex: 10">
+                <button class="btn btn-calculo" onclick="addMaoDeObra()"> Adicionar Mão de Obra </button>
+
               </div>
-              <br>
-              <button class="btn btn-calculo" onclick="addMaoDeObra()"> Adicionar Mão de Obra </button>
 
-            </div>
+              <div class="box-materiais-e-custos">
+                <h3>Máquinas</h3>
 
-            <div class="box-materiais-e-custos">
-              <h3>Máquinas</h3>
+                <ul id="listaMaquinas" class="materiais-e-custos">
+                  <!-- Lista de mão de obra será inserida aqui -->
+                </ul>
 
-              <ul id="listaMaquinas" class="materiais-e-custos">
-                <!-- Lista de mão de obra será inserida aqui -->
-              </ul>
+                <div class="materiais-e-custos-item-input">
+                  <div id="selectMaquinas">
 
-              <div class="materiais-e-custos-item-input">
-                <div id="selectMaquinas">
-
+                  </div>
+                  <br>
+                  <label for="numeroDeMaquinas" style="color: #ffffff;">Nº de máquinas</label>
+                  <input type="number" id="numeroDeMaquinas" name="numeroDeMaquinas" placeholder="Ex:2">
+                  <label for="quantidadeDeHorasMaquina" style="color: #ffffff;">Quantidade de Horas</label>
+                  <input type="number" id="quantidadeDeHorasMaquina" name="quantidadeDeHorasMaquina"
+                    placeholder="Ex: 10">
                 </div>
                 <br>
-                <label for="numeroDeMaquinas" style="color: #ffffff;">Nº de máquinas</label>
-                <input type="number" id="numeroDeMaquinas" name="numeroDeMaquinas" placeholder="Ex:2">
-                <label for="quantidadeDeHorasMaquina" style="color: #ffffff;">Quantidade de Horas</label>
-                <input type="number" id="quantidadeDeHorasMaquina" name="quantidadeDeHorasMaquina" placeholder="Ex: 10">
+                <button class="btn btn-calculo" onclick="addMaquina()">Adicionar Maquina</button>
               </div>
-              <br>
-              <button class="btn btn-calculo" onclick="addMaquina()">Adicionar Maquina</button>
-            </div>
 
-            <div>
+              <div>
+              </div>
               <div class="subPeca">
                 <h2>Resumo</h2>
               </div>
@@ -415,8 +419,6 @@
                 " onClick="handleSalvarPeca()">
                 Guardar
               </button>
-
-              <button onclick="calcularKG()">Teste</button>
 
               <a href="historico.html"><button class="btn" style="
                 background-color: #3d3d3d;

@@ -1,0 +1,41 @@
+@media (max-width: 700px) {
+    .content-container {
+         padding-left: 0%; 
+         padding-right: 0%; 
+    }
+
+    .cadastro-container {
+        background-color: rgb(98 98 98 / 0%);
+    }
+
+    .novo-calculo {
+        background-color: rgba(189, 189, 189, 0);
+        color: #fff;
+        border: dashed 1px #ffffff00;
+    }
+    .tarugos-adicionados {
+        background-color: rgba(189, 189, 189, 0);
+        border: dashed 1px #ffffff00;
+    }
+    .peca-inputs {
+        background-color: rgb(98 98 98 / 0%);
+
+    }
+    .box-materiais-e-custos {
+        background-color: #3d3d3d00;
+    }
+    .sub-pecas-adicionadas {
+        background-color: rgba(189, 189, 189, 0);
+        border: dashed 1px #ffffff00;
+       
+    }
+    .box-materiais-e-custos {
+        padding: 0px;
+
+    }
+
+    .materiais-e-custos-item-input {
+        font-size: 0.78em;
+    }
+   
+}
