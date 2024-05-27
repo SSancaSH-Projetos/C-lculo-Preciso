@@ -74,5 +74,23 @@ window.onload = function () {
   }
 };
 
+//  fetch('http://localhost:8080/pecas')
+//    .then(response => response.json())
+//    .then(data => {
+//      const listaDeMateriais = document.getElementById('listaDePecas');
+
+//      data.forEach(peca => {
+//        const option = document.createElement('option');
+//        option.value = peca.codigo;
+//        option.text = peca.nomeDaPeca;
+//        option.value = peca.material;
+//        option.value = peca.maosDeObra;
+//        listaDeMateriais.appendChild(option);
+//      });
+//  })
+//  .catch(error => console.error('Erro ao buscar dados das peças', error));
 
 // Exemplo: http://127.0.0.1:5500/relatorio.html?idPeca=4
+
+
+

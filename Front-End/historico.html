@@ -11,8 +11,13 @@
     <link rel="stylesheet" href="assets/css/geral.css">
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/historico.css"><!-- Link para o arquivo CSS -->
-    <script src="assets/js/geral.js"></script>
-    <script src="assets/js/historico.js"></script>
+
+    <link rel="stylesheet" href="assets/media/geralMedia.css">
+    <link rel="stylesheet" href="assets/media/historicoMedia.css">
+
+
+    <script src="assets/js/geral.js" defer></script>
+    <script src="assets/js/historico.js" defer></script>
 </head>
 
 <body class="body-container-historico">
@@ -27,21 +32,52 @@
                     style="color: #ffffff;"></i></a>
         </div>
     </header>
+
+
     <div>
-        <div class="historico-container">
-            <table id="data-table">
+        <div id="não-responsivo">
+            <table id="data-table" class="table">
                 <thead>
                     <tr>
-                        <th>ID</th>
+                        <th>Id</th>
+                        <th>Código</th>
                         <th>Nome da peça</th>
-                        <th>Quantidade de Sub peças</th>
+                        <th>Volume Total</th>
                         <th>Preço</th>
+                        <th>Tempo De Usinagem</th>
+                        <th>Peso do Tarugo</th>
+                        <th>Quantidade de Cavaco</th>
+                        <th>Valor do Cavaco</th>
+                        <th>Data de Criação</th>
+                        <th>Quantidade de Sub-Peças</th>
+                        <th>Responsável</th>
+                        <th>Máquina</th>
+                        <th>Material</th>
                     </tr>
                 </thead>
                 <tbody>
                     <!-- Linhas de dados serão adicionadas aqui -->
                 </tbody>
             </table>
+        </div>
+
+        <div id="responsivo">
+            <div class="tabela01">
+                <table id="data-table" class="table">
+                    <thead>
+                        <tr>
+                            <th>Código</th>
+                            <th>Nome da peça</th>
+                            <th>Volume Total</th>
+                            <th>Preço</th>
+                            <th>Tempo De Usinagem</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Linhas de dados serão adicionadas aqui -->
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
 </body>

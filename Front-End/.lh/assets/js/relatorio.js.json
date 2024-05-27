@@ -1,0 +1,18 @@
+{
+    "sourceFile": "assets/js/relatorio.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1716495472195,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1716495472195,
+            "name": "Commit-0",
+            "content": "// Função para carregar os dados de mão de obra e atualizar o HTML\r\nvar subPecas = [];\r\nvar materiais = [];\r\nvar maoDeObra = [];\r\n\r\nfunction carregarDadosDaPeca(idPeca) {\r\n  fetch(\"http://localhost:8080/pecas/\" + idPeca)\r\n    .then((response) => {\r\n      if (!response.ok) {\r\n        throw new Error(\"Network response was not ok \" + response.statusText);\r\n      }\r\n      return response.json();\r\n    })\r\n    .then((data) => {\r\n      const listaDeNomesDePecas = document.getElementById(\r\n        \"listaDeNomesDePecas\"\r\n      );\r\n      const codigoPeca = document.getElementById(\r\n        \"codigo\"\r\n      );\r\n\r\n      const maoDeObra = document.getElementById(\r\n        \"maoDeObra\"\r\n      );\r\n\r\n      const maquinaPeca = document.getElementById(\r\n        \"maquina\"\r\n      );\r\n\r\n      const materialPeca = document.getElementById(\r\n        \"material\"\r\n      );\r\n\r\n\r\n      listaDeNomesDePecas.innerHTML = data.nomeDaPeca;\r\n      codigoPeca.innerHTML = data.codigo;\r\n\r\n      if (Array.isArray(data.maosDeObra) && data.maosDeObra.length > 0) {\r\n        maoDeObra.innerHTML = data.maosDeObra\r\n          .map((mao) => `<li>Profissional: ${mao.profissional}, Preço por Hora: ${mao.precoPorHora}</li>`)\r\n          .join('');\r\n      } else {\r\n        maoDeObra.innerHTML = 'Nenhuma mão de obra encontrada.';\r\n      }\r\n\r\n\r\n      if (Array.isArray(data.maquina) && data.maquina.length > 0) {\r\n        maquinaPeca.innerHTML = data.maquina\r\n          .map((maquina) => `<li>Nome: ${maquina.nome}, Preço por Hora: ${maquina.precoPorHora}</li>`)\r\n          .join('');\r\n      } else {\r\n        maquinaPeca.innerHTML = 'Nenhuma máquina encontrada.';\r\n      }\r\n\r\n      if (data.material) {\r\n        materialPeca.innerHTML = `Nome: ${data.material.nome}, Preço por Kg: ${data.material.precoPorKg}, Preço Cavaco: ${data.material.precoCavaco}`;\r\n      } else {\r\n        materialPeca.innerHTML = 'Nenhum material encontrado.';\r\n      }\r\n    })\r\n    .catch((error) => console.error(\"Erro ao buscar nomes das peças:\", error));\r\n}\r\n\r\n// Função que será executada quando a página for carregada\r\nwindow.onload = function () {\r\n  if (window.location.search) {\r\n    // Obtenha a URL atual\r\n    var urlParams = new URLSearchParams(window.location.search);\r\n\r\n    // Obtenha o valor do parâmetro idPeca\r\n    var idPeca = urlParams.get(\"idPeca\");\r\n\r\n    carregarDadosDaPeca(idPeca);\r\n  }\r\n};\r\n\r\n//  fetch('http://localhost:8080/pecas')\r\n//    .then(response => response.json())\r\n//    .then(data => {\r\n//      const listaDeMateriais = document.getElementById('listaDePecas');\r\n\r\n//      data.forEach(peca => {\r\n//        const option = document.createElement('option');\r\n//        option.value = peca.codigo;\r\n//        option.text = peca.nomeDaPeca;\r\n//        option.value = peca.material;\r\n//        option.value = peca.maosDeObra;\r\n//        listaDeMateriais.appendChild(option);\r\n//      });\r\n//  })\r\n//  .catch(error => console.error('Erro ao buscar dados das peças', error));\r\n\r\n// Exemplo: http://127.0.0.1:5500/relatorio.html?idPeca=4\r\n\r\n\r\n\r\n"
+        }
+    ]
+}

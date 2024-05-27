@@ -3,7 +3,6 @@
 
 <head>
   <title>Cálculo Preciso - Login</title>
-  <link rel="stylesheet" href="assets/css/reset.css">
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,67 +25,67 @@
 
 
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/geral.css">
   <script src="assets/js/login.js" defer></script>
 
   <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
   <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
 
   <link rel="stylesheet" href="assets/css/geral.css">
+  <link rel="stylesheet" href="assets/css/reset.css">
 
+  <link rel="stylesheet" href="assets/media/geralMedia.css">
+  <link rel="stylesheet" href="assets/media/indexMedia.css">
 
 </head>
 
-<body class="body-container" style="flex-direction: row;">
-
-  <!-- Modal de erro -->
-  <div class="modal" id="modal" tabindex="-1" role="dialog">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">Cálculo Preciso - Erro de Login</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body" id="modal-content" style="font-size: 1.5em;">
-          <!-- Conteúdo do modal será preenchido dinamicamente -->
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" id="fechar-modal">Fechar</button>
+<body>
+  <div class="body-container" style="flex-direction: row;">
+    <!-- Modal de erro -->
+    <div class="modal" id="modal" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Cálculo Preciso - Erro de Login</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body" id="modal-content" style="font-size: 1.5em;">
+            <!-- Conteúdo do modal será preenchido dinamicamente -->
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" id="fechar-modal">Fechar</button>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
 
-  <div class="spinning-parts">
-    <model-viewer id="parts" class="parts-3d" controls auto-rotate src="assets/3DModels/metalparts.glb"
-      camera-controls></model-viewer>
-  </div>
+    <div class="spinning-parts">
+      <model-viewer id="parts" class="parts-3d" controls auto-rotate src="assets/3DModels/metalparts.glb"
+        camera-controls></model-viewer>
+    </div>
 
-  <div class="login-container">
+    <div class="login-container">
 
-    <form id="login-form">
-
-      <img class="logoCalculoPreciso" src="assets/images/logoBranco.png" alt="PrecisionTechLogo">
-      <div style="width: 80%;">
-        <label for="usuario">Usuário ou Email</label>
-        <input class="form-control login-text-box" type="text" id="email" name="email " placeholder="Email ou usuario">
+      <form id="login-form">
+        <img class="logoCalculoPreciso; img" src="assets/images/logoBranco.png" alt="PrecisionTechLogo">
+        <div style="width: 80%;">
+          <label for="usuario">Email</label>
+          <input class="form-control login-text-box" type="email" id="email" name="email "
+            placeholder="Insira seu Email">
+          <br>
+          <label for="senha">Senha:</label>
+          <input class="form-control login-text-box" type="password" id="senha" name="senha" placeholder="Ex: Pass#123">
+        </div>
         <br>
-        <label for="senha">Senha:</label>
-        <input class="form-control login-text-box" type="password" id="senha" name="senha" placeholder="Ex: Pass#123">
-      </div>
-      <br>
-      <div class="buttons-container">
-        <button class="btn-padrao" style="background-color: #C0C4D2;" id="btn-login">Login</button>
-        <a class="btn-padrao" style="background-color: #C0C4D2;" href="cadastro.html">Cadastre-se</a>
-        <a style="font-size: 15px; color: #fff; text-decoration: none;" href="#">Esqueci minha senha</a>
-      </div>
-
-      <br><br>
-      <div style="color: #fff; font-weight: 800;">By PRECISION TECH</div>
-    </form>
+        <div class="buttons-container">
+          <button class="btn-padrao" style="background-color: #C0C4D2;" id="btn-login">Login</button>
+          <a class="btn-padrao" style="background-color: #C0C4D2;" href="cadastro.html">Cadastro</a>
+          <a style="font-size: 15px; color: #fff; text-decoration: none;" href="#">Esqueci minha senha</a>
+        </div>
+      </form>
+    </div>
   </div>
   </div>
 </body>
