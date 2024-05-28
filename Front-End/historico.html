@@ -8,6 +8,18 @@
     <title>historico</title>
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+
     <link rel="stylesheet" href="assets/css/geral.css">
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/historico.css"><!-- Link para o arquivo CSS -->
@@ -15,12 +27,16 @@
     <link rel="stylesheet" href="assets/media/geralMedia.css">
     <link rel="stylesheet" href="assets/media/historicoMedia.css">
 
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
     <script src="assets/js/geral.js" defer></script>
     <script src="assets/js/historico.js" defer></script>
 </head>
 
 <body class="body-container-historico">
+
+
     <header>
         <div class="navbar">
             <a href="dashboard.html"> <i class="fa-solid fa-home" style="color: #ffffff;"></i> Início</a>
@@ -33,53 +49,16 @@
         </div>
     </header>
 
+    <div style="display: flex; flex-direction: column; align-items: center; width: 100%; margin: 20px;">
+        <h2 style="color: #ffffff;">Cálculo Preciso</h2>
 
-    <div>
-        <div id="não-responsivo">
-            <table id="data-table" class="table">
-                <thead>
-                    <tr>
-                        <th>Id</th>
-                        <th>Código</th>
-                        <th>Nome da peça</th>
-                        <th>Volume Total</th>
-                        <th>Preço</th>
-                        <th>Tempo De Usinagem</th>
-                        <th>Peso do Tarugo</th>
-                        <th>Quantidade de Cavaco</th>
-                        <th>Valor do Cavaco</th>
-                        <th>Data de Criação</th>
-                        <th>Quantidade de Sub-Peças</th>
-                        <th>Responsável</th>
-                        <th>Máquina</th>
-                        <th>Material</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <!-- Linhas de dados serão adicionadas aqui -->
-                </tbody>
-            </table>
-        </div>
-
-        <div id="responsivo">
-            <div class="tabela01">
-                <table id="data-table" class="table">
-                    <thead>
-                        <tr>
-                            <th>Código</th>
-                            <th>Nome da peça</th>
-                            <th>Volume Total</th>
-                            <th>Preço</th>
-                            <th>Tempo De Usinagem</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <!-- Linhas de dados serão adicionadas aqui -->
-                    </tbody>
-                </table>
-            </div>
+        <div class="accordion-container">
+            <div id="accordionExample" class="accordion" style="width: 80%;"></div>
         </div>
     </div>
+
 </body>
+
+
 
 </html>

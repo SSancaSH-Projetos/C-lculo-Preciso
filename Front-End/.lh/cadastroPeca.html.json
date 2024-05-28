@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 9,
+            "activePatchIndex": 12,
             "patches": [
                 {
                     "date": 1716581633146,
@@ -44,6 +44,18 @@
                 {
                     "date": 1716921751658,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -424,9 +424,9 @@\n                 background-color: #3d3d3d;\r\n                 align-items: self-end;\r\n                 width: 100%;margin-top: 2%;\r\n               \">Historico</button></a>\r\n-              <button onclick=\"precoProfisinal()\" class=\"btn\" style=\"\r\n+              <button onclick=\"custoDeProducao()\" class=\"btn\" style=\"\r\n                 background-color: #3d3d3d;\r\n                 align-items: self-end;\r\n                 width: 100%;margin-top: 2%;\r\n               \">teste</button>\r\n"
+                },
+                {
+                    "date": 1716928589438,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -259,9 +259,9 @@\n                   <label for=\"raioCilindro\">Raio (mm):</label>\r\n                   <input style=\"width: 100%;\" type=\"number\" id=\"raioCilindro\" name=\"raioCilindro\" />\r\n                 </div>\r\n                 <div>\r\n-                  <label for=\"alturaCilindro\">Altura (mm):</label>\r\n+                  <label for=\"alturaCilindro\">Comprimento (mm):</label>\r\n                   <input style=\"width: 100%;\" type=\"number\" id=\"alturaCilindro\" name=\"alturaCilindro\" />\r\n                 </div>\r\n               </div>\r\n \r\n"
+                },
+                {
+                    "date": 1716928611481,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -124,9 +124,9 @@\n                     <label for=\"raioCilindroTarugo\">Raio (mm):</label>\r\n                     <input style=\"width: 100%;\" type=\"number\" id=\"raioCilindroTarugo\" name=\"raioCilindroTarugo\" />\r\n                   </div>\r\n                   <div>\r\n-                    <label for=\"alturaCilindroTarugo\">Altura (mm):</label>\r\n+                    <label for=\"alturaCilindroTarugo\" (mm):</label>\r\n                     <input style=\"width: 100%;\" type=\"number\" id=\"alturaCilindroTarugo\" name=\"alturaCilindroTarugo\" />\r\n                   </div>\r\n                 </div>\r\n \r\n"
+                },
+                {
+                    "date": 1716928619966,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -124,9 +124,9 @@\n                     <label for=\"raioCilindroTarugo\">Raio (mm):</label>\r\n                     <input style=\"width: 100%;\" type=\"number\" id=\"raioCilindroTarugo\" name=\"raioCilindroTarugo\" />\r\n                   </div>\r\n                   <div>\r\n-                    <label for=\"alturaCilindroTarugo\" (mm):</label>\r\n+                    <label for=\"alturaCilindroTarugo\">Comprimento (mm):</label>\r\n                     <input style=\"width: 100%;\" type=\"number\" id=\"alturaCilindroTarugo\" name=\"alturaCilindroTarugo\" />\r\n                   </div>\r\n                 </div>\r\n \r\n"
                 }
             ],
             "date": 1716581633146,

@@ -5,7 +5,7 @@ body {
     padding: 0;
     background-color: #f4f4f4;
     font-family: "Orbitron";
-} 
+}
 
 h1 {
     text-align: center;
@@ -53,20 +53,11 @@ h1 {
     background-image: url("../images/bg3.jpg");
     margin-left: 0;
     margin-top: 0px;
-
 }
 
-.tabela01{
-    font-size: 0.01em;
+.tabela01 {
+    font-size: 1em;
     margin-left: 5%;
-}
-
-.so-para-responsividade{
-    display: none;
-}
-
-.so-para-responsividade1{
-    display: none;
 }
 
 #não-responsivo {
@@ -77,12 +68,47 @@ h1 {
     display: none;
 }
 
-@media screen and (max-width: 700px) {
-    #não-responsivo {
-        display: none;
-    }
+.button-table{
+    background-color: #C0C4D2;
+    border: none;
+    color: #fff;
+    font-family: "Orbitron";
+    height: 30px;
+    width: auto;
+    border-radius: 5px;
+}
 
-    #responsivo {
-        display: block;
-    }
+
+.accordion-button {
+    background-color: #343a40;
+    color: white;
+}
+.accordion-button:not(.collapsed) {
+    color: #fff;
+    background-color: #495057;
+}
+.accordion-body {
+    background-color: #343a40;
+    color: white;
+}
+
+.accordion-body p{
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+.accordion-item {
+    border: 1px solid #495057;
+}
+
+.accordion-example{
+    width: 100%;
+}
+
+
+.accordion-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin:5%;
 }
