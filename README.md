@@ -1,19 +1,18 @@
 
 <img width="479" alt="Logo03" src="https://github.com/SSancaSH-Projetos/Calculo-Preciso/assets/158601854/da4a96b3-9b85-4108-9d7d-10adb4117c1d">
 
-# Problema: Dificuldade no cálculo de Custo de Usinagem de Peças
+# Problema: Dificuldade no Cálculo de Custo de Usinagem de Peças
 
 - **Área:** Usinagem
 - **Responsável:** Grupo PrecisionTech
 
 ## 1. Escopo
 
-O projeto tem como objetivo desenvolver um sistema de comunicação eficiente, conectando os usuários de forma indireta para otimizar a dinâmica nos cálculos de custo de usinagem. A proposta é proporcionar layouts simples, facilitando a identificação de cada usuário com o software. Além disso, visa proporcionar agilidade nas negociações e alcançar resultados satisfatórios para todos os usuários.
+O projeto "Cálculo Preciso" visa desenvolver uma aplicação que automatiza cálculos de usinagem, além de gerenciar o cadastro de professores, alunos e turmas. O principal objetivo é reduzir o tempo que os usuários levam para realizar cálculos manuais, melhorando a eficiência e precisão dos processos educacionais e industriais.
 
 ## 2. Objetivos do projeto
 
-- Desenvolver um aplicativo para funcionários, gestores e clientes que permita com mais facilidade realizar cálculos de usinagem mais específicos com menos dificuldades.
-- Estabelecer um sistema de notificações instantâneas para informar os supervisores, operadores e clientes sobre os resultados obtidos através dos cálculos.
+- Desenvolver uma pagina Web para aluno e professores que permita com mais facilidade realizar cálculos de usinagem mais específicos com menos dificuldades.
 - Alcançar uma redução mensurável no tempo médio gasto na conclusão de cálculos muito difíceis com implementação do sistema.
 - Alcançar uma taxa de adoção das empresas no uso do software de cálculos de usinagem.
 
@@ -23,8 +22,8 @@ O projeto tem como objetivo desenvolver um sistema de comunicação eficiente, c
 - Estratégias de Mitigação: Realizar uma série de testes antes do lançamento final do aplicativo, implementar mecanismos de tratamento de exceções, onde eles irão capturar esses erros e mostrar informações mais detalhadas sobre os erros.
 - Plano de Contingência: Adotar uma estratégia de backup que permite fazer uma cópia dos dados.
 
-**Risco: O cliente ter acesso às informações exclusivas do gestor ou do operador.**
-- Estratégias de Mitigação: Reforçar a autenticação, garantindo que cada usuário (gestor, operador e cliente) acessem suas informações. Dessa forma, cada um dos usuários terá sua própria senha de acesso.
+**Risco: O aluno ter acesso às informações exclusivas do Professor.**
+- Estratégias de Mitigação: Reforçar a autenticação, garantindo que cada usuário (aluno e professor) acessem suas informações. Dessa forma, cada um dos usuários terá sua própria senha de acesso.
 - Plano de Contingência: Realizar vários testes para identificar possíveis erros de autenticação e corrigir possíveis brechas no sistema.
 
 **Risco: Possíveis mudanças nos Requisitos durante o Desenvolvimento do projeto.**
@@ -60,12 +59,12 @@ O projeto tem como objetivo desenvolver um sistema de comunicação eficiente, c
 # 5. Recursos
 
 ## Pessoal:
-- Desenvolvedores de Software: Para a criação do aplicativo para funcionários, clientes e gestores de empresas de usinagem.
+- Desenvolvedores de uma pagina Web: Para a criação do aplicativo para alunos e professores no curso de usinagem.
 - Líder do Projeto: Para coordenar e supervisionar todas as atividades.
 
 ## Tecnologia:
 - Ambiente de Desenvolvimento Integrado (IDE): Ferramentas adequadas para o desenvolvimento do aplicativo e do painel de supervisão.
-- Sistemas de versionamento de código: git e github para manter o código versionado e sempre atualizado.
+- Sistemas de versionamento de código: Git e Github para manter o código versionado e sempre atualizado.
 - Ferramentas de Teste de Software: Para garantir a qualidade e a confiabilidade do aplicativo e do sistema.
 
 ## Equipamentos:
@@ -78,7 +77,7 @@ O projeto tem como objetivo desenvolver um sistema de comunicação eficiente, c
 # 6. Custos
 
 ## Pessoal:
-- Desenvolvedores de Software:
+- Desenvolvedores da pagina Web:
   - 5 desenvolvedores trabalhando por 3 dias na semana.
 - Líder do Projeto:
   - 1 líder do projeto.
