@@ -196,24 +196,24 @@ function handlerFecharModal(qualModal) {
 
 }
 
-// Função para contar o número de peças no histórico e exibir no elemento <p>
-function countAndDisplayPieces() {
-    fetch("http://localhost:8080/pecas")
-        .then(response => response.json())
-        .then(data => {
-            // Contar o número de peças
-            const numberOfPieces = data.length;
-            // Selecionar o elemento <p> onde você deseja exibir o número de peças
-            const pieceCountElement = document.getElementById("piece-count");
-            // Exibir o número de peças no elemento <p>
-            pieceCountElement.textContent = `Número de peças no histórico: ${numberOfPieces}`;
-        })
-        .catch(error => {
-            console.error("Erro ao buscar dados:", error);
-        });
-}
+// // Função para contar o número de peças no histórico e exibir no elemento <p>
+// function countAndDisplayPieces() {
+//     fetch("http://localhost:8080/pecas")
+//         .then(response => response.json())
+//         .then(data => {
+//             // Contar o número de peças
+//             const numberOfPieces = data.length;
+//             // Selecionar o elemento <p> onde você deseja exibir o número de peças
+//             const pieceCountElement = document.getElementById("piece-count");
+//             // Exibir o número de peças no elemento <p>
+//             pieceCountElement.textContent = `Número de peças no histórico: ${numberOfPieces}`;
+//         })
+//         .catch(error => {
+//             console.error("Erro ao buscar dados:", error);
+//         });
+// }
 
-countAndDisplayPieces();
+// countAndDisplayPieces();
 
 
 

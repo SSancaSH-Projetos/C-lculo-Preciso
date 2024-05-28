@@ -7,8 +7,13 @@ let tarugos = [];
 let volumeDoTarugo = 0;
 let volumeCavaco = 0;
 let somaVolumes = 0;
+let maoDeObraTudo = [];
+let valorTotalMaoDeObra = 0;
+let maquinaTudo = [];
+let valorTotalMaquinas = 0;
 
-
+console.log(valorTotalMaoDeObra)
+console.log(valorTotalMaquinas)
 // Carrega os dados para a página
 fetch('http://localhost:8080/maodeobra')
   .then(response => response.json())
@@ -17,6 +22,9 @@ fetch('http://localhost:8080/maodeobra')
 
     const selectElement = document.createElement('select');
     selectElement.setAttribute('id', 'maoDeObraSelect');
+    maoDeObraTudo = data;
+    console.log(maoDeObraTudo)
+
 
     data.forEach(profissional => {
       const optionElement = document.createElement('option');
@@ -39,6 +47,7 @@ fetch('http://localhost:8080/maquinas')
 
     const selectElement = document.createElement('select');
     selectElement.setAttribute('id', 'maquinasSelect');
+    maquinaTudo = data;
 
     data.forEach(maquina => {
       const optionElement = document.createElement('option');
@@ -329,14 +338,13 @@ function addMaoDeObra() {
   var numeroDeProfissionais = parseInt(document.getElementById("numeroDeProfissionais").value);
   var quantidadeDeHorasProfissional = parseInt(document.getElementById("quantidadeDeHorasProfissional").value);
 
-  console.log(id,nome,numeroDeProfissionais, quantidadeDeHorasProfissional);
-
   if (nome && !isNaN(numeroDeProfissionais) && !isNaN(quantidadeDeHorasProfissional)) {
       var maoDeObraObj = {
           id: id,
           nome: nome,
           numeroDeProfissionais: numeroDeProfissionais,
-          quantidadeDeHorasProfissional: quantidadeDeHorasProfissional
+          quantidadeDeHorasProfissional: quantidadeDeHorasProfissional,
+          valorMaoDeObra: numeroDeProfissionais * quantidadeDeHorasProfissional * maoDeObraTudo[id-1].precoPorHora
       };
 
       maoDeObra.push(maoDeObraObj);
@@ -352,7 +360,7 @@ function addMaoDeObra() {
   
       maoDeObra.forEach(function(maoDeObraObj) {
           var li = document.createElement("li");
-          li.textContent = "Nome: " + maoDeObraObj.nome + ", Profissionais: " + maoDeObraObj.numeroDeProfissionais + ", Horas: " + maoDeObraObj.quantidadeDeHorasProfissional;
+          li.textContent = "Nome: " + maoDeObraObj.nome + ", Profissionais: " + maoDeObraObj.numeroDeProfissionais + ", Horas: " + maoDeObraObj.quantidadeDeHorasProfissional + ", Valor Total: " + maoDeObraObj.valorMaoDeObra ;
           listaMaoDeObra.appendChild(li);
       });
 
@@ -362,13 +370,17 @@ function addMaoDeObra() {
       // Calcula a quantidade total de horas demandadas
       var horasTotais = maoDeObra.reduce((acc, curr) => acc + curr.quantidadeDeHorasProfissional, 0);
       
+      // Calcula o valor total da mão de obra
+      var valorTotalMaoDeObra = maoDeObra.reduce((acc, curr) => acc + curr.valorMaoDeObra, 0);
+      
       // Atualiza o elemento de resumo
-      document.getElementById("relatorio-maoDeObra").textContent = "Total de Profissionais: " + totalProfissionais + ", Horas Totais: " + horasTotais;
+      document.getElementById("relatorio-maoDeObra").textContent = "Total de Profissionais: " + totalProfissionais + ", Horas Totais: " + horasTotais + ", Valor Total: " + valorTotalMaoDeObra ;
 
   } else {
       alert("Por favor, preencha todos os campos corretamente.");
   }
 }
+
 
 function addMaquina() {
   var id = maquina.length + 1; // Gera um ID sequencial
@@ -376,14 +388,14 @@ function addMaquina() {
   var numeroDeMaquinas = parseInt(document.getElementById("numeroDeMaquinas").value);
   var quantidadeDeHorasMaquina = parseInt(document.getElementById("quantidadeDeHorasMaquina").value);
 
-  console.log(id, nome, numeroDeMaquinas, quantidadeDeHorasMaquina);
 
   if (nome && !isNaN(numeroDeMaquinas) && !isNaN(quantidadeDeHorasMaquina)) {
       var maquinaObj = {
           id: id,
           nome: nome,
           numeroDeMaquinas: numeroDeMaquinas,
-          quantidadeDeHorasMaquina: quantidadeDeHorasMaquina
+          quantidadeDeHorasMaquina: quantidadeDeHorasMaquina,
+          valorMaquina: numeroDeMaquinas * quantidadeDeHorasMaquina * maquinaTudo[id-1].precoPorHora
       };
 
       maquina.push(maquinaObj);
@@ -399,7 +411,7 @@ function addMaquina() {
 
       maquina.forEach(function(maquinaObj) {
           var li = document.createElement("li");
-          li.textContent = "Nome: " + maquinaObj.nome + ", Máquinas: " + maquinaObj.numeroDeMaquinas + ", Horas: " + maquinaObj.quantidadeDeHorasMaquina;
+          li.textContent = "Nome: " + maquinaObj.nome + ", Máquinas: " + maquinaObj.numeroDeMaquinas + ", Horas: " + maquinaObj.quantidadeDeHorasMaquina + ", Valor Total: " + maquinaObj.valorMaquina;
           listaMaquinas.appendChild(li);
       });
 
@@ -408,15 +420,18 @@ function addMaquina() {
 
       // Calcula a quantidade total de horas demandadas
       var horasTotais = maquina.reduce((acc, curr) => acc + curr.quantidadeDeHorasMaquina, 0);
+      
+      // Calcula o valor total das máquinas
+      var valorTotalMaquinas = maquina.reduce((acc, curr) => acc + curr.valorMaquina, 0);
 
       // Atualiza o elemento de resumo
-      document.getElementById("relatorio-maquinas").textContent = "Total de Máquinas: " + totalMaquinas + ", Horas Totais: " + horasTotais;
-
+      document.getElementById("relatorio-maquinas").textContent = "Total de Máquinas: " + totalMaquinas + ", Horas Totais: " + horasTotais + ", Valor Total: " + valorTotalMaquinas;
 
   } else {
       alert("Por favor, preencha todos os campos corretamente.");
   }
 }
+
 
 
 
@@ -628,3 +643,13 @@ function calcularKG() {
 const massa = calcularKG();
 
 console.log(`Massa: ${massa} kg`); // Saída: Massa: 0.005 kg
+
+function custoDeProducao(){
+  let valorProfissional = document.getElementById('valorTotalMaoDeObra'.value);
+  let valorMaquina = document.getElementById('valorTotalMaquina'.value);
+
+  let custoTotal = valorTotalMaoDeObra + valorTotalMaquina;
+  //return custoTotal;
+
+  console.log(custoTotal)
+}
