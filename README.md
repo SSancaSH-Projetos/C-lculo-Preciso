@@ -64,7 +64,7 @@ O projeto "Cálculo Preciso" visa desenvolver uma aplicação que automatiza cá
 
 ## Tecnologia:
 - Ambiente de Desenvolvimento Integrado (IDE): Ferramentas adequadas para o desenvolvimento do aplicativo e do painel de supervisão.
-- Sistemas de versionamento de código: git e github para manter o código versionado e sempre atualizado.
+- Sistemas de versionamento de código: Git e Github para manter o código versionado e sempre atualizado.
 - Ferramentas de Teste de Software: Para garantir a qualidade e a confiabilidade do aplicativo e do sistema.
 
 ## Equipamentos:
