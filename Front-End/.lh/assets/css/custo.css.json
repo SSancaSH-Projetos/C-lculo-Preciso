@@ -1,0 +1,210 @@
+{
+    "sourceFile": "assets/css/custo.css",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 48,
+            "patches": [
+                {
+                    "date": 1717008020876,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1717008208147,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -129,4 +129,6 @@\n \r\n .button-edit-delete i {\r\n     pointer-events: none;\r\n }\r\n+\r\n+\r\n"
+                },
+                {
+                    "date": 1717008214443,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -130,5 +130,7 @@\n .button-edit-delete i {\r\n     pointer-events: none;\r\n }\r\n \r\n-\r\n+a{\r\n+    background-color: ;\r\n+}\r\n"
+                },
+                {
+                    "date": 1717008219892,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -131,6 +131,6 @@\n     pointer-events: none;\r\n }\r\n \r\n a{\r\n-    background-color: ;\r\n+    background-color: #fefefe;\r\n }\r\n"
+                },
+                {
+                    "date": 1717008231394,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -131,6 +131,6 @@\n     pointer-events: none;\r\n }\r\n \r\n a{\r\n-    background-color: #fefefe;\r\n+    background-color: #fefefe00;\r\n }\r\n"
+                },
+                {
+                    "date": 1717008254656,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -131,6 +131,6 @@\n     pointer-events: none;\r\n }\r\n \r\n a{\r\n-    background-color: #fefefe00;\r\n+    background-color: #fefefe;\r\n }\r\n"
+                },
+                {
+                    "date": 1717008356862,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -129,8 +129,4 @@\n \r\n .button-edit-delete i {\r\n     pointer-events: none;\r\n }\r\n-\r\n-a{\r\n-    background-color: #fefefe;\r\n-}\r\n"
+                },
+                {
+                    "date": 1717009275560,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -121,9 +121,9 @@\n }\r\n \r\n .button-edit-delete {\r\n     cursor: pointer;\r\n-    color: #007bff;\r\n+    color: #007bff00;\r\n     text-decoration: none;\r\n     margin: 0 5px;\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1717009290472,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -121,12 +121,13 @@\n }\r\n \r\n .button-edit-delete {\r\n     cursor: pointer;\r\n-    color: #007bff00;\r\n+    color: #007bff;\r\n     text-decoration: none;\r\n     margin: 0 5px;\r\n }\r\n \r\n .button-edit-delete i {\r\n     pointer-events: none;\r\n }\r\n+\r\n"
+                },
+                {
+                    "date": 1717009375138,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -98,9 +98,9 @@\n     background-color: rgba(0, 0, 0, 0.4);\r\n }\r\n \r\n .modal-content {\r\n-    background-color: #fefefe;\r\n+    background-color: #444444;\r\n     margin: 15% auto;\r\n     padding: 20px;\r\n     border: 1px solid #888;\r\n     width: 80%;\r\n@@ -121,9 +121,9 @@\n }\r\n \r\n .button-edit-delete {\r\n     cursor: pointer;\r\n-    color: #007bff;\r\n+    color: #ffffff;\r\n     text-decoration: none;\r\n     margin: 0 5px;\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1717009552721,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -129,5 +129,6 @@\n \r\n .button-edit-delete i {\r\n     pointer-events: none;\r\n }\r\n+pop-up\r\n \r\n"
+                },
+                {
+                    "date": 1717009558424,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -129,6 +129,6 @@\n \r\n .button-edit-delete i {\r\n     pointer-events: none;\r\n }\r\n-pop-up\r\n+.pop-up\r\n \r\n"
+                },
+                {
+                    "date": 1717009569974,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -129,6 +129,8 @@\n \r\n .button-edit-delete i {\r\n     pointer-events: none;\r\n }\r\n-.pop-up\r\n+.pop-up{\r\n+    display: flex;\r\n+}\r\n \r\n"
+                },
+                {
+                    "date": 1717011927233,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -129,8 +129,6 @@\n \r\n .button-edit-delete i {\r\n     pointer-events: none;\r\n }\r\n-.pop-up{\r\n-    display: flex;\r\n-}\r\n \r\n+\r\n"
+                },
+                {
+                    "date": 1717011935668,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -83,52 +83,6 @@\n     text-decoration: none;\r\n     cursor: pointer;\r\n }\r\n \r\n-/* Estilos para os modais */\r\n-.modal {\r\n-    display: none;\r\n-    position: fixed;\r\n-    z-index: 1;\r\n-    left: 0;\r\n-    top: 0;\r\n-    width: 100%;\r\n-    height: 100%;\r\n-    overflow: auto;\r\n-    background-color: rgb(0, 0, 0);\r\n-    background-color: rgba(0, 0, 0, 0.4);\r\n-}\r\n \r\n-.modal-content {\r\n-    background-color: #444444;\r\n-    margin: 15% auto;\r\n-    padding: 20px;\r\n-    border: 1px solid #888;\r\n-    width: 80%;\r\n-}\r\n \r\n-.close {\r\n-    color: #aaa;\r\n-    float: right;\r\n-    font-size: 28px;\r\n-    font-weight: bold;\r\n-}\r\n-\r\n-.close:hover,\r\n-.close:focus {\r\n-    color: black;\r\n-    text-decoration: none;\r\n-    cursor: pointer;\r\n-}\r\n-\r\n-.button-edit-delete {\r\n-    cursor: pointer;\r\n-    color: #ffffff;\r\n-    text-decoration: none;\r\n-    margin: 0 5px;\r\n-}\r\n-\r\n-.button-edit-delete i {\r\n-    pointer-events: none;\r\n-}\r\n-\r\n-\r\n"
+                },
+                {
+                    "date": 1717011969990,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -83,6 +83,116 @@\n     text-decoration: none;\r\n     cursor: pointer;\r\n }\r\n \r\n+/* Estilos para o pop-up de edição */\r\n+.modal {\r\n+    display: none;\r\n+    position: fixed;\r\n+    z-index: 1000;\r\n+    left: 50%;\r\n+    top: 50%;\r\n+    transform: translate(-50%, -50%);\r\n+    background-color: #333;\r\n+    padding: 20px;\r\n+    border: 1px solid #ccc;\r\n+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);\r\n+    width: 700px;\r\n+    border-radius: 8px;\r\n+    font-family: \"Orbitron\";\r\n+}\r\n \r\n+.modal-content {\r\n+    background-color: #333;\r\n+    padding: 20px;\r\n+    border: 1px solid #ccc;\r\n+    border-radius: 8px;\r\n+    width: 100%;\r\n+    box-shadow: none;\r\n+    margin: 0;\r\n+    position: relative;\r\n+}\r\n \r\n+.modal-content h3 {\r\n+    margin-top: 0;\r\n+    color: #ffffff;\r\n+    font-family: \"Orbitron\";\r\n+}\r\n+\r\n+.modal-content label {\r\n+    display: block;\r\n+    margin-top: 10px;\r\n+    color: white;\r\n+    font-family: \"Orbitron\";\r\n+}\r\n+\r\n+.modal-content input[type=\"text\"],\r\n+.modal-content input[type=\"password\"] {\r\n+    width: calc(100% - 10px);\r\n+    padding: 5px;\r\n+    margin-top: 5px;\r\n+    border: 1px solid #ccc;\r\n+    border-radius: 4px;\r\n+    font-family: \"Orbitron\";\r\n+}\r\n+\r\n+.modal-content button {\r\n+    margin-top: 10px;\r\n+    padding: 8px 15px;\r\n+    border: none;\r\n+    border-radius: 4px;\r\n+    cursor: pointer;\r\n+    font-family: \"Orbitron\";\r\n+}\r\n+\r\n+.modal-content button[type=\"submit\"] {\r\n+    background-color: #C0C4D2;\r\n+    color: white;\r\n+    font-family: \"Orbitron\";\r\n+}\r\n+\r\n+.modal-content button[type=\"button\"] {\r\n+    background-color: #C0C4D2;\r\n+    color: white;\r\n+    margin-left: 10px;\r\n+    font-family: \"Orbitron\";\r\n+}\r\n+\r\n+/* Estilo para o fundo cinza */\r\n+.modal-overlay {\r\n+    display: none;\r\n+    position: fixed;\r\n+    top: 0;\r\n+    left: 0;\r\n+    width: 100%;\r\n+    height: 100%;\r\n+    background-color: rgba(0, 0, 0, 0.5);\r\n+    z-index: 999;\r\n+    font-family: \"Orbitron\";\r\n+}\r\n+\r\n+.close {\r\n+    color: #aaa;\r\n+    float: right;\r\n+    font-size: 28px;\r\n+    font-weight: bold;\r\n+}\r\n+\r\n+.close:hover,\r\n+.close:focus {\r\n+    color: black;\r\n+    text-decoration: none;\r\n+    cursor: pointer;\r\n+}\r\n+\r\n+.button-edit-delete {\r\n+    cursor: pointer;\r\n+    color: #ffffff;\r\n+    text-decoration: none;\r\n+    margin: 0 5px;\r\n+}\r\n+\r\n+.button-edit-delete i {\r\n+    pointer-events: none;\r\n+}\r\n+\r\n+\r\n"
+                },
+                {
+                    "date": 1717011978554,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -83,8 +83,9 @@\n     text-decoration: none;\r\n     cursor: pointer;\r\n }\r\n \r\n+\r\n /* Estilos para o pop-up de edição */\r\n .modal {\r\n     display: none;\r\n     position: fixed;\r\n"
+                },
+                {
+                    "date": 1717012340363,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -93,9 +93,9 @@\n     left: 50%;\r\n     top: 50%;\r\n     transform: translate(-50%, -50%);\r\n     background-color: #333;\r\n-    padding: 20px;\r\n+    /* padding: 20px; */\r\n     border: 1px solid #ccc;\r\n     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);\r\n     width: 700px;\r\n     border-radius: 8px;\r\n"
+                },
+                {
+                    "date": 1717012364380,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -194,6 +194,7 @@\n \r\n .button-edit-delete i {\r\n     pointer-events: none;\r\n }\r\n+input-pop-up\r\n \r\n \r\n"
+                },
+                {
+                    "date": 1717012374316,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -194,7 +194,10 @@\n \r\n .button-edit-delete i {\r\n     pointer-events: none;\r\n }\r\n-input-pop-up\r\n+.input-pop-up{\r\n \r\n+    width: ;\r\n+}\r\n \r\n+\r\n"
+                },
+                {
+                    "date": 1717012381109,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -196,8 +196,9 @@\n     pointer-events: none;\r\n }\r\n .input-pop-up{\r\n \r\n-    width: ;\r\n+    width: 500px;\r\n+    \r\n }\r\n \r\n \r\n"
+                },
+                {
+                    "date": 1717012392944,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -197,8 +197,8 @@\n }\r\n .input-pop-up{\r\n \r\n     width: 500px;\r\n-    \r\n+    font-family: \"Orbitron\";\r\n }\r\n \r\n \r\n"
+                },
+                {
+                    "date": 1717012592602,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -96,9 +96,9 @@\n     background-color: #333;\r\n     /* padding: 20px; */\r\n     border: 1px solid #ccc;\r\n     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);\r\n-    width: 700px;\r\n+    width: 900px;\r\n     border-radius: 8px;\r\n     font-family: \"Orbitron\";\r\n }\r\n \r\n@@ -195,9 +195,8 @@\n .button-edit-delete i {\r\n     pointer-events: none;\r\n }\r\n .input-pop-up{\r\n-\r\n     width: 500px;\r\n     font-family: \"Orbitron\";\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1717012769535,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -194,10 +194,6 @@\n \r\n .button-edit-delete i {\r\n     pointer-events: none;\r\n }\r\n-.input-pop-up{\r\n-    width: 500px;\r\n-    font-family: \"Orbitron\";\r\n-}\r\n \r\n \r\n"
+                },
+                {
+                    "date": 1717013064643,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -84,116 +84,12 @@\n     cursor: pointer;\r\n }\r\n \r\n \r\n-/* Estilos para o pop-up de edição */\r\n-.modal {\r\n-    display: none;\r\n-    position: fixed;\r\n-    z-index: 1000;\r\n-    left: 50%;\r\n-    top: 50%;\r\n-    transform: translate(-50%, -50%);\r\n-    background-color: #333;\r\n-    /* padding: 20px; */\r\n-    border: 1px solid #ccc;\r\n-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);\r\n-    width: 900px;\r\n-    border-radius: 8px;\r\n-    font-family: \"Orbitron\";\r\n-}\r\n-\r\n-.modal-content {\r\n-    background-color: #333;\r\n-    padding: 20px;\r\n-    border: 1px solid #ccc;\r\n-    border-radius: 8px;\r\n-    width: 100%;\r\n-    box-shadow: none;\r\n-    margin: 0;\r\n-    position: relative;\r\n-}\r\n-\r\n-.modal-content h3 {\r\n-    margin-top: 0;\r\n-    color: #ffffff;\r\n-    font-family: \"Orbitron\";\r\n-}\r\n-\r\n-.modal-content label {\r\n-    display: block;\r\n-    margin-top: 10px;\r\n+.modal-dark .modal-content {\r\n+    background-color: #343a40;\r\n     color: white;\r\n-    font-family: \"Orbitron\";\r\n }\r\n-\r\n-.modal-content input[type=\"text\"],\r\n-.modal-content input[type=\"password\"] {\r\n-    width: calc(100% - 10px);\r\n-    padding: 5px;\r\n-    margin-top: 5px;\r\n-    border: 1px solid #ccc;\r\n-    border-radius: 4px;\r\n-    font-family: \"Orbitron\";\r\n-}\r\n-\r\n-.modal-content button {\r\n-    margin-top: 10px;\r\n-    padding: 8px 15px;\r\n-    border: none;\r\n-    border-radius: 4px;\r\n-    cursor: pointer;\r\n-    font-family: \"Orbitron\";\r\n-}\r\n-\r\n-.modal-content button[type=\"submit\"] {\r\n-    background-color: #C0C4D2;\r\n+.modal-dark .close {\r\n     color: white;\r\n-    font-family: \"Orbitron\";\r\n }\r\n \r\n-.modal-content button[type=\"button\"] {\r\n-    background-color: #C0C4D2;\r\n-    color: white;\r\n-    margin-left: 10px;\r\n-    font-family: \"Orbitron\";\r\n-}\r\n-\r\n-/* Estilo para o fundo cinza */\r\n-.modal-overlay {\r\n-    display: none;\r\n-    position: fixed;\r\n-    top: 0;\r\n-    left: 0;\r\n-    width: 100%;\r\n-    height: 100%;\r\n-    background-color: rgba(0, 0, 0, 0.5);\r\n-    z-index: 999;\r\n-    font-family: \"Orbitron\";\r\n-}\r\n-\r\n-.close {\r\n-    color: #aaa;\r\n-    float: right;\r\n-    font-size: 28px;\r\n-    font-weight: bold;\r\n-}\r\n-\r\n-.close:hover,\r\n-.close:focus {\r\n-    color: black;\r\n-    text-decoration: none;\r\n-    cursor: pointer;\r\n-}\r\n-\r\n-.button-edit-delete {\r\n-    cursor: pointer;\r\n-    color: #ffffff;\r\n-    text-decoration: none;\r\n-    margin: 0 5px;\r\n-}\r\n-\r\n-.button-edit-delete i {\r\n-    pointer-events: none;\r\n-}\r\n-\r\n-\r\n"
+                },
+                {
+                    "date": 1717013422265,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -84,12 +84,116 @@\n     cursor: pointer;\r\n }\r\n \r\n \r\n-.modal-dark .modal-content {\r\n-    background-color: #343a40;\r\n+/* Estilos para o pop-up de edição */\r\n+.modal {\r\n+    display: none;\r\n+    position: fixed;\r\n+    z-index: 1000;\r\n+    left: 50%;\r\n+    top: 50%;\r\n+    transform: translate(-50%, -50%);\r\n+    background-color: #333;\r\n+    /* padding: 20px; */\r\n+    border: 1px solid #ccc;\r\n+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);\r\n+    width: 900px;\r\n+    border-radius: 8px;\r\n+    font-family: \"Orbitron\";\r\n+}\r\n+\r\n+.modal-content {\r\n+    background-color: #333;\r\n+    padding: 20px;\r\n+    border: 1px solid #ccc;\r\n+    border-radius: 8px;\r\n+    width: 100%;\r\n+    box-shadow: none;\r\n+    margin: 0;\r\n+    position: relative;\r\n+}\r\n+\r\n+.modal-content h3 {\r\n+    margin-top: 0;\r\n+    color: #ffffff;\r\n+    font-family: \"Orbitron\";\r\n+}\r\n+\r\n+.modal-content label {\r\n+    display: block;\r\n+    margin-top: 10px;\r\n     color: white;\r\n+    font-family: \"Orbitron\";\r\n }\r\n-.modal-dark .close {\r\n+\r\n+.modal-content input[type=\"text\"],\r\n+.modal-content input[type=\"password\"] {\r\n+    width: calc(100% - 10px);\r\n+    padding: 5px;\r\n+    margin-top: 5px;\r\n+    border: 1px solid #ccc;\r\n+    border-radius: 4px;\r\n+    font-family: \"Orbitron\";\r\n+}\r\n+\r\n+.modal-content button {\r\n+    margin-top: 10px;\r\n+    padding: 8px 15px;\r\n+    border: none;\r\n+    border-radius: 4px;\r\n+    cursor: pointer;\r\n+    font-family: \"Orbitron\";\r\n+}\r\n+\r\n+.modal-content button[type=\"submit\"] {\r\n+    background-color: #C0C4D2;\r\n     color: white;\r\n+    font-family: \"Orbitron\";\r\n }\r\n \r\n+.modal-content button[type=\"button\"] {\r\n+    background-color: #C0C4D2;\r\n+    color: white;\r\n+    margin-left: 10px;\r\n+    font-family: \"Orbitron\";\r\n+}\r\n+\r\n+/* Estilo para o fundo cinza */\r\n+.modal-overlay {\r\n+    display: none;\r\n+    position: fixed;\r\n+    top: 0;\r\n+    left: 0;\r\n+    width: 100%;\r\n+    height: 100%;\r\n+    background-color: rgba(0, 0, 0, 0.5);\r\n+    z-index: 999;\r\n+    font-family: \"Orbitron\";\r\n+}\r\n+\r\n+.close {\r\n+    color: #aaa;\r\n+    float: right;\r\n+    font-size: 28px;\r\n+    font-weight: bold;\r\n+}\r\n+\r\n+.close:hover,\r\n+.close:focus {\r\n+    color: black;\r\n+    text-decoration: none;\r\n+    cursor: pointer;\r\n+}\r\n+\r\n+.button-edit-delete {\r\n+    cursor: pointer;\r\n+    color: #ffffff;\r\n+    text-decoration: none;\r\n+    margin: 0 5px;\r\n+}\r\n+\r\n+.button-edit-delete i {\r\n+    pointer-events: none;\r\n+}\r\n+\r\n+\r\n"
+                },
+                {
+                    "date": 1717013433790,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -83,9 +83,9 @@\n     text-decoration: none;\r\n     cursor: pointer;\r\n }\r\n \r\n-\r\n+/* \r\n /* Estilos para o pop-up de edição */\r\n .modal {\r\n     display: none;\r\n     position: fixed;\r\n@@ -195,5 +195,5 @@\n .button-edit-delete i {\r\n     pointer-events: none;\r\n }\r\n \r\n-\r\n+ */\r\n"
+                },
+                {
+                    "date": 1717013445673,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -84,9 +84,9 @@\n     cursor: pointer;\r\n }\r\n \r\n /* \r\n-/* Estilos para o pop-up de edição */\r\n+\r\n .modal {\r\n     display: none;\r\n     position: fixed;\r\n     z-index: 1000;\r\n"
+                },
+                {
+                    "date": 1717013461012,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -83,19 +83,18 @@\n     text-decoration: none;\r\n     cursor: pointer;\r\n }\r\n \r\n-/* \r\n \r\n+/* Estilos para o pop-up de edição */\r\n .modal {\r\n     display: none;\r\n     position: fixed;\r\n     z-index: 1000;\r\n     left: 50%;\r\n     top: 50%;\r\n     transform: translate(-50%, -50%);\r\n     background-color: #333;\r\n-    /* padding: 20px; */\r\n     border: 1px solid #ccc;\r\n     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);\r\n     width: 900px;\r\n     border-radius: 8px;\r\n@@ -195,5 +194,5 @@\n .button-edit-delete i {\r\n     pointer-events: none;\r\n }\r\n \r\n- */\r\n+\r\n"
+                },
+                {
+                    "date": 1717013468984,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -85,9 +85,9 @@\n }\r\n \r\n \r\n /* Estilos para o pop-up de edição */\r\n-.modal {\r\n+/* .modal {\r\n     display: none;\r\n     position: fixed;\r\n     z-index: 1000;\r\n     left: 50%;\r\n@@ -194,5 +194,5 @@\n .button-edit-delete i {\r\n     pointer-events: none;\r\n }\r\n \r\n-\r\n+ */\r\n"
+                },
+                {
+                    "date": 1717013477317,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -156,9 +156,9 @@\n     margin-left: 10px;\r\n     font-family: \"Orbitron\";\r\n }\r\n \r\n-/* Estilo para o fundo cinza */\r\n+\r\n .modal-overlay {\r\n     display: none;\r\n     position: fixed;\r\n     top: 0;\r\n"
+                },
+                {
+                    "date": 1717013484702,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -83,9 +83,11 @@\n     text-decoration: none;\r\n     cursor: pointer;\r\n }\r\n \r\n+modal-bonito\r\n \r\n+\r\n /* Estilos para o pop-up de edição */\r\n /* .modal {\r\n     display: none;\r\n     position: fixed;\r\n"
+                },
+                {
+                    "date": 1717013491883,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -83,9 +83,11 @@\n     text-decoration: none;\r\n     cursor: pointer;\r\n }\r\n \r\n-modal-bonito\r\n+.modal-bonito{\r\n+    \r\n+}\r\n \r\n \r\n /* Estilos para o pop-up de edição */\r\n /* .modal {\r\n"
+                },
+                {
+                    "date": 1717013531636,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -84,9 +84,10 @@\n     cursor: pointer;\r\n }\r\n \r\n .modal-bonito{\r\n-    \r\n+    align-items: ;\r\n+\r\n }\r\n \r\n \r\n /* Estilos para o pop-up de edição */\r\n"
+                },
+                {
+                    "date": 1717013537711,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -84,9 +84,10 @@\n     cursor: pointer;\r\n }\r\n \r\n .modal-bonito{\r\n-    align-items: ;\r\n+    dis\r\n+    align-items: center;\r\n \r\n }\r\n \r\n \r\n"
+                },
+                {
+                    "date": 1717013544214,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -84,9 +84,10 @@\n     cursor: pointer;\r\n }\r\n \r\n .modal-bonito{\r\n-    dis\r\n+    display: flex;\r\n+    justify-content: ;\r\n     align-items: center;\r\n \r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1717013554478,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -85,9 +85,9 @@\n }\r\n \r\n .modal-bonito{\r\n     display: flex;\r\n-    justify-content: ;\r\n+    justify-content: center;\r\n     align-items: center;\r\n \r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1717013581497,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -87,8 +87,9 @@\n .modal-bonito{\r\n     display: flex;\r\n     justify-content: center;\r\n     align-items: center;\r\n+    fle\r\n \r\n }\r\n \r\n \r\n"
+                },
+                {
+                    "date": 1717013606675,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -87,9 +87,10 @@\n .modal-bonito{\r\n     display: flex;\r\n     justify-content: center;\r\n     align-items: center;\r\n-    fle\r\n+    flex-direction: column;\r\n+    \r\n \r\n }\r\n \r\n \r\n"
+                },
+                {
+                    "date": 1717013647876,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -88,9 +88,8 @@\n     display: flex;\r\n     justify-content: center;\r\n     align-items: center;\r\n     flex-direction: column;\r\n-    \r\n \r\n }\r\n \r\n \r\n"
+                },
+                {
+                    "date": 1717013654889,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -90,8 +90,11 @@\n     align-items: center;\r\n     flex-direction: column;\r\n \r\n }\r\n+.modal-pop-up{\r\n+    \r\n+}\r\n \r\n \r\n /* Estilos para o pop-up de edição */\r\n /* .modal {\r\n"
+                },
+                {
+                    "date": 1717013668739,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -91,9 +91,9 @@\n     flex-direction: column;\r\n \r\n }\r\n .modal-pop-up{\r\n-    \r\n+    width: 450px;\r\n }\r\n \r\n \r\n /* Estilos para o pop-up de edição */\r\n"
+                },
+                {
+                    "date": 1717013685728,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -90,13 +90,9 @@\n     align-items: center;\r\n     flex-direction: column;\r\n \r\n }\r\n-.modal-pop-up{\r\n-    width: 450px;\r\n-}\r\n \r\n-\r\n /* Estilos para o pop-up de edição */\r\n /* .modal {\r\n     display: none;\r\n     position: fixed;\r\n"
+                },
+                {
+                    "date": 1717013749269,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,86 +5,9 @@\n     padding-bottom: 3%;\r\n     border-radius: 0px 40px 0px 0px;\r\n }\r\n \r\n-.button-edit-delete{\r\n-    background-color: rgba(51, 68, 83, 0.411);\r\n-    color: #fff;\r\n-    border: none;\r\n-    border-radius: 5px;\r\n-    cursor: pointer;\r\n-}\r\n \r\n-\r\n-\r\n-/* Estilos para o modal */\r\n-.modal {\r\n-    display: none;\r\n-    /* Escondido por padrão */\r\n-    position: fixed;\r\n-    /* Ficar fixo na tela */\r\n-    z-index: 1;\r\n-    /* Colocar o modal sobre tudo */\r\n-    left: 0;\r\n-    top: 0;\r\n-    width: 100%;\r\n-    height: 100%;\r\n-    overflow: auto;\r\n-    background-color: rgba(0, 0, 0, 0.4);\r\n-    /* Fundo preto com opacidade */\r\n-}\r\n-\r\n-.modal-title{\r\n-    text-align: center;\r\n-    color: #ffffff;\r\n-    font-family: \"Orbitron\";\r\n-    font-size: 1.6em;\r\n-}\r\n-\r\n-.modal-content {\r\n-    background-color: #333;\r\n-    color: #fff;\r\n-    font-family: \"Orbitron\";\r\n-    margin: 15% auto;\r\n-    padding: 20px;\r\n-    border: 1px solid #888;\r\n-    width: 80%;\r\n-}\r\n-\r\n-.form{\r\n-    display: flex;\r\n-    flex-direction: column;\r\n-\r\n-}\r\n-\r\n-.modal-footer{\r\n-    display: flex;\r\n-    flex-direction: row;\r\n-    justify-content: center;\r\n-    gap: 30px;\r\n-}\r\n-\r\n-.input{\r\n-     width: 100%;\r\n-     font-size: 1.4em;\r\n-     font-family: \"Orbitron\";\r\n-}\r\n-\r\n-/* Botão para fechar o modal */\r\n-.close {\r\n-    color: #aaa;\r\n-    float: right;\r\n-    font-size: 28px;\r\n-    font-weight: bold;\r\n-}\r\n-\r\n-.close:hover,\r\n-.close:focus {\r\n-    color: black;\r\n-    text-decoration: none;\r\n-    cursor: pointer;\r\n-}\r\n-\r\n .modal-bonito{\r\n     display: flex;\r\n     justify-content: center;\r\n     align-items: center;\r\n"
+                },
+                {
+                    "date": 1717013766456,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,86 @@\n     padding-bottom: 3%;\r\n     border-radius: 0px 40px 0px 0px;\r\n }\r\n \r\n+.button-edit-delete{\r\n+    background-color: rgba(51, 68, 83, 0.411);\r\n+    color: #fff;\r\n+    border: none;\r\n+    border-radius: 5px;\r\n+    cursor: pointer;\r\n+}\r\n \r\n+\r\n+\r\n+/* Estilos para o modal */\r\n+.modal {\r\n+    display: none;\r\n+    /* Escondido por padrão */\r\n+    position: fixed;\r\n+    /* Ficar fixo na tela */\r\n+    z-index: 1;\r\n+    /* Colocar o modal sobre tudo */\r\n+    left: 0;\r\n+    top: 0;\r\n+    width: 100%;\r\n+    height: 100%;\r\n+    overflow: auto;\r\n+    background-color: rgba(0, 0, 0, 0.4);\r\n+    /* Fundo preto com opacidade */\r\n+}\r\n+\r\n+.modal-title{\r\n+    text-align: center;\r\n+    color: #ffffff;\r\n+    font-family: \"Orbitron\";\r\n+    font-size: 1.6em;\r\n+}\r\n+\r\n+.modal-content {\r\n+    background-color: #333;\r\n+    color: #fff;\r\n+    font-family: \"Orbitron\";\r\n+    margin: 15% auto;\r\n+    padding: 20px;\r\n+    border: 1px solid #888;\r\n+    width: 80%;\r\n+}\r\n+\r\n+.form{\r\n+    display: flex;\r\n+    flex-direction: column;\r\n+\r\n+}\r\n+\r\n+.modal-footer{\r\n+    display: flex;\r\n+    flex-direction: row;\r\n+    justify-content: center;\r\n+    gap: 30px;\r\n+}\r\n+\r\n+.input{\r\n+     width: 100%;\r\n+     font-size: 1.4em;\r\n+     font-family: \"Orbitron\";\r\n+}\r\n+\r\n+/* Botão para fechar o modal */\r\n+.close {\r\n+    color: #aaa;\r\n+    float: right;\r\n+    font-size: 28px;\r\n+    font-weight: bold;\r\n+}\r\n+\r\n+.close:hover,\r\n+.close:focus {\r\n+    color: black;\r\n+    text-decoration: none;\r\n+    cursor: pointer;\r\n+}\r\n+\r\n .modal-bonito{\r\n     display: flex;\r\n     justify-content: center;\r\n     align-items: center;\r\n"
+                },
+                {
+                    "date": 1717013805782,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -83,8 +83,24 @@\n     text-decoration: none;\r\n     cursor: pointer;\r\n }\r\n \r\n+.modal {\r\n+    display: none;\r\n+    /* Escondido por padrão */\r\n+    position: fixed;\r\n+    /* Ficar fixo na tela */\r\n+    z-index: 1;\r\n+    /* Colocar o modal sobre tudo */\r\n+    left: 0;\r\n+    top: 0;\r\n+    width: 100%;\r\n+    height: 100%;\r\n+    overflow: auto;\r\n+    background-color: rgba(0, 0, 0, 0.4);\r\n+    /* Fundo preto com opacidade */\r\n+}\r\n+\r\n .modal-bonito{\r\n     display: flex;\r\n     justify-content: center;\r\n     align-items: center;\r\n"
+                },
+                {
+                    "date": 1717013816028,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -83,9 +83,9 @@\n     text-decoration: none;\r\n     cursor: pointer;\r\n }\r\n \r\n-.modal {\r\n+.modal-pop-up {\r\n     display: none;\r\n     /* Escondido por padrão */\r\n     position: fixed;\r\n     /* Ficar fixo na tela */\r\n"
+                },
+                {
+                    "date": 1717014072835,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -92,9 +92,9 @@\n     z-index: 1;\r\n     /* Colocar o modal sobre tudo */\r\n     left: 0;\r\n     top: 0;\r\n-    width: 100%;\r\n+    width: 450px;\r\n     height: 100%;\r\n     overflow: auto;\r\n     background-color: rgba(0, 0, 0, 0.4);\r\n     /* Fundo preto com opacidade */\r\n"
+                },
+                {
+                    "date": 1717014100054,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -90,9 +90,9 @@\n     position: fixed;\r\n     /* Ficar fixo na tela */\r\n     z-index: 1;\r\n     /* Colocar o modal sobre tudo */\r\n-    \r\n+    d\r\n     left: 0;\r\n     top: 0;\r\n     width: 450px;\r\n     height: 100%;\r\n"
+                }
+            ],
+            "date": 1717008020876,
+            "name": "Commit-0",
+            "content": ".title-containers{\r\n    background-color: rgba(98, 98, 98, 0.8);\r\n    padding-left: 3%;\r\n    padding-right: 3%;\r\n    padding-bottom: 3%;\r\n    border-radius: 0px 40px 0px 0px;\r\n}\r\n\r\n.button-edit-delete{\r\n    background-color: rgba(51, 68, 83, 0.411);\r\n    color: #fff;\r\n    border: none;\r\n    border-radius: 5px;\r\n    cursor: pointer;\r\n}\r\n\r\n\r\n\r\n/* Estilos para o modal */\r\n.modal {\r\n    display: none;\r\n    /* Escondido por padrão */\r\n    position: fixed;\r\n    /* Ficar fixo na tela */\r\n    z-index: 1;\r\n    /* Colocar o modal sobre tudo */\r\n    left: 0;\r\n    top: 0;\r\n    width: 100%;\r\n    height: 100%;\r\n    overflow: auto;\r\n    background-color: rgba(0, 0, 0, 0.4);\r\n    /* Fundo preto com opacidade */\r\n}\r\n\r\n.modal-title{\r\n    text-align: center;\r\n    color: #ffffff;\r\n    font-family: \"Orbitron\";\r\n    font-size: 1.6em;\r\n}\r\n\r\n.modal-content {\r\n    background-color: #333;\r\n    color: #fff;\r\n    font-family: \"Orbitron\";\r\n    margin: 15% auto;\r\n    padding: 20px;\r\n    border: 1px solid #888;\r\n    width: 80%;\r\n}\r\n\r\n.form{\r\n    display: flex;\r\n    flex-direction: column;\r\n\r\n}\r\n\r\n.modal-footer{\r\n    display: flex;\r\n    flex-direction: row;\r\n    justify-content: center;\r\n    gap: 30px;\r\n}\r\n\r\n.input{\r\n     width: 100%;\r\n     font-size: 1.4em;\r\n     font-family: \"Orbitron\";\r\n}\r\n\r\n/* Botão para fechar o modal */\r\n.close {\r\n    color: #aaa;\r\n    float: right;\r\n    font-size: 28px;\r\n    font-weight: bold;\r\n}\r\n\r\n.close:hover,\r\n.close:focus {\r\n    color: black;\r\n    text-decoration: none;\r\n    cursor: pointer;\r\n}\r\n\r\n/* Estilos para os modais */\r\n.modal {\r\n    display: none;\r\n    position: fixed;\r\n    z-index: 1;\r\n    left: 0;\r\n    top: 0;\r\n    width: 100%;\r\n    height: 100%;\r\n    overflow: auto;\r\n    background-color: rgb(0, 0, 0);\r\n    background-color: rgba(0, 0, 0, 0.4);\r\n}\r\n\r\n.modal-content {\r\n    background-color: #fefefe;\r\n    margin: 15% auto;\r\n    padding: 20px;\r\n    border: 1px solid #888;\r\n    width: 80%;\r\n}\r\n\r\n.close {\r\n    color: #aaa;\r\n    float: right;\r\n    font-size: 28px;\r\n    font-weight: bold;\r\n}\r\n\r\n.close:hover,\r\n.close:focus {\r\n    color: black;\r\n    text-decoration: none;\r\n    cursor: pointer;\r\n}\r\n\r\n.button-edit-delete {\r\n    cursor: pointer;\r\n    color: #007bff;\r\n    text-decoration: none;\r\n    margin: 0 5px;\r\n}\r\n\r\n.button-edit-delete i {\r\n    pointer-events: none;\r\n}\r\n"
+        }
+    ]
+}

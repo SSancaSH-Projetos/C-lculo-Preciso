@@ -16,4 +16,5 @@ public class MaterialDTO {
     private String nome;
     private Double precoPorKg;
     private Double precoCavaco;
+    private Double densidade;
 }

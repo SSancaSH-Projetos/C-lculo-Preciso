@@ -200,17 +200,81 @@
           </table>
         </form>
       </div>
+      <footer class="footer">
+        <p class="footer-text">© 2024 Cálculo Preciso by Precision Tech - Todos os direitos reservados</p>
+      </footer>
     </div>
-
+   
   </div>
+
+  <!-- teste -->
+
+<!-- Modal para editar Material -->
+<div id="editMaterialModal" class="modal-pop-up">
+  <div class="modal-content">
+      <span class="close" onclick="fecharModal('editMaterialModal')">&times;</span>
+      <div class="modal-bonito">
+      <h2>Editar Material</h2>
+      <form id="editMaterialForm" >
+          <input type="hidden" id="editMaterialId" >
+          
+          <label for="editNome">Nome:</label><br>
+          <input type="text" id="editNome" name="editNome" class="input-pop-up"  required><br>
+
+          <label for="editPrecoPorKg">Preço por Kg:</label><br>
+          <input type="number" id="editPrecoPorKg" name="editPrecoPorKg" class="input-pop-up"  step="0.01" required><br>
+
+          <label for="editPrecoCavaco">Preço do Cavaco:</label><br>
+          <input type="number" id="editPrecoCavaco" name="editPrecoCavaco" class="input-pop-up"  step="0.01" required><br>
+
+          <label for="editDensidade">Densidade (kg/m³):</label><br>
+          <input type="number" id="editDensidade" name="editDensidade" step="0.01" class="input-pop-up"  required><br>
+
+          <button type="button" onclick="atualizar('material')">Atualizar</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- Modal para editar Mão de Obra -->
+<div id="editMaoDeObraModal" class="modal-pop-up">
+  <div class="modal-content">
+      <span class="close" onclick="fecharModal('editMaoDeObraModal')">&times;</span>
+      <h2>Editar Mão de Obra</h2>
+      <form id="editMaoDeObraForm">
+          <input type="hidden" id="editMaoDeObraId" class="input-pop-up" >
+          <label for="editProfissional">Profissional:</label><br>
+          <input type="text" id="editProfissional" class="input-pop-up"  name="editProfissional" required><br>
+
+          <label for="editValorPorHora">Valor por Hora:</label><br>
+          <input type="number" id="editValorPorHora" name="editValorPorHora" class="input-pop-up"  step="0.01" required><br>
+
+          <button type="button" onclick="atualizar('maodeobra')">Atualizar</button>
+      </form>
+  </div>
+</div>
+
+<!-- Modal para editar Máquina -->
+<div id="editMaquinaModal" class="modal-pop-up">
+  <div class="modal-content">
+      <span class="close" onclick="fecharModal('editMaquinaModal')">&times;</span>
+      <h2>Editar Máquina</h2>
+      <form id="editMaquinaForm">
+          <input type="hidden" id="editMaquinaId" class="input-pop-up" >
+          <label for="editNomeMaquina">Nome da Máquina:</label><br>
+          <input type="text" id="editNomeMaquina" name="editNomeMaquina" class="input-pop-up" required><br>
+
+          <label for="editValorOperacaoPorHora">Valor da Operação por Hora:</label><br>
+          <input type="number" id="editValorOperacaoPorHora" name="editValorOperacaoPorHora" step="0.01" class="input-pop-up"  required><br>
+
+          <button type="button" onclick="atualizar('maquinas')">Atualizar</button>
+      </form>
+  </div>
+</div>
 
 </body>
 
 <script src="assets/js/geral.js"></script>
 <script src="assets/js/custos.js"></script>
-
-<footer class="footer">
-  <p class="footer-text">© 2024 Cálculo Preciso by Precision Tech - Todos os direitos reservados</p>
-</footer>
 
 </html>

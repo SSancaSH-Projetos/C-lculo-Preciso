@@ -46,7 +46,7 @@ function displayDataInTable(data, tableId) {
         const row = document.createElement('tr');
         row.innerHTML = rowData + `
             <td>
-                <a class="button-edit-delete"><i class="fa-solid fa-pencil"></i></a>
+                <a onClick="handleEditar(${item.id},'${tableId}');" class="button-edit-delete"><i class="fa-solid fa-pencil"></i></a>
                 <a onClick="handledeletar(${item.id},'${tableId}');" class="button-edit-delete"><i class="fa-solid fa-trash"></i></a>
             </td>
         `;
@@ -214,6 +214,113 @@ function handlerFecharModal(qualModal) {
 // }
 
 // countAndDisplayPieces();
+
+
+function handleEditar(id, tipoEdicao) {
+    let url;
+    let modalId;
+
+    if (tipoEdicao === 'maquinas-table') {
+        url = `http://localhost:8080/maquinas/${id}`;
+        modalId = 'editMaquinaModal';
+    } else if (tipoEdicao === 'materiais-table') {
+        url = `http://localhost:8080/material/${id}`;
+        modalId = 'editMaterialModal';
+    } else if (tipoEdicao === 'mao-de-obra-table') {
+        url = `http://localhost:8080/maodeobra/${id}`;
+        modalId = 'editMaoDeObraModal';
+    }
+
+    fetch(url)
+        .then(response => response.json())
+        .then(data => {
+            if (tipoEdicao === 'maquinas-table') {
+                document.getElementById('editNomeMaquina').value = data.nome;
+                document.getElementById('editValorOperacaoPorHora').value = data.precoPorHora;
+                document.getElementById('editMaquinaId').value = id;
+            } else if (tipoEdicao === 'materiais-table') {
+                document.getElementById('editNome').value = data.nome;
+                document.getElementById('editPrecoPorKg').value = data.precoPorKg;
+                document.getElementById('editPrecoCavaco').value = data.precoCavaco;
+                document.getElementById('editDensidade').value = data.densidade;
+                document.getElementById('editMaterialId').value = id;
+            } else if (tipoEdicao === 'mao-de-obra-table') {
+                document.getElementById('editProfissional').value = data.profissional;
+                document.getElementById('editValorPorHora').value = data.precoPorHora;
+                document.getElementById('editMaoDeObraId').value = id;
+            }
+            abrirModal(modalId);
+        })
+        .catch(error => console.error('Erro ao buscar dados:', error));
+}
+
+function atualizar(tipoItem) {
+    let formData;
+    let url;
+    let id;
+    let modalId;
+
+    if (tipoItem === 'material') {
+        id = document.getElementById('editMaterialId').value;
+        formData = {
+            nome: document.getElementById('editNome').value,
+            precoPorKg: parseFloat(document.getElementById('editPrecoPorKg').value),
+            precoCavaco: parseFloat(document.getElementById('editPrecoCavaco').value),
+            densidade: parseFloat(document.getElementById('editDensidade').value),
+        };
+        url = `http://localhost:8080/material/${id}`;
+        modalId = 'editMaterialModal';
+    } else if (tipoItem === 'maodeobra') {
+        id = document.getElementById('editMaoDeObraId').value;
+        formData = {
+            profissional: document.getElementById('editProfissional').value,
+            precoPorHora: parseFloat(document.getElementById('editValorPorHora').value),
+        };
+        url = `http://localhost:8080/maodeobra/${id}`;
+        modalId = 'editMaoDeObraModal';
+    } else if (tipoItem === 'maquinas') {
+        id = document.getElementById('editMaquinaId').value;
+        formData = {
+            nome: document.getElementById('editNomeMaquina').value,
+            precoPorHora: parseFloat(document.getElementById('editValorOperacaoPorHora').value),
+        };
+        url = `http://localhost:8080/maquinas/${id}`;
+        modalId = 'editMaquinaModal';
+    }
+
+    fetch(url, {
+        method: 'PUT',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+    })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Erro ao atualizar item');
+            }
+            return response.json();
+        })
+        .then(data => {
+            console.log('Item atualizado com sucesso:', data);
+            fecharModal(modalId);
+            window.location.reload(); // Atualiza a página para refletir as mudanças
+        })
+        .catch(error => {
+            console.error('Erro:', error);
+        });
+}
+
+function abrirModal(modalId) {
+    const modal = document.getElementById(modalId);
+    modal.style.display = 'block';
+}
+
+function fecharModal(modalId) {
+    const modal = document.getElementById(modalId);
+    modal.style.display = 'none';
+}
+
 
 
 

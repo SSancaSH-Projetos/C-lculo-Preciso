@@ -1,8 +1,3 @@
-// Função para carregar os dados de mão de obra e atualizar o HTML
-var subPecas = [];
-var materiais = [];
-var maoDeObra = [];
-
 function carregarDadosDaPeca(idPeca) {
   fetch("http://localhost:8080/pecas/" + idPeca)
     .then((response) => {
@@ -12,50 +7,78 @@ function carregarDadosDaPeca(idPeca) {
       return response.json();
     })
     .then((data) => {
-      const listaDeNomesDePecas = document.getElementById(
-        "listaDeNomesDePecas"
-      );
-      const codigoPeca = document.getElementById(
-        "codigo"
-      );
+      // Selecionar elementos do DOM
+      const id = document.getElementById("id");
+      const listaDeNomesDePecas = document.getElementById("listaDeNomesDePecas");
+      const codigoPeca = document.getElementById("codigo");
+      const volumeTotal = document.getElementById("volumeTotal");
+      const custoDeProducao = document.getElementById("custoDeProducao");
+      const tempoDeUsinagem = document.getElementById("tempoDeUsinagem");
+      const pesoTarugo = document.getElementById("pesoTarugo");
+      const quantidadeDeCavaco = document.getElementById("quantidadeDeCavaco");
+      const valorDoCavaco = document.getElementById("valorDoCavaco");
+      const dataDeCriacao = document.getElementById("dataDeCriacao");
+      const maoDeObra = document.getElementById("maoDeObra");
+      const subPecas = document.getElementById("subPecas");
+      const maquina = document.getElementById("maquina");
+      const material = document.getElementById("material");
+      const quantidadeSubPecas = document.getElementById("quantidadeSubPecas");
 
-      const maoDeObra = document.getElementById(
-        "maoDeObra"
-      );
-
-      const maquinaPeca = document.getElementById(
-        "maquina"
-      );
-
-      const materialPeca = document.getElementById(
-        "material"
-      );
-
-
+      // Preencher elementos com os dados recebidos
+      id.innerHTML = data.id;
       listaDeNomesDePecas.innerHTML = data.nomeDaPeca;
       codigoPeca.innerHTML = data.codigo;
+      volumeTotal.innerHTML = data.volumeTotal;
+      custoDeProducao.innerHTML = data.custoDeProducao;
+      tempoDeUsinagem.innerHTML = data.tempoDeUsinagem;
+      quantidadeDeCavaco.innerHTML = data.quantidadeDeCavaco;
+      pesoTarugo.innerHTML = data.pesoTarugo;
+      valorDoCavaco.innerHTML = data.valorDoCavaco;
 
+      // Formatar e exibir a data de criação
+      const dataCriacao = new Date(data.dataDeCriacao);
+      const dataFormatada = `${dataCriacao.getDate()}/${dataCriacao.getMonth() + 1}/${dataCriacao.getFullYear()}`;
+      dataDeCriacao.innerHTML = dataFormatada;
+
+      // Exibir sub-peças
+      if (Array.isArray(data.subPecas) && data.subPecas.length > 0) {
+        subPecas.innerHTML = data.subPecas
+          .map((subPeca) => `<li>Nome: ${subPeca.nome}, Código: ${subPeca.id}</li>`)
+          .join('');
+        console.log("Sub-peças carregadas");
+        // Contar a quantidade de sub-peças e exibir na página
+        if (quantidadeSubPecas) {
+          quantidadeSubPecas.textContent = `${data.subPecas.length}`;
+        } else {
+          console.error("Elemento com id 'quantidadeSubPecas' não encontrado.");
+        }
+      } else {
+        subPecas.innerHTML = 'Nenhuma sub peça encontrada.';
+      }
+
+      // Exibir mãos de obra
       if (Array.isArray(data.maosDeObra) && data.maosDeObra.length > 0) {
         maoDeObra.innerHTML = data.maosDeObra
-          .map((mao) => `<li>Profissional: ${mao.profissional}, Preço por Hora: ${mao.precoPorHora}</li>`)
+          .map((mao) => `<li>Nome: ${mao.profissional}</li>`)
           .join('');
       } else {
         maoDeObra.innerHTML = 'Nenhuma mão de obra encontrada.';
       }
 
-
+      // Exibir máquinas
       if (Array.isArray(data.maquina) && data.maquina.length > 0) {
-        maquinaPeca.innerHTML = data.maquina
-          .map((maquina) => `<li>Nome: ${maquina.nome}, Preço por Hora: ${maquina.precoPorHora}</li>`)
+        maquina.innerHTML = data.maquina
+          .map((maq) => `<li>Nome: ${maq.nome}</li>`)
           .join('');
       } else {
-        maquinaPeca.innerHTML = 'Nenhuma máquina encontrada.';
+        maquina.innerHTML = 'Nenhuma máquina encontrada.';
       }
 
-      if (data.material) {
-        materialPeca.innerHTML = `Nome: ${data.material.nome}, Preço por Kg: ${data.material.precoPorKg}, Preço Cavaco: ${data.material.precoCavaco}`;
+      // Exibir material
+      if (data.material && data.material.nome) {
+        material.innerHTML = `Nome: ${data.material.nome}`;
       } else {
-        materialPeca.innerHTML = 'Nenhum material encontrado.';
+        material.innerHTML = 'Nenhum material encontrado.';
       }
     })
     .catch((error) => console.error("Erro ao buscar nomes das peças:", error));
@@ -64,33 +87,11 @@ function carregarDadosDaPeca(idPeca) {
 // Função que será executada quando a página for carregada
 window.onload = function () {
   if (window.location.search) {
-    // Obtenha a URL atual
+    // Obter a URL atual
     var urlParams = new URLSearchParams(window.location.search);
-
-    // Obtenha o valor do parâmetro idPeca
+    // Obter o valor do parâmetro idPeca
     var idPeca = urlParams.get("idPeca");
-
+    // Carregar os dados da peça correspondente
     carregarDadosDaPeca(idPeca);
   }
 };
-
-//  fetch('http://localhost:8080/pecas')
-//    .then(response => response.json())
-//    .then(data => {
-//      const listaDeMateriais = document.getElementById('listaDePecas');
-
-//      data.forEach(peca => {
-//        const option = document.createElement('option');
-//        option.value = peca.codigo;
-//        option.text = peca.nomeDaPeca;
-//        option.value = peca.material;
-//        option.value = peca.maosDeObra;
-//        listaDeMateriais.appendChild(option);
-//      });
-//  })
-//  .catch(error => console.error('Erro ao buscar dados das peças', error));
-
-// Exemplo: http://127.0.0.1:5500/relatorio.html?idPeca=4
-
-
-

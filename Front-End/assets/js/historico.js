@@ -58,8 +58,7 @@ function carregarDadosDasPecasCompleto() {
 
 // Função que será chamada quando o botão for clicado
 function handleButtonClick(codigoPeca) {
-    alert("Botão clicado para a peça com código: " + codigoPeca);
-    window.location.href = 'relatorio.html';
+    window.location.href = 'relatorio.html?idPeca=' + encodeURIComponent(codigoPeca);
 }
 
 // Função que será executada quando a página for carregada

@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 62,
+            "activePatchIndex": 63,
             "patches": [
                 {
                     "date": 1716486308482,
@@ -256,6 +256,10 @@
                 {
                     "date": 1716489332045,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n     flex-direction: column;\r\n     align-items: center;\r\n     color: #fff;\r\n     font-family: \"Orbitron\";\r\n-    margin-right: 20%;\r\n+    margin-right: 15%;\r\n     margin-left: 15%;\r\n }\r\n \r\n .logoCalculoPreciso {\r\n"
+                },
+                {
+                    "date": 1717013946818,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,18 +34,39 @@\n }\r\n \r\n .login-text-box {\r\n     font-size: 1em;\r\n+    flex: 1;\r\n }\r\n \r\n .cadastro-elementos {\r\n     display: flex;\r\n     flex-direction: column;\r\n }\r\n+\r\n+.input-group {\r\n+    display: flex;\r\n+    align-items: center;\r\n+    width: 100%;\r\n+}\r\n+\r\n+.input-group input {\r\n+    flex: 1;\r\n+}\r\n+\r\n+.input-group button {\r\n+    height: 100%;\r\n+    display: flex;\r\n+    align-items: center;\r\n+    justify-content: center;\r\n+    padding: 0 10px;\r\n+    width: 10%;\r\n+}\r\n+\r\n .footer-cadastro {\r\n     color: white;\r\n     font-family: Arial, Helvetica, sans-serif;\r\n     width: 100%;\r\n     text-align: center;\r\n     padding: 10px;\r\n     margin-top: 5%;\r\n-  }\r\n+}\n\\ No newline at end of file\n"
                 }
             ],
             "date": 1716486308482,

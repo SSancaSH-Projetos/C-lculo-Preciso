@@ -29,6 +29,9 @@ public class Material {
     @Column(name = "preco_cavaco")
     private Double precoCavaco;
 
+    @Column(name= "densidade")
+    private Double densidade;
+
     @JsonIgnore
     @ToString.Exclude
     @OneToMany(mappedBy = "material")
@@ -39,7 +42,8 @@ public class Material {
                 material.getId(),
                 material.getNome(),
                 material.getPrecoPorKg(),
-                material.getPrecoCavaco()
+                material.getPrecoCavaco(),
+                material.getDensidade()
         );
     }
 
