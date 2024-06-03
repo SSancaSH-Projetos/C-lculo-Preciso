@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <title>Cálculo preciso by Precision Tech</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/geral.css" />
+  <link rel="stylesheet" href="assets/css/cadastroUsuario.css" />
+  <link rel="stylesheet" href="assets/media/cadastroMedia.css" />
+  <script src="assets/js/cadastroProfessor.js" defer></script>
+  <script src="assets/js/geral.js" defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body class="body-container-cadastro">
+  <div class="login-container">
+    <form>
+      <div style="width: 100%; display: flex; flex-direction: column; align-items: center">
+        <img style="width: 150px; height: 150px; margin-bottom: 5%; margin-top: 5%;" class="logoCalculoPreciso" src="assets/images/logoBranco.png"
+          alt="PrecisionTechLogo" />
+
+        <div class="cadastro-elementos">
+          <label for="usuario">Usuário</label>
+          <input class="login-text-box" type="text" id="usuario" name="usuario" placeholder="Ex: ProfJoao" />
+          <br />
+          <label for="usuario">Email:</label>
+          <input class="login-text-box" type="email" id="email" name="email" placeholder="Ex: joaoprof@gmail.com" />
+          <br />
+          <label for="senha">Senha:</label>
+          <div class="input-group">
+            <input class="login-text-box" type="password" id="senha" name="senha" placeholder="Ex: Pass#123" />
+            <button class="btn btn-outline-secondary" type="button" id="showPassword">
+              <i class="fas fa-eye"></i>
+            </button>
+          </div>
+          <br />
+          <label for="confirmarSenha">Confirmar senha:</label>
+          <div class="input-group">
+            <input class="login-text-box" type="password" id="confirmarSenha" name="confirmarSenha" placeholder="Ex: Pass#123" />
+            <button class="btn btn-outline-secondary" type="button" id="showConfirmPassword">
+              <i class="fas fa-eye"></i>
+            </button>
+          </div>
+          <br />
+
+          <div class="radio-group">
+            <input type="radio" id="professor" name="tipo_usuario" value="professor">
+            <label for="professor"><span>Professor</span></label>
+
+            <input type="radio" id="aluno" name="tipo_usuario" value="aluno" checked>
+            <label for="aluno"><span>Aluno</span></label>
+          </div>
+          <div class="botoes-ao-lado">
+            <button id="cadastro" class="btn-cadastro" style="background-color: #c0c4d2;" href="index.html">Cadastrar</button>
+            <button class="btn-cadastro"><a href="index.html" class="btn-a">cancelar</a></button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</body>
+
+<footer class="footer-cadastro">
+  <p class="footer-text">
+    © 2024 Cálculo Preciso by Precision Tech <br> Todos os direitos reservados
+  </p>
+</footer>
+
+</html>
