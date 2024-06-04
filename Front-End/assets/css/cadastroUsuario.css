@@ -1,0 +1,109 @@
+.main-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.body-container-cadastro{
+    background-image: url("../images/bg3.jpg");
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
+}
+
+.login-container {
+    background-color: rgba(98, 98, 98, 0.8);
+    border-radius: 5px 90px 5px 5px;
+    display: flex;
+    width: 90%;
+    max-width: 400px;
+    height: 70vh;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    font-family: "Orbitron";
+    margin-top: 5%;
+    margin-right: 15%;
+    margin-left: 15%;
+}
+
+.logoCalculoPreciso {
+    width: 50%;
+    max-width: 200px;
+}
+
+.buttons-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    max-width: 50%;
+}
+
+.login-text-box {
+    font-size: 1em;
+    flex: 1;
+}
+
+.cadastro-elementos {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.input-group input {
+    flex: 1;
+}
+
+.input-group button {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px;
+    width: 10%;
+}
+
+.footer-cadastro {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    text-align: center;
+    margin-top: 5%;
+}
+
+.botoes-ao-lado{
+    display: flex;
+    flex-direction: row;
+}
+
+.btn-cadastro {
+    background-color: #C0C4D2;
+    border: none;
+    color: #fff;
+    font-size: 1em;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 150px;
+    height: 40px;
+    position: flex;
+    font-family: "Orbitron";
+    margin-top: 5%;
+    margin-left: 3px;
+  }
+
+  .btn-a{
+    color: #fff;
+    font-size: 1em;
+    text-align: center;
+    text-decoration: none;
+    font-family: "Orbitron";    
+  }

@@ -1,0 +1,13 @@
+/* Media query para tornar responsivo até 700px */
+@media screen and (max-width: 700px) {
+    .table-container {
+        overflow-x: scroll;
+    }
+    .so-para-responsividade1{
+        display: block;
+    }
+    .btn {
+        border-radius: 5px;
+        width: 80%;
+    }
+}
