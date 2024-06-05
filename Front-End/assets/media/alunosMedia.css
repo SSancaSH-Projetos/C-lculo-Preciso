@@ -1,0 +1,40 @@
+@media (max-width: 700px) {    
+
+    .page-title {
+        margin-top: 25%;
+    }
+    .meusalunos-container {
+        background-color: rgba(98, 98, 98, 0.400);
+        border-radius: 10px;
+        padding: 3%;
+    }
+    #editFormContainer {
+        width: 90%;
+        padding: 10px;
+    }
+
+    #editForm input[type="text"],
+    #editForm input[type="password"] {
+        width: calc(100% - 10px);
+        padding: 5px;
+        margin-top: 5px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-family: "Orbitron";
+    }
+
+    #editForm button {
+        width: 100%;
+        margin-top: 10px;
+        padding: 8px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-family: "Orbitron";
+    }
+
+    #editForm button[type="button"] {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+}

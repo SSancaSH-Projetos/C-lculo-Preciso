@@ -1,0 +1,9 @@
+/* Responsiveness */
+@media (max-width: 700px) {
+  .spinning-parts {
+    display: none;
+  }
+  .login-container{
+    background-color: rgb(98 98 98 / 0%);
+  }
+  }
