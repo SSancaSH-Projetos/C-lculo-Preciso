@@ -1,0 +1,150 @@
+.meusalunos-container {
+    width: 100%;
+    background-color: rgba(98, 98, 98, 0.8);
+    padding: 5%;
+    border-radius: 0px 40px 0 0;
+
+}
+
+/* Estilos para o modal */
+.modal {
+    display: none;
+    /* Escondido por padrão */
+    position: fixed;
+    /* Ficar fixo na tela */
+    z-index: 1;
+    /* Colocar o modal sobre tudo */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Fundo preto com opacidade */
+}
+
+.modal-title{
+    text-align: center;
+    color: #ffffff;
+    font-family: "Orbitron";
+    font-size: 1.6em;
+}
+
+.modal-content {
+    background-color: #333;
+    color: #fff;
+    font-family: "Orbitron";
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.studentForm{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.modal-footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+}
+
+.input{
+     width: 100%;
+     font-size: 1.4em;
+     font-family: "Orbitron";
+}
+
+/* Botão para fechar o modal */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+  /* Estilos para o pop-up de edição */
+#editFormContainer {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #333;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    width: 700px;
+    border-radius: 8px;
+    font-family: "Orbitron";
+}
+
+#editFormContainer h3 {
+    margin-top: 0;
+    color: #ffffff;
+    font-family: "Orbitron";
+}
+
+#editForm label {
+    display: block;
+    margin-top: 10px;
+    color: white;
+    font-family: "Orbitron";
+}
+
+#editForm input[type="text"],
+#editForm input[type="password"] {
+    width: calc(100% - 10px);
+    padding: 5px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: "Orbitron";
+}
+
+#editForm button {
+    margin-top: 10px;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: "Orbitron";
+}
+
+#editForm button[type="submit"] {
+    background-color: #C0C4D2;
+    color: white;
+    font-family: "Orbitron";
+}
+
+#editForm button[type="button"] {
+    background-color:  #C0C4D2;
+    color: white;
+    margin-left: 10px;
+    font-family: "Orbitron";
+}
+
+/* Estilo para o fundo cinza */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    font-family: "Orbitron";
+}

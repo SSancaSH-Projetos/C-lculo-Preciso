@@ -1,0 +1,8 @@
+.sobre-o-projeto-container{
+    border-radius: 5px 5px 5px 90px;
+    background-color: rgba(98, 98, 98, 0.8);
+    padding: 5%;
+    font-size: 1.2em;
+    font-family: Orbitron;
+    color: white;
+}

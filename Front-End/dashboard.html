@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR ">
+
+<head>
+  <title>Cálculo preciso by Precision Tech</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/geral.css">
+  <link rel="stylesheet" href="assets/css/dashboard.css">
+
+  <link rel="stylesheet" href="assets/media/dashboardMedia.css">
+  <link rel="stylesheet" href="assets/media/geralMedia.css">
+
+  <script src="assets/js/geral.js"></script>
+  <script src="assets/js/dashboard.js"></script>
+
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<header>
+  <div class="navbar">
+    <a href="dashboard.html"> <i class="fa-solid fa-home" style="color: #ffffff;"></i> Início</a>
+    <a href="professor.html"> <i class="fa-solid fa-user" style="color: #ffffff;"></i> Professor</a>
+    <a href="alunos.html"> <i class="fa-solid fa-users" style="color: #ffffff;"></i> Meus Alunos </a>
+    <a href="turmas.html"> <i class="fa-solid fa-school" style="color: #ffffff;"></i> Turmas</a>
+    <a href="informacoes.html"><i class="fa-solid fa-info" style="color: #ffffff;"> </i> Informações</a>
+    <a id="logout" href="index.html"> Sair <i class="fa-solid fa-right-from-bracket" style="color: #ffffff;"></i></a>
+  </div>
+</header>
+
+<body class="body-container">
+
+  <div class="titulo-software">
+    <h2>Cálculo Preciso</h2>
+  </div>
+
+  <div class="main-container">
+
+    <div class="layout-container">
+      <div class="logo-container">
+        <img class="logoCalculoPreciso" src="assets/images/logoBranco.png" alt="PrecisionTechLogo">
+      </div>
+      <div class="buttons">
+        <a href="cadastroPeca.html"><button class="btn btn-sidebar">Nova Peça</button></a>
+        <a href="custos.html"><button class="btn btn-sidebar">Custos</button> </a>
+        <a href="historico.html"><button class="btn btn-sidebar">Histórico</button></a>
+      </div>
+      <div class="layout-container1">
+        <model-viewer id="parts" class="parts-3d-dashboard" controls auto-rotate src="assets/3DModels/ImageToStl.com_3.7240x-2860.glb"
+          camera-controls></model-viewer>
+      </div>
+    </div>
+
+
+    <div class="content-container">
+
+      <h4 class="page-title">Histórico</h4>
+      <div class="historico-container">
+        <form id="usinagemForm" class="tabela1">
+          <table>
+            <thead>
+              <tr>
+                <th>Nome da Peça</th>
+                <th>Responsável</th>
+                <th>Atualizado (Dia)</th>
+                <th># de Sub-Peças</th>
+                <th>Orçamento</th>
+              </tr>
+            </thead>
+            <tbody id="tabela-body">
+              <!-- Os dados serão adicionados aqui dinamicamente -->
+            </tbody>
+          </table>
+
+        </form>
+
+        <div style="width: 100%; display: flex; justify-content: center; margin-top: 4%;">
+          <a href="historico.html" class="btn" style="background-color: #727272;">Histórico Completo</a>
+        </div>
+      </div>
+      <!-- outro container -->
+      <div class="responsive-wrapper">
+        <h4 class="page-title">Informações</h4>
+        <div class="informacoes-container">
+          <div class="cards-container">
+            <div class="card">
+              <i class="fas fa-cogs"></i>
+              <div class="metric">Quantidade de Peças Calculadas</div>
+              <div class="value" id="piece-count"></div>
+            </div>
+            <div class="card">
+              <i class="fas fa-recycle"></i>
+              <div class="metric">Quantidade de Cavaco Produzido</div>
+              <div class="value">500 kg</div>
+            </div>
+            <div class="card">
+              <i class="fas fa-weight-hanging"></i>
+              <div class="metric">Quantidade de Material Usado</div>
+              <div class="value" id="total-weight">Calculando...</div>
+            </div>
+            <!-- Adicione mais cards conforme necessário -->
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+
+</body>
+
+<footer class="footer">
+  <p class="footer-text">© 2024 Cálculo Preciso by Precision Tech - Todos os direitos reservados</p>
+</footer>
+
+</html>

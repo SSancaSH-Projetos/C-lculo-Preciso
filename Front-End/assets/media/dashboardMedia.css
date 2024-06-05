@@ -1,0 +1,41 @@
+@media (max-width: 700px) {
+    .layout-container1 {
+        display: none;
+      }
+    .btn-sidebar {
+        width: 30vh;
+    }
+
+    .historico-container {
+        width: 100%;
+        padding: 5%;
+        border-radius: 5px;
+      }
+      .responsive-wrapper{
+        display:none;
+      }
+
+}
+/* Responsividade */
+@media (max-width: 768px) {
+  .tabela1 {
+    font-size: 1em; /* Ajusta o tamanho da fonte para telas menores */
+  }
+
+  .tabela1 th,
+  .tabela1 td {
+    padding: 1px; /* Ajusta o padding para telas menores */
+  }
+}
+
+@media (max-width: 480px) {
+  .tabela1 {
+    font-size: 0.8em; /* Ajusta o tamanho da fonte para telas muito pequenas */
+  }
+
+  .tabela1 th,
+  .tabela1 td {
+    padding: 1px; /* Ajusta o padding para telas muito pequenas */
+  }
+  
+}

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <title>Cálculo preciso by Precision Tech</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/geral.css">
+  <link rel="stylesheet" href="assets/css/relatorio.css">
+
+  <link rel="stylesheet" href="assets/media/relatorioMedia.css">
+  <link rel="stylesheet" href="assets/media/geralMedia.css">
+
+  <script src="assets/js/geral.js"></script>
+  <script src="assets/js/relatorio.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body class="body-container">
+
+  <header>
+    <div class="navbar">
+      <a href="dashboard.html"> <i class="fa-solid fa-home" style="color: #ffffff;"></i> Início</a>
+      <a href="professor.html"> <i class="fa-solid fa-user" style="color: #ffffff;"></i> Professor</a>
+      <a href="alunos.html"> <i class="fa-solid fa-users" style="color: #ffffff;"></i> Meus Alunos </a>
+      <a href="turmas.html"> <i class="fa-solid fa-school" style="color: #ffffff;"></i> Turmas</a>
+      <a href="informacoes.html"><i class="fa-solid fa-info" style="color: #ffffff;"> </i> Informações</a>
+      <a id="logout" href="index.html"> Sair <i class="fa-solid fa-right-from-bracket" style="color: #ffffff;"></i></a>
+    </div>
+  </header>
+
+  <h2>Cálculo Preciso</h2>
+
+  <div class="main-container">
+
+    <div class="layout-container">
+      <div class="logo-container">
+        <img class="logoCalculoPreciso" src="assets/images/logoBranco.png" alt="PrecisionTechLogo">
+      </div>
+      <div class="buttons">
+        <a href="cadastroPeca.html"><button class="btn btn-sidebar">Nova Peça</button></a>
+        <a href="custos.html"><button class="btn btn-sidebar">Custos</button> </a>
+        <a href="historico.html"><button class="btn btn-sidebar">Histórico</button></a>
+      </div>
+      <div class="precision-tech-container">
+        <h3> By PrecisionTech </h3>
+      </div>
+    </div>
+
+    <div class="content-container">
+      <div class="relatorio-de-peca">
+        <h2>Relatório</h2>
+        <p>Id:
+          <div id="id" class="relatorio-item"></div>
+        </p>
+        <p>Código da peça:
+        <div id="codigo" class="relatorio-item"></div>
+        </p>
+        <p>Volume Total:
+          <div id="volumeTotal" class="relatorio-item"></div>
+        </p>
+        <p>Nome da peça:
+          <div id="listaDeNomesDePecas" class="relatorio-item"></div>
+          </p>
+        <p>Custo De Producao:
+          <div id="custoDeProducao" class="relatorio-item"></div>
+        </p>
+        <!-- <p>Tempo De Usinagem :
+          <div id="tempoDeUsinagem" class="relatorio-item"></div>
+        </p> -->
+        <p>Peso do Tarugo :
+          <div id="pesoTarugo" class="relatorio-item"></div>
+        </p>
+        <!-- <p>Quantidade de Cavaco :
+          <div id="quantidadeDeCavaco" class="relatorio-item"></div>
+        </p>
+        <p>Valor Do Cavaco :
+          <div id="valorDoCavaco" class="relatorio-item"></div>
+        </p> -->
+        <p>Data de Criação :
+          <div id="dataDeCriacao" class="relatorio-item"></div>
+        </p>
+        <p>Responsável:
+          <div id="maoDeObra" class="relatorio-item"></div>
+        </p>
+        <p>Máquina:
+          <div id="maquina" class="relatorio-item"></div>
+        </p>
+        <p>Material:
+          <div id="material" class="relatorio-item"></div>
+        </p>
+        <p>Sub Peças:
+          <div id="subPecas" class="relatorio-item"></div>
+        </p>
+        <p>Quantidade de Sub-Peças:
+          <div id="quantidadeSubPecas" class="relatorio-item"></div>
+        </p>
+      </div>
+      <a href="historico.html"><button class="btn" style="
+        background-color: #3d3d3d;
+        align-items: self-end;
+        width: 100%;margin-top: 2%;
+      ">Historico</button></a>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p class="footer-text">© 2024 Cálculo Preciso by Precision Tech - Todos os direitos reservados</p>
+  </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="pt-BR ">
+
+<head>
+  <title>Cálculo preciso by Precision Tech</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="assets/css/geral.css">
+  <link rel="stylesheet" href="assets/css/custo.css">
+
+  <link rel="stylesheet" href="assets/media/geralMedia.css">
+  <link rel="stylesheet" href="assets/media/custosMedia.css">
+
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<header>
+  <div class="navbar">
+    <a href="dashboard.html"> <i class="fa-solid fa-home" style="color: #ffffff;"></i> Início</a>
+    <a href="professor.html"> <i class="fa-solid fa-user" style="color: #ffffff;"></i> Professor</a>
+    <a href="alunos.html"> <i class="fa-solid fa-users" style="color: #ffffff;"></i> Meus Alunos </a>
+    <a href="turmas.html"> <i class="fa-solid fa-school" style="color: #ffffff;"></i> Turmas</a>
+    <a href="informacoes.html"><i class="fa-solid fa-info" style="color: #ffffff;"> </i> Informações</a>
+    <a id="logout" href="index.html"> Sair <i class="fa-solid fa-right-from-bracket" style="color: #ffffff;"></i></a>
+  </div>
+</header>
+
+<body class="body-container">
+
+  <h2>Cálculo Preciso</h2>
+
+  <div class="main-container">
+
+    <div class="layout-container">
+      <div class="logo-container">
+        <img class="logoCalculoPreciso" src="assets/images/logoBranco.png" alt="PrecisionTechLogo">
+      </div>
+      <div class="buttons">
+        <a href="cadastroPeca.html"><button class="btn btn-sidebar">Nova Peça</button></a>
+        <a href="custos.html"><button class="btn btn-sidebar">Custos</button> </a>
+        <a href="historico.html"><button class="btn btn-sidebar">Histórico</button></a>
+      </div>
+
+      <div class=" precision-tech-container">
+        <h3> By PrecisionTech </h3>
+      </div>
+
+
+
+
+    </div>
+
+    <div class="content-container">
+      <div class="title-containers">
+        <h2>Materiaisㅤ<a id="addMaterialButton" onclick="handlerAbrirModal('material')"><i class="fa-solid fa-plus"></i></a></h2>
+
+        <div id="addMaterialModal" class="modal" tabindex="-1" role="dialog">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button onclick="handlerFecharModal('material')" type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+                <h5 class="modal-title">Cadastrar Material</h5>
+              </div>
+              <div class="modal-body">
+                <form id="formMaterial" class="form">
+                  <label for="nome">Nome:</label>
+                  <input type="text" class="input" id="nome" name="nome" required><br>
+                  <label for="precoPorKg">Preço por Kg:</label>
+                  <input type="number" step="0.01" class="input" id="precoPorKg" name="precoPorKg" required><br>
+
+                  <label for="precoCavaco">Preço Cavaco:</label>
+                  <input type="number" step="0.01" class="input" id="precoCavaco" name="precoCavaco" required><br>
+
+                  <label for="densidade">Densidade:</label>
+                  <input type="number" class="input" id="densidade" name="densidade" required><br>
+                  <button onclick="handleCadastrar('material')" style="width: 100%;" class="btn btn-secondary" data-dismiss="modal"
+                    type="button">Cadastrar</button>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <p>Precision Tech</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="containerMetais">
+          <form>
+            <table class="tabela" id="materiais-table">
+              <thead>
+                <tr>
+                  <th>Material</th>
+                  <th>Valor</th>
+                  <th>Ações</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- Os materiais serão adicionados dinamicamente pelo JavaScript -->
+              </tbody>
+            </table>
+          </form>
+        </div>
+      </div>
+      <br>
+      <div class="title-containers">
+        <h2>Mão De Obraㅤ<a id="addMaoDeObraButton" onclick="handlerAbrirModal('maoDeObra')"><i class="fa-solid fa-plus"></i></a></h2>
+
+        <!-- Modal para Mão de Obra -->
+        <div id="addMaoDeObraModal" class="modal" tabindex="-1" role="dialog">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button onclick="handlerFecharModal('maoDeObra')" type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+                <h5 class="modal-title">Cadastrar Mão de Obra</h5>
+              </div>
+              <div class="modal-body">
+                <form id="formMaoDeObra" class="form">
+                  <label for="profissional">Profissional:</label>
+                  <input type="text" class="input" id="profissional" name="profissional" required><br>
+                  <label for="valorPorHora">Valor por Hora:</label>
+                  <input type="number" step="0.01" class="input" id="valorPorHora" name="valorPorHora" required><br>
+                  <button onclick="handleCadastrar('maoDeObra')" style="width: 100%;" class="btn btn-secondary" data-dismiss="modal"
+                    type="button">Cadastrar</button>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <p>Precision Tech</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <form class="containerMaoDeObra">
+          <table class="tabela" id="mao-de-obra-table">
+            <thead>
+              <tr>
+                <th>Tipo</th>
+                <th>Valor por Hora</th>
+                <th>Ações</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- A mão de obra será adicionada dinamicamente pelo JavaScript -->
+            </tbody>
+          </table>
+        </form>
+      </div>
+      <br>
+      <div class="title-containers">
+        <h2>Maquinaㅤ<a id="addMaquinaButton" onclick="handlerAbrirModal('maquina')"><i class="fa-solid fa-plus"></i></a></h2>
+
+        <!-- Modal para Máquina -->
+        <div id="addMaquinaModal" class="modal" tabindex="-1" role="dialog">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button onclick="handlerFecharModal('maquina')" type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+                <h5 class="modal-title">Cadastrar Máquina</h5>
+              </div>
+              <div class="modal-body">
+                <form id="formMaquina" class="form">
+                  <label for="nomeMaquina">Tipo de Máquina:</label>
+                  <input type="text" class="input" id="nomeMaquina" name="nomeMaquina" required><br>
+                  <label for="valorOperacaoPorHora">Valor de Operação por Hora:</label>
+                  <input type="number" step="0.01" class="input" id="valorOperacaoPorHora" name="valorOperacaoPorHora"
+                    required><br>
+                  <button onclick="handleCadastrar('maquina')" style="width: 100%;" class="btn btn-secondary" data-dismiss="modal"
+                    type="button">Cadastrar</button>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <p>Precision Tech</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <form class="containerMaoDeObra">
+          <table class="tabela" id="maquinas-table">
+            <thead>
+              <tr>
+                <th>Tipo de Máquina</th>
+                <th>Valor de Operação por Hora</th>
+                <th>Ações</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- As máquinas serão adicionadas dinamicamente pelo JavaScript -->
+            </tbody>
+          </table>
+        </form>
+      </div>
+      <footer class="footer">
+        <p class="footer-text">© 2024 Cálculo Preciso by Precision Tech - Todos os direitos reservados</p>
+      </footer>
+    </div>
+   
+  </div>
+
+  <!-- teste -->
+
+<!-- Modal para editar Material -->
+<div id="editMaterialModal" class="modal-pop-up">
+  <div class="modal-content">
+      <span class="close" onclick="fecharModal('editMaterialModal')">&times;</span>
+      <div class="modal-bonito">
+      <h2>Editar Material</h2>
+      <form id="editMaterialForm" >
+          <input type="hidden" id="editMaterialId" >
+          
+          <label for="editNome">Nome:</label><br>
+          <input type="text" id="editNome" name="editNome" class="input-pop-up"  required><br>
+
+          <label for="editPrecoPorKg">Preço por Kg:</label><br>
+          <input type="number" id="editPrecoPorKg" name="editPrecoPorKg" class="input-pop-up"  step="0.01" required><br>
+
+          <label for="editPrecoCavaco">Preço do Cavaco:</label><br>
+          <input type="number" id="editPrecoCavaco" name="editPrecoCavaco" class="input-pop-up"  step="0.01" required><br>
+
+          <label for="editDensidade">Densidade (kg/m³):</label><br>
+          <input type="number" id="editDensidade" name="editDensidade" step="0.01" class="input-pop-up"  required><br>
+
+          <button type="button" onclick="atualizar('material')">Atualizar</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- Modal para editar Mão de Obra -->
+<div id="editMaoDeObraModal" class="modal-pop-up">
+  <div class="modal-content">
+      <span class="close" onclick="fecharModal('editMaoDeObraModal')">&times;</span>
+      <h2>Editar Mão de Obra</h2>
+      <form id="editMaoDeObraForm">
+          <input type="hidden" id="editMaoDeObraId" class="input-pop-up" >
+          <label for="editProfissional">Profissional:</label><br>
+          <input type="text" id="editProfissional" class="input-pop-up"  name="editProfissional" required><br>
+
+          <label for="editValorPorHora">Valor por Hora:</label><br>
+          <input type="number" id="editValorPorHora" name="editValorPorHora" class="input-pop-up"  step="0.01" required><br>
+
+          <button type="button" onclick="atualizar('maodeobra')" class="btn">Atualizar</button>
+      </form>
+  </div>
+</div>
+
+<!-- Modal para editar Máquina -->
+<div id="editMaquinaModal" class="modal-pop-up">
+  <div class="modal-content-maquina">
+      <span class="close" onclick="fecharModal('editMaquinaModal')">&times;</span>
+      <h2>Editar Máquina</h2>
+      <form id="editMaquinaForm">
+          <input type="hidden" id="editMaquinaId" class="input-pop-up" >
+          <label for="editNomeMaquina">Nome da Máquina:</label><br>
+          <input type="text" id="editNomeMaquina" name="editNomeMaquina" class="input-pop-up" required><br>
+
+          <label for="editValorOperacaoPorHora">Valor da Operação por Hora:</label><br>
+          <input type="number" id="editValorOperacaoPorHora" name="editValorOperacaoPorHora" step="0.01" class="input-pop-up"  required><br>
+
+          <button type="button" onclick="atualizar('maquinas')">Atualizar</button>
+      </form>
+  </div>
+</div>
+
+</body>
+
+<script src="assets/js/geral.js"></script>
+<script src="assets/js/custos.js"></script>
+
+</html>
