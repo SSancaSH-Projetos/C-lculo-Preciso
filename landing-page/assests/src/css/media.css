@@ -1,0 +1,108 @@
+@media(max-width: 700px) {
+
+    .primeiraImagem,
+    .segundaImagem,
+    .terceiraImagem,
+    .quartaImagem,
+    .quintaImagem,
+    .sextaImagem {
+        background-attachment: scroll;
+    }
+
+
+    .primeiraImagem,
+    .segundaImagem,
+    .terceiraImagem,
+    .quartaImagem,
+    .quintaImagem,
+    .sextaImagem {
+        background-size: contain;
+    }
+
+    .coluna {
+        width: 100%;
+    }
+
+
+    .footer {
+        background-image: linear-gradient(to bottom, #000000, #e6e6e8da, #e6e6e8);
+        position: static;
+        clear: both;
+        bottom: 0;
+        width: 100%;
+        align-items: center;
+    }
+
+    #imgNone {
+        display: none;
+    }
+
+    .passo-a-passo {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #calculos {
+        width: 400px;
+        height: 200px;
+    }
+
+    #calculos1 {
+        max-width: 100%;
+        margin-right: 35%;
+    }
+
+    #produto {
+        font-size: 1em;
+    }
+
+    #titulo {
+        font-size: 1em;
+    }
+
+    li {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+    }
+
+    .titulo-land {
+        background-color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-right: 25%;
+    }
+
+    .escondido {
+        display: none;
+    }
+
+    .texto-metalurgia {
+        font-size: 1em;
+    }
+
+    .exemplos-usinagem {
+        flex-direction: column;
+    }
+
+    .novo-titulo {
+        font-size: 1em;
+        gap: 5px;
+    }
+
+    #botao-sobre-nos {
+        display: none;
+    }
+
+    #footer-img {
+        margin-top: 20%;
+    }
+}

@@ -1,0 +1,381 @@
+body {
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    line-height: 0.8cm;
+    background-color: black;
+    color: rgb(255, 255, 255);
+}
+
+.primeiraImagem,
+.segundaImagem,
+.terceiraImagem,
+.quartaImagem,
+.quintaImagem {
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+}
+
+.sextaImagem {
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+}
+
+
+.primeiraImagem {
+    background-color: black;
+}
+
+.segundaImagem {
+    background-image: url('https://live.staticflickr.com/65535/53552505879_91ae831594_o.jpg');
+    min-height: 800px;
+    /* min-width: 460px; */
+}
+
+.terceiraImagem {
+    background-image: url('https://live.staticflickr.com/65535/53555047675_efcd91beaf_o.jpg');
+    min-height: 800px;
+}
+
+.quartaImagem {
+    background-image: url('https://live.staticflickr.com/65535/53552505884_738504dfec_o.jpg');
+    min-height: 800px;
+}
+
+.quintaImagem {
+    background-image: url('https://live.staticflickr.com/65535/53552615375_ff7f69e4bd_o.jpg');
+    min-height: 800px;
+}
+
+.sextaImagem {
+    background-image: url("../img/Tela4.png");
+    min-height: 700px;
+}
+
+.secao {
+    text-align: center;
+    padding: 0px 0px;
+}
+
+.secaoClara {
+    background-color: black;
+    color: #ddd;
+}
+
+.secaoEscura {
+    background-color: black;
+    color: #ddd;
+}
+
+.texto {
+    position: absolute;
+    top: 50%;
+    width: 100;
+    text-align: center;
+    color: #ffffff;
+    font-size: 27px;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    opacity: 1;
+}
+
+.rotulo {
+    background-color: #ffffff;
+    color: #ffffff;
+    padding: 20px;
+}
+
+.texto,
+.rotulo,
+.transicao {
+    background-color: transparent;
+}
+
+ul {
+    background-color: transparent;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: black;
+    opacity: 1;
+}
+
+li {
+    float: left;
+}
+
+li:last-child {
+    border-right: none;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    border-radius: 15px;
+    margin-right: 5px;
+}
+
+.sobre {
+    padding: 20px;
+    margin: 0;
+    background-image: linear-gradient(to bottom, rgb(225, 6, 6), rgb(222, 76, 76), rgb(249, 171, 179));
+    color: grey;
+}
+
+.alinhadoAoCentro {
+    text-align: center;
+    padding: 10px;
+}
+
+.alinhadoTextoSobre {
+    text-align: justify;
+    font-size: 18px;
+}
+
+.coluna {
+    float: left;
+    width: 32%;
+    margin-bottom: 15px;
+    padding: 0 8px;
+}
+
+.cartao {
+    box-shadow: 0 4px 22px 0 rgb(202, 202, 202);
+    margin: 8px;
+    font-size: 16px;
+    border-radius: 15px;
+}
+
+.imagemDeIdentificacao {
+    width: 100%;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.titulacao {
+    color: white;
+}
+
+
+.footer {
+    background-image: linear-gradient(to bottom, #000000, #e6e6e8da, #e6e6e8);
+    position: static;
+    clear: both;
+    bottom: 0;
+    width: 100%;
+    align-items: center;
+    height: 250px;
+}
+
+.fa {
+    font-size: 20px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+    margin: 2px;
+}
+
+.iconesRedesSociais {
+    text-align: center;
+}
+
+.mensagemRedesSociais {
+    text-align: center;
+    color: white;
+    font-family: sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 4px;
+}
+
+.button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: black;
+    border: none;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 0px 4px rgba(180, 160, 255, 0.253);
+    cursor: pointer;
+    transition-duration: 0.3s;
+    overflow: hidden;
+    position: relative;
+}
+
+.svgIcon {
+    width: 12px;
+    transition-duration: 0.3s;
+}
+
+.svgIcon path {
+    fill: white;
+}
+
+.button:hover {
+    width: 140px;
+    border-radius: 50px;
+    transition-duration: 0.3s;
+    background-color: rgb(181, 160, 255);
+    align-items: center;
+}
+
+.button:hover .svgIcon {
+    /* width: 20px; */
+    transition-duration: 0.3s;
+    transform: translateY(-200%);
+}
+
+.button::before {
+    position: absolute;
+    bottom: -20px;
+    content: "Volte ao Topo";
+    color: white;
+    /* transition-duration: .3s; */
+    font-size: 0px;
+}
+
+.button:hover::before {
+    font-size: 13px;
+    opacity: 1;
+    bottom: unset;
+    /* transform: translateY(-30px); */
+    transition-duration: 0.3s;
+}
+
+.custom-shape-divider-top-1709130889 {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-top-1709130889 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 101px;
+}
+
+.custom-shape-divider-top-1709130889 .shape-fill {
+    fill: black;
+}
+
+
+.custom-shape-divider-top-1709131301 {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-top-1709131301 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 101px;
+    transform: rotateY(180deg);
+}
+
+.custom-shape-divider-top-1709131301 .shape-fill {
+    fill: black;
+}
+
+.custom-shape-divider-bottom-1709140022 {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1709140022 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 150px;
+    transform: rotateY(180deg);
+}
+
+.custom-shape-divider-bottom-1709140022 .shape-fill {
+    fill: black;
+}
+
+.custom-shape-divider-bottom-1709140760 {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1709140760 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 67px;
+}
+
+.custom-shape-divider-bottom-1709140760 .shape-fill {
+    fill: black;
+}
+
+.nav-bar-responsive {
+    display: flex;
+    justify-content: start;
+    flex-direction: row;
+    text-align: start;
+}
+
+.titulo-land {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 43px;
+}
+
+.texto-metalurgia {
+    font-size: 1.5em;
+    margin-bottom: 5%;
+}
+
+.exemplos-usinagem {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.novo-titulo {
+    font-size: 2em;
+    gap: 5px;
+}
+
+#footer-img {
+    margin-top: 8%;
+}

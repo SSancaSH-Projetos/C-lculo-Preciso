@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio Cálculo-Preciso</title>
+    <link rel="icon" href="https://live.staticflickr.com/65535/53519945244_4bfbc33659_o.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="assests/src/css/reset.css">
+    <link rel="stylesheet" href="assests/src/css/style.css">
+    <link rel="stylesheet" href="assests/src/css/media.css">
+    <script src="assests/src/js/script.js"></script>
+
+</head>
+
+<body style="width: 100%;">
+    <div class="nav-bar-responsive">
+        <div id="inicio" class="primeiraImagem">
+            <ul>
+                <li><a class="active" href="#">Início</a></li>
+                <li><a class="active" onclick="scrollToBottom()" href="#produto">Nosso produto</a></li>
+                <li><a href="#repositorio" onclick="scrollToBottom()">Repositório</a></li>
+                <li id="botao-sobre-nos"><a href="#sobre" onclick="scrollToBottom()">Sobre Nós</a></li>
+                <div id="inicioDaPagina"></div>
+            </ul>
+        </div>
+    </div>
+    <div class="titulo-land">
+        <img src="assests/src/img/logoBranco.png" class="escondido" style="max-width: 23%; height: auto; flex: 1;">
+        <div style="flex: 1; margin-left: 40px;">
+            <h1
+                style="display: flex;justify-content: end; color: white; font-size: 5vw; font-family: 'Roboto Mono'; margin: 0; font-size: 2.0em;">
+                Calculo Preciso
+            </h1>
+        </div>
+    </div>
+
+    <div class="custom-shape-divider-top-1709130981">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M1200 120L0 16.48 0 0 1200 0 1200 120z" class="shape-fill"></path>
+        </svg>
+    </div>
+
+    <section id="produto" class="secao secaoClara">
+        <p class="texto-metalurgia">Usinagem é o processo de dar forma a materiais através do corte e da remoção de
+            partes indesejadas para criar peças específicas.</p>
+
+
+
+        <div class="exemplos-usinagem">
+            <div style="flex: 1;">
+                <img style="max-width: 100%;" src="assests/src/img/20220413085231_19223.gif" />
+                <p style="font-size: 1.5em; text-align: center;">
+                    Exemplo de peça de metal usinada
+                </p>
+            </div>
+            <div style="flex: 1;">
+                <img style="max-width: 100%;" src="assests\src\img\gif usinagem.gif" />
+                <p style="font-size: 1.5em; text-align: center;">
+                    Exemplo de peça de metal usinada
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <div style="background-color: white;">
+
+        <div class="custom-shape-divider-top-1709131301">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                preserveAspectRatio="none">
+                <path d="M1200 120L0 16.48 0 0 1200 0 1200 120z" class="shape-fill"></path>
+            </svg>
+        </div>
+
+        <section style="display:flex; flex-direction: column; background-color:white;">
+
+            <p id="titulo" class="novo-titulo"
+                style="margin-top: 2%; margin-bottom: 2%; color: black; font-size: 1.3em;"><b>Como são
+                    feitos os cálculos de
+                    usinagem?</b></p>
+
+            <div>
+                <p style="color: black;">O cálculo se baseia no volume das peças, usando formas complexas e fórmulas
+                    geométricas para
+                    determinar a quantidade de materiais necessários. Veja 2 exemplos de fórmulas de cálculos:</p>
+            </div>
+
+            <br>
+
+            <div id="calculos" style="display: flex; justify-content: center;">
+                <img id="calculos1" style="max-width: 48%;" src="assests\src\img\peças.png" alt="">
+            </div>
+            <h2 style="color: black;">Passo a Passo dos Cálculos</h2>
+        </section>
+
+        </section>
+
+        <br>
+        <div class="passo-a-passo"
+            style="display: flex; justify-content: space-around; gap: 20px; background-color: white;">
+            <div style=" color: black; border: dashed 2px rgb(133, 133, 133); padding: 20px; border-radius: 10px;"
+                class="passo01">
+                <h2>Passo 01 - Definir a geometria da matéria prima</h2>
+                <div>
+                    <img style="max-width: 50%; height: auto;" src="assests\src\img\tarugo.png" alt="">
+                </div>
+            </div>
+            <div style=" color: black; border: dashed 2px rgb(133, 133, 133); padding: 20px; border-radius: 10px;"
+                class="passo02">
+                <h2>Passo 02 - Identificar as formas da peça</h2>
+                <div>
+                    <img style="max-width: 50%; height: auto;" src="assests\src\img\croquipeca.png" alt="">
+                </div>
+            </div>
+            <div style=" color: black; border: dashed 2px rgb(133, 133, 133); padding: 20px; border-radius: 10px;"
+                class="passo03">
+                <h2>Passo 03 - Identificar resíduos e área utilizável</h2>
+                <div>
+                    <img style="max-width: 50%; height: auto;" src="assests\src\img\tarugocroqui.png" alt="">
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <p class="texto-metalurgia" style="color: black; margin-top: 5%;">
+            Nossa calculadora é uma ferramenta essencial projetada para auxiliar operadores na área de usinagem. Ela
+            simplificará os cálculos necessários para elaborar orçamentos precisos: considerando materiais, custos de
+            mão de obra e tempo sobre a peça.
+        </p>
+
+        </section>
+
+
+
+
+        <div class="custom-shape-divider-bottom-1709140022">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                preserveAspectRatio="none">
+                <path d="M1200 120L0 16.48 0 0 1200 0 1200 120z" class="shape-fill"></path>
+            </svg>
+        </div>
+    </div>
+
+    <div style="display: flex; justify-content: center; height: 70vh;">
+
+        <div style="display: flex; justify-content: center;">
+            <img style="width: 100%; height: 100%;" src="assests/src/img/TelaCelFundo.png" alt="">
+        </div>
+        <div style="display: flex; justify-content: center;">
+            <img id="imgNone" style="width: 100%; height: 100%;" src="assests/src/img/TelaPcFundo.png" alt="">
+        </div>
+
+    </div>
+    <section class="secao secaoEscura">
+
+    </section>
+
+    </section>
+    <div class="">
+    </div>
+    <section class="secao secaoEscura">
+        <div id="fimDaPagina"></div>
+
+        <script>
+            function scrollToBottom() {
+                var conteudo = document.getElementById('fimDaPagina');
+                conteudo.scrollIntoView({ behavior: 'smooth' });
+            }
+        </script>
+
+        <div class="escondido">
+            <div>
+                <img style="width: 100%;" src="assests/src/img/NovaLogo.png" alt="">
+            </div>
+
+
+            <div style="display: flex; flex-wrap: wrap; justify-content: center;">
+                <div class="coluna" style="flex: 1; padding: 10px;">
+                    <div class="cartao">
+                        <img class="imagemDeIdentificacao" src="assests\src\img\davi2.png" alt="">
+                        <div class="alinharBotaoAoCentro">
+                            <h2>Davi de Sales Lima</h2>
+                            <p class="titulacao">Líder Do Projeto</p>
+                            <h3>@davi_salesl</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="coluna" style="flex: 1; padding: 10px;">
+                    <div class="cartao">
+                        <img class="imagemDeIdentificacao" src="assests\src\img\henrique2.png" alt="">
+                        <div class="alinharBotaoAoCentro">
+                            <h2>Henrique Linhares</h2>
+                            <p class="titulacao">D.Back-End</p>
+                            <h3>@h.linhares_</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="coluna" style="flex: 1; padding: 10px;">
+                    <div class="cartao">
+                        <img class="imagemDeIdentificacao" src="assests\src\img\diogo2.png" alt="">
+                        <div class="alinharBotaoAoCentro">
+                            <h2>Diogo Pereira dos Santos</h2>
+                            <p class="titulacao">D.Front-End</p>
+                            <h3>@diogopereiras23</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="coluna" style="flex: 1; padding: 10px;">
+                    <div class="cartao">
+                        <img class="imagemDeIdentificacao" src="assests\src\img\eu2.png" alt="">
+                        <div class="alinharBotaoAoCentro">
+                            <h2>Danielly Cristina de Assis</h2>
+                            <p class="titulacao">D.Designer</p>
+                            <h3>@_ssdanielly</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="coluna" style="flex: 1; padding: 10px;">
+                    <div class="cartao">
+                        <img class="imagemDeIdentificacao" src="assests\src\img\luiz2.png" alt="">
+                        <div class="alinharBotaoAoCentro">
+                            <h2>Luiz Miguel Gallo Giglioti</h2>
+                            <p class="titulacao">D.Banco de Dados</p>
+                            <h3>@_luizmiguel07_</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="alinhamentoDoCentro"></div>
+    </section>
+    <div class="escondido">
+        <div class="custom-shape-divider-bottom-1709140760">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                preserveAspectRatio="none">
+                <path d="M1200 0L0 0 598.97 114.72 1200 0z" class="shape-fill"></path>
+            </svg>
+        </div>
+
+        <div id="repositorio" class="sextaImagem" style="padding: 80px;">
+            <div class="texto">
+            </div>
+        </div>
+
+    </div>
+
+
+</body>
+<footer class="footer">
+    <div class="mensagemRedesSociais">
+        <h4></h4>
+    </div>
+    <div class="iconesRedesSociais">
+        <a href="https://github.com/SSancaSH-Projetos/Calculo-Preciso" target="_blank">
+            <img id="footer-img" src="https://live.staticflickr.com/65535/53519088021_44701529cc_o.png" alt="GitHub"
+                onclick="scrollToTop()">
+        </a>
+        <button class="button" onclick="scrollToTop()">
+            <svg class="svgIcon" viewBox="0 0 384 512">
+                <path
+                    d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z">
+                </path>
+            </svg>
+        </button>
+    </div>
+</footer>
+
+
+</html>
