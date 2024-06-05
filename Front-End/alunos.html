@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <title>Cálculo preciso by Precision Tech</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+    <link rel="stylesheet" href="assets/css/geral.css">
+    <link rel="stylesheet" href="assets/css/aluno.css">
+
+    <link rel="stylesheet" href="assets/media/geralMedia.css">
+    <link rel="stylesheet" href="assets/media/alunosMedia.css">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body class="body-container">
+
+    <header>
+        <div class="navbar">
+            <a href="dashboard.html"> <i class="fa-solid fa-home" style="color: #ffffff;"></i> Início</a>
+            <a href="professor.html"> <i class="fa-solid fa-user" style="color: #ffffff;"></i> Professor</a>
+            <a href="alunos.html"> <i class="fa-solid fa-users" style="color: #ffffff;"></i> Meus Alunos </a>
+            <a href="turmas.html"> <i class="fa-solid fa-school" style="color: #ffffff;"></i> Turmas</a>
+            <a href="informacoes.html"><i class="fa-solid fa-info" style="color: #ffffff;"> </i> Informações</a>
+            <a id="logout" href="index.html"> Sair <i class="fa-solid fa-right-from-bracket"
+                    style="color: #ffffff;"></i></a>
+        </div>
+    </header>
+
+    <h2>Cálculo Preciso</h2>
+
+    <div class="main-container">
+
+        <div class="layout-container">
+            <div class="logo-container">
+                <img class="logoCalculoPreciso" src="assets/images/logoBranco.png" alt="PrecisionTechLogo">
+            </div>
+            <div class="buttons">
+                <a href="cadastroPeca.html"><button class="btn btn-sidebar">Nova Peça</button></a>
+                <a href="custos.html"><button class="btn btn-sidebar">Custos</button> </a>
+                <a href="historico.html"><button class="btn btn-sidebar">Histórico</button></a>
+            </div>
+            <div class="precision-tech-container">
+                <h3> By PrecisionTech </h3>
+            </div>
+        </div>
+
+        <div class="content-container">
+            <h2 class="page-title">Meus Alunos <a id="addStudentButton"><i class="fa-solid fa-plus"></i></a></h2>
+
+
+            <div id="addStudentModal" class="modal" tabindex="-1" role="dialog">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <h5 class="modal-title">Cadastrar Aluno</h5>
+
+                        </div>
+                        <div class="modal-body">
+                            <form id="studentForm" class="studentForm">
+                                <label for="email">Email:</label>
+                                <input type="email" class="input" id="email" name="email" required><br>
+                                <label for="name">Nome:</label>
+                                <input type="text" class="input" id="name" name="name" required><br>
+                                <label for="course">Curso:</label>
+                                <input type="text" class="input" id="course" name="course" required><br>
+                                <label for="password">Senha:</label>
+                                <input type="password" class="input" id="password" name="password" required><br>
+                                <button style="width: 100%;" class="btn btn-secondary" data-dismiss="modal"
+                                    type="submit">Cadastrar</button>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <p>Precision Tech</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="meusalunos-container">
+                <table class="tabela" id="alunosTable">
+                    <thead>
+                        <tr data-id="12345">
+                            <th>Aluno</th>
+                            <th>Curso</th>
+                            <th>E-mail</th>
+                            <th>Tipo de Usuário</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody id="alunosTableBody">
+                        <!-- Os dados serão inseridos aqui dinamicamente -->
+                    </tbody>
+                </table>
+            </div>
+            <div id="editFormContainer">
+                <h3>Editar Usuário</h3>
+                <form id="editForm">
+                    <label for="editNome">Nome:</label>
+                    <input type="text" id="editNome" name="nome" required><br>
+        
+                    <label for="editCurso">Curso:</label>
+                    <input type="text" id="editCurso" name="curso" required><br>
+        
+                    <label for="editTipoUsuario">Tipo de Usuário:</label>
+                    <input type="text" id="editTipoUsuario" name="tipoUsuario" required><br>
+        
+                    <label for="editSenha">Senha:</label>
+                    <input type="password" id="editSenha" name="senha" required><br>
+        
+                    <button type="submit">Salvar</button>
+                    <button type="button" id="cancelEdit">Cancelar</button>
+                </form>
+            </div>
+        </div>
+
+
+    </div>
+
+    <footer class="footer">
+        <p class="footer-text">© 2024 Cálculo Preciso by Precision Tech - Todos os direitos reservados</p>
+    </footer>
+
+</body>
+
+<script src="assets/js/geral.js"></script>
+<script src="assets/js/alunos.js"></script>
+
+</html>

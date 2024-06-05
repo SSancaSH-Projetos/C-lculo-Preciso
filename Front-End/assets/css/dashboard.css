@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+
+
+
+h3 {
+  color: white;
+  font-family: "Orbitron";
+}
+
+h4 {
+  color: white;
+  font-family: "Orbitron";
+}
+
+.cards-container{
+  display: flex;
+}
+
+.card {
+  background-color: #6d6d6d;
+  border-radius: 5px;
+  padding: 20px;
+  color: white;
+  margin: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card i {
+  font-size: 60px;
+  margin-bottom: 10px;
+  color: #fff;
+}
+.card .value {
+  font-size: 30px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.metric {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.historico-container {
+  background-color: rgba(98, 98, 98, 0.8);
+  border-radius: 5px 5px 90px 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+  width: 250vh;  /* Evite usar unidades como 'vh' para largura de elementos */
+  max-width: 600px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 7%;
+}
+
+.informacoes-container {
+  background-color: rgba(98, 98, 98, 0.8);
+  border-radius: 5px 5px 5px 90px;
+  display: flex;
+  padding: 7%;
+  flex-direction: column;
+  color: #fff;
+  margin-top: 2%;
+}
+
+
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 36vh;
+  width: 30vw;
+  font-size: 25px;
+  font-family: "Orbitron";
+
+}
+
+
+.parts-3d {
+  width: 50vw;
+  height: 80vh;
+}
+
+.login-text-box {
+  width: 100%;
+}
+
+
+
+
+.navbar a:hover {
+  background-color: #dddddd8c;
+}
+
+/* Style the header */
+header {
+  width: 100%;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+  border: 0;
+  padding-top: 10px;
+}
+.tabela1-container {
+  width: 100%;
+  overflow-x: auto; /* Permite rolagem horizontal em telas menores */
+}
+
+.tabela1 {
+  font-size: 1.2em;
+  border-collapse: collapse;
+  width: 100%;
+  /* Faz a tabela ocupar todo o espaço horizontal do container */
+}
+
+.tabela1 th,
+.tabela1 td {
+  border: 1px solid #000;
+  padding: 8px;
+  text-align: center;
+  color: #fff;
+}
+
+.tabela1 th {
+  background-color: #f2f2f2;
+  color: #000;
+}
+
+.tabela1 tr:nth-child(even) {
+  background-color: #333;
+}
+
+.tabela1 tr:hover {
+  background-color: #666;
+}
+
